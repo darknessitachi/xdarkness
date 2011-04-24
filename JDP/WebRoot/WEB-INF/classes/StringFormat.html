@@ -1,0 +1,212 @@
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../resources/ext-all.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/docs.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/style.css" />
+		<script>
+		window.onload=function(){
+			var tds = document.getElementsByTagName('td');
+			for(var i=0;i<tds.length;i++) {
+				var td = tds[i];
+				if(td.name != 'methodTd') continue;
+				td.onclick = dispalyRow;
+			}
+		}
+		function dispalyRow() {
+			var className = this.parentElement.className;
+			this.parentElement.className = className.indexOf('expanded')>0?'method-row expandable ':'method-row expandable expanded';
+		}
+		</script>
+	</head>
+	<body style="overflow:auto">
+		<div class="body-wrap">
+			<div class="top-tools">
+				<a class="inner-link" href="#String-props"><img
+						src="../../resources/images/default/blank.gif"
+						style="border-color: #0000ff;" class="item-icon icon-prop">属性</a>&#13;
+				<a class="inner-link" href="#String-methods"><img
+						src="../../resources/images/default/blank.gif"
+						class="item-icon icon-method">方法</a>&#13;
+				<a class="inner-link" href="#String-events"><img
+						src="../../resources/images/default/blank.gif"
+						class="item-icon icon-event">事件</a>&#13;
+			</div>
+			<h1>
+				类
+				<a href="#">StringFormat</a>
+			</h1>
+			<table cellspacing="0">
+				<tr>
+					<td class="label">
+						包:
+					</td>
+					<td class="hd-info">
+						全局
+					</td>
+				</tr>
+				<tr>
+					<td class="label">
+						定义在:
+					</td>
+					<td class="hd-info">
+						<a href="#">String.prototype.js</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="label">
+						类:
+					</td>
+					<td class="hd-info">
+						<a href="#">StringFormat</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="label">
+						继承:
+					</td>
+					<td class="hd-info">
+						Object
+					</td>
+				</tr>
+			</table>
+			<div class="description">
+				格式化字符串，如:new
+			</div>
+			<div class="hr"></div>
+			<a id="String-props"></a>
+			<h2>
+				公有属性
+			</h2>
+									<div class="no-members">
+				这个类没有公有属性.
+			</div>
+						<a id="String-methods"></a>
+			<h2>
+				公有方法
+			</h2>
+						<table cellspacing="0" class="member-table">
+				<tbody>
+					<tr>
+						<th colspan="2" class="sig-header">
+							方法
+						</th>
+						<th class="msource-header">
+							属于
+						</th>
+					</tr>
+															<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">StringFormat</a></b>(&nbsp;
+							<code>
+																String str 
+																， Object params 
+															</code>
+							&nbsp;) : void
+							<div class="mdesc">
+								<div class="short">
+									&lt;&gt;&nbsp;构造器
+								</div>
+								<div class="long">
+									&lt;&gt;&nbsp;构造器
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+																						
+											<li>
+												<code>
+													str
+												</code>
+												: String
+												<div class="sub-desc">
+													原始字符串
+												</div>
+											</li>
+											
+																						
+											<li>
+												<code>
+													params
+												</code>
+												: Object
+												<div class="sub-desc">
+													参数
+												</div>
+											</li>
+											
+																						
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													void
+												</code>
+												<div class="sub-desc">
+													
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							StringFormat
+						</td>
+					</tr>
+																				<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">toString</a></b>(&nbsp;
+							<code>
+															</code>
+							&nbsp;) : String
+							<div class="mdesc">
+								<div class="short">
+									&lt;&gt;&nbsp;转换成字符串
+								</div>
+								<div class="long">
+									&lt;&gt;&nbsp;转换成字符串
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+																						
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													String
+												</code>
+												<div class="sub-desc">
+													字符串
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							StringFormat
+						</td>
+					</tr>
+														</tbody>
+			</table>
+									<a id="String-events"></a>
+			<h2>
+				公有事件
+			</h2>
+			<div class="no-members">
+				这个类没有公有事件.
+			</div>
+		</div>
+
+	</body>
+</html>

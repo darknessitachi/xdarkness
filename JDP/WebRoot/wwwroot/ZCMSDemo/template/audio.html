@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>${Catalog.Name}</title>
+<link href="../images/kj3.css" type="text/css" rel="stylesheet" />
+<link href="../images/kj2.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../images/play.js"></script>
+</head>
+
+<body>
+<cms:include file="include/head.html"></cms:include>
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+    <td>
+    <div id="twoContainer">
+        	<div class="twoContentHeader">
+            	<span class="twoTitle">${catalog.name}</span> <span class="twoPosition">您的位置：<cms:link type="CurrentPosition" spliter=">">{ZCMS:当前位置}</cms:link></span>
+            </div>
+            
+            <div class="twoContent">
+                <table width="948" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td width="638" valign="top">
+                  	<div class="twoRight" style="border:none;">
+                    	<div class="twoRightContent audio" style="border:none">
+                  	    <div class="newAudio">
+                  	      <h2>最新故事</h2>
+                  	      <ol>
+                              <cms:list item="Audio" type="Recent" count="10" name="科技故事">
+                                  <li><span class="fr">大小:${Audio.FileSize}</span><a href="#" onclick="play('${Audio.Name}|${level}${Audio.path}${Audio.filename}',false);return false;">${Audio.Name|CharWidth=14}</a></li>
+                              </cms:list>
+               	          </ol>
+                  	      &nbsp;&nbsp;<a href="<cms:link type="Catalog" name="科技故事"></cms:link>" class="audio_btn"><span>更多&raquo;</span></a></div>
+                  	    <div class="clear">
+                  	      <h2>最新专辑</h2>
+                          <cms:list item="Catalog" type="audio" level="child" count="3" name="科普专辑">
+                              <dl class="album">
+                                  <dt class="title"><a href="${Catalog.Link}">${Catalog.Name}</a></dt>
+                                  <dd class="img"><a href="${Catalog.Link}"><img src="${Catalog.ImagePath}" width="90" height="90" onerror="onloadPic(this)" alt="${Catalog.Name}" /></a></dd>
+                                  <dd class="summary">${Catalog.summary|CharWidth=100}</dd>
+                                  <dd class="info">作者:${Catalog.author}</dd>
+               	              </dl>
+                          </cms:list>
+                           &nbsp;&nbsp;<a href="<cms:link type="Catalog" name="科普专辑"></cms:link>" class="audio_btn"><span>更多专辑&raquo;</span></a></div>
+               	        </div>
+                    </div>
+                  </td>
+                  <cms:include file="include/blocklist.html">{ZCMS:文件包含}</cms:include>
+                </tr>
+              </table>
+            	
+        </div>
+        </div>
+	</td>
+  </tr></table>
+<cms:include file="include/footer.html"></cms:include>
+</body>
+</html>

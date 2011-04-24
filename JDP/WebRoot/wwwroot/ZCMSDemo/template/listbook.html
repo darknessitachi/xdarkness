@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>${Site.Name}-${Catalog.Name}</title>
+<link href="../images/kj3.css" type="text/css" rel="stylesheet" />
+<link href="../images/kj2.css" type="text/css" rel="stylesheet" />
+<link href="../images/book.css" type="text/css" rel="stylesheet" />
+</head>
+<script>
+function callbackInListbookTemple(){
+	try{
+		if (req.readyState==4&&req.status==200){
+            var txt = req.responseText;
+            var flag = txt.substring(0,1);
+            txt = txt.substring(2);
+            if(flag=="Y"){
+            	alert(txt);
+				var siteID = document.getElementById("SiteID").value;
+				var cmscontext = document.getElementById("cmscontext").value;
+            	window.open(cmscontext + "/Shop/Web/Favorite.jsp?cur=Menu_Fav&SiteID=" + siteID);
+            }else{
+            	alert(txt);
+            }
+        }
+    }catch(ex){
+    	alert(ex);
+    };
+}
+
+function buyNow(GoodsID) {
+	var siteID = document.getElementById("SiteID").value;
+	var cmscontext = document.getElementById("cmscontext").value;
+	window.open(cmscontext + "/Shop/Web/AddShopCart.jsp?GoodsID=" + GoodsID + "&SiteID=" + siteID + "&BuyNowFlag=1");
+}
+
+function addToCart(GoodsID){
+	req = getXMLHttpRequest();
+	var siteID = document.getElementById("SiteID").value;
+	var cmscontext = document.getElementById("cmscontext").value;
+	var url = cmscontext + "/Shop/Web/AddShopCart.jsp?GoodsID=" + GoodsID + "&SiteID=" + siteID + "&BuyNowFlag=0";
+	req.open("POST", url, true);
+	req.send(null);
+	req.onreadystatechange = callbackInListbookTemple;
+}
+
+function addToFav(GoodsID){
+	req = getXMLHttpRequest();
+	var siteID = document.getElementById("SiteID").value;
+	var cmscontext = document.getElementById("cmscontext").value;
+	var url = cmscontext + "/Shop/Web/AddToFavorite.jsp?GoodsID=" + GoodsID + "&SiteID=" + siteID +　"&PriceNote=N";
+	req.open("POST", url, true);
+	req.send(null);
+	req.onreadystatechange = callbackInListbookTemple;
+}
+
+function urlLink(){
+	var siteID = document.getElementById("SiteID").value;
+	var cmscontext = document.getElementById("cmscontext").value;
+    window.open(cmscontext + "/Shop/Web/ShopCart.jsp?SiteID=" + '${Site.ID}', "ShopCart");
+}
+
+function priceNote(GoodsID) {
+	req = getXMLHttpRequest();
+	var siteID = document.getElementById("SiteID").value;
+	var cmscontext = document.getElementById("cmscontext").value;
+	var url = cmscontext + "/Shop/Web/AddToFavorite.jsp?GoodsID=" + GoodsID + "&SiteID=" + siteID +　"&PriceNote=Y";
+	req.open("POST", url, true);
+	req.send(null);
+	req.onreadystatechange = callbackInListbookTemple;
+}
+</script>
+
+<body>
+<cms:include file="include/head.html"></cms:include>
+<table width="960" border="0" align="center" cellspacing="0" cellpa dding="0">
+<tr>
+    <td>
+    <div id="twoContainer">
+        	<div class="twoContentHeader">
+            	<span class="twoTitle">${catalog.name}</span> <span class="twoPosition">您的位置：<cms:link type="CurrentPosition" spliter=">">{ZCMS:当前位置}</cms:link></span>
+            </div>
+          <input name="GoodsID" id="GoodsID" type="hidden"> 
+            
+            <div class="twoContent">
+                <table width="948" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td width="638" valign="top">
+                  	<div class="twoRight" style="border:none;">
+                    	<div class="twoRightContent">
+                       	  <table width="100%" border="0" cellspacing="0" cellpadding="10" class="book_list">
+                        	     <cms:list item="Goods" level="Child" pagesize="5" page="true">
+                        	  <tr>
+                        	    <td width="100" align="center">
+                                	<a href="${goods.link}" target="_blank"><img src="${level}${goods.image0}" width="85" alt="${goods.Name}" /></a></td>
+                        	    <td>
+                                	<dl class="describe">
+                                    	<dt><a href="${goods.link}" target="_blank">${goods.Name}</a></dt>
+                                        <dd>
+                                        	<div class="red">库存数量:${goods.Store}${goods.Unit}&nbsp;已售数量:${goods.SaleCount}${goods.Unit}</div>
+                                                  市场价：￥${goods.MarketPrice}元&nbsp;&nbsp;&nbsp;销售价：<span class="price">￥${goods.Price}元</span>
+                                            <a href="javascript:void(0);" onClick="priceNote('${goods.ID}');">降价提醒</a><br />
+											作者：${goods.Author}<br /> 
+											出版社：${goods.Factory}&nbsp;&nbsp;&nbsp;出版日期：${goods.PublishDate|format=yyyy-MM-dd}<br />
+                                        </dd>
+                                    </dl><input type="hidden" value="1" id="GoodsCount">
+                                </td>
+                        	    <td width="80" align="right" valign="bottom">
+                                <a href="javascript:void(0);" onClick="addToCart('${Goods.ID}')" style="display:block; width:80px; text-align:center">加入购物车</a>
+                                <a href="javascript:void(0);" onClick="buyNow('${Goods.ID}')"><img src="../images/button_buy.gif" height="25" width="80" alt="直接购买" class="button_book" /></a>
+                                <a href="javascript:void(0);" onClick="addToFav('${Goods.ID}')"><img src="../images/button_collect.gif" height="25" width="80" alt="收藏" class="button_book" /></a></td>
+                      	      </tr>
+							  </cms:list>
+                        	 
+                            
+                      	  </table>
+                   	    </div>
+                        <div class="page">
+                        ${PageBar}
+                        </div>
+                    </div>
+                  </td>
+                  <td valign="top" width="310">
+                  	<div class="threeContentRight" style="margin-top:18px; margin-left:0px; margin-bottom:18px;">
+                	<div class="threeTuijianHeader">
+                    	<h3>${Catalog.name}</h3>
+                        <p style="width:280px;"><a href="${Catalog.link}">更多</a>>></p>
+                    </div>
+                    <div class="threeTuijianContent" style="width:269px;">
+                   	  <table width="268" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <cms:list item="Article" type="Recent" name="精彩专题" count="2">
+                                <td class="threeTuijianPic">
+                                    <a href="${Article.Link}" target="_blank"><img src="../${Article.ImagePath}" height="90" width="120"/></a><br />
+                                    <a href="${Article.Link}" target="_blank">${Article.Title|charwidth=10}</a>
+                                </td>
+                            </cms:list>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <ul>
+                                      <cms:list item="Article" type="Recent" name="精彩专题" count="5" begin=2>
+                                        <li><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=20}</a></li>
+                                      </cms:list>
+                                    </ul>
+            
+                                </td>
+                            </tr>
+                        </table>      	
+                  </div>
+                  
+                  <div class="threeXinzhiHeader" style="margin-top:15px;">
+                    	<h3>今日导读</h3>
+                        <p style="width:280px;"><a href="<cms:link type='Catalog' name='今日导读'/>">更多</a>>></p>
+                    </div>
+                    <div class="threeTuijianContent" style="width:269px;">
+                   	  <table width="268" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <cms:list item="Article"  name="今日导读" count="2">
+                                <td class="threeTuijianPic">
+                                    <a href="${Article.Link}" target="_blank"><img src="../${Article.ImagePath}" height="90" width="120"/></a><br />
+                                    <a href="${Article.Link}" target="_blank">${Article.Title|charwidth=10}</a>
+                                </td>
+                                </cms:list>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <ul>
+                                      <cms:list item="Article"  count="5" begin=2 name="今日导读">
+                                        <li><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=20}</a></li>
+                                      </cms:list>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>      	
+                  </div>
+                </div>
+                  </td>
+                </tr>
+              </table>
+            	
+        </div>
+        </div>
+    </td>
+  </tr>
+ </table>
+<cms:include file="include/footer.html"></cms:include>
+
+</body>
+</html>

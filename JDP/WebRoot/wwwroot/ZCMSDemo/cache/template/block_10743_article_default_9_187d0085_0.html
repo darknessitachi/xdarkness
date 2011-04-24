@@ -1,0 +1,9 @@
+<!--循环：article count：9-->
+<% DataTable dt_45 = TemplateData.getDocList("article","封面秀","current","null","null","9","null");
+if(dt_45==null){write("没有找到栏目。parent：null  catalog：封面秀");}else{
+for(int i=0;i<dt_45.getRowCount();i++){
+DataRow article_45  = dt_45.getDataRow(i);
+%>
+
+                            <td width="100" align="center"><a href="${article_45.link}" target="_blank"> <img src="${article_45.RoolImage}" width="83" height="113" hspace="5" vspace="5"/></a></td>
+                          <%}}%>

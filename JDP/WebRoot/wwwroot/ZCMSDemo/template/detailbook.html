@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>${goods.name}</title>
+<link href="../images/kj3.css" type="text/css" rel="stylesheet" />
+<link href="../images/book.css" type="text/css" rel="stylesheet" />
+<script language="javascript">
+function setTab(n) {
+	var tlis = document.getElementById('introduction_menu').getElementsByTagName('li');
+	var mlis = document.getElementById('introduction_main').getElementsByTagName('div');
+	for(i=0;i<tlis.length;i++) {
+		tlis[i].className=i==n?'current':'';
+		mlis[i].style.display=i==n?'block':'none';
+	}
+}
+
+function callbackInDetailbookTemple(){
+	try{
+		if (req.readyState==4&&req.status==200){
+            var txt = req.responseText;
+            var flag = txt.substring(0,1);
+            txt = txt.substring(2);
+            if(flag=="Y"){
+            	alert(txt);
+				var siteID = document.getElementById("SiteID").value;
+				var cmscontext = document.getElementById("cmscontext").value;
+            	window.open(cmscontext + "/Shop/Web/Favorite.jsp?cur=Menu_Fav&SiteID=" + siteID);
+            }else{
+            	alert(txt);
+            }
+        }
+    }catch(ex){
+    	alert(ex);
+    };
+}
+
+function addToFav(GoodsID){
+	req = getXMLHttpRequest();
+	var siteID = document.getElementById("SiteID").value;
+	var cmscontext = document.getElementById("cmscontext").value;
+	var url = cmscontext + "/Shop/Web/AddToFavorite.jsp?GoodsID=" + GoodsID + "&SiteID=" + siteID +　"&PriceNote=N";
+	req.open("POST", url, true);
+	req.send(null);
+	req.onreadystatechange = callbackInDetailbookTemple;
+}
+
+function addCart(GoodsID){
+	
+	req = getXMLHttpRequest();
+	var siteID = document.getElementById("SiteID").value;
+	var cmscontext = document.getElementById("cmscontext").value;
+	var url = cmscontext + "/Shop/Web/AddShopCart.jsp?GoodsID=" + GoodsID + "&SiteID=" + siteID + "&BuyNowFlag=0";
+	req.open("POST", url, true);
+	req.send(null);
+	req.onreadystatechange = callbackInDetailbookTemple;
+}
+
+function buyNow(GoodsID) {
+	var siteID = document.getElementById("SiteID").value;
+	var cmscontext = document.getElementById("cmscontext").value;
+	window.open(cmscontext + "/Shop/Web/AddShopCart.jsp?GoodsID=" + GoodsID + "&SiteID=" + siteID + "&BuyNowFlag=1");
+}
+
+function urlLink(){
+    window.open(cmscontext+"/Shop/Web/ShopCart.jsp?SiteID=" + '${Site.ID}', "ShopCart");
+}
+
+function priceNote(GoodsID) {
+	req = getXMLHttpRequest();
+	var siteID = document.getElementById("SiteID").value;
+	var cmscontext = document.getElementById("cmscontext").value;
+	var url = cmscontext + "/Shop/Web/AddToFavorite.jsp?GoodsID=" + GoodsID + "&SiteID=" + siteID +　"&PriceNote=Y";
+	req.open("POST", url, true);
+	req.send(null);
+	req.onreadystatechange = callbackInDetailbookTemple;
+}
+</script>
+</head>
+
+<body>
+<cms:include file="include/head.html"></cms:include>
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>
+   	  <div class="threeContentHeader">
+        	<h2>科普书籍</h2>
+            <p>您的位置:<cms:link type="CurrentPosition" spliter=">">{ZCMS:当前位置}</cms:link>
+            </p>
+        </div>
+      <table width="960" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="660" valign="top">
+            	<!-- 左侧内容 -->
+           	  <div class="threeContentLeft book_detail">
+               	<h3 class="name">${goods.name}</h3>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td rowspan="3" width="170" align="center";><img src="${level}${goods.image0}" width="140" alt="${goods.name}" /></td>
+                        <td style="padding-left:10px;">
+                            <table width="100%" border="0">
+                              <tr>
+                                <td width="52%"><span style="width:100%;">作者：<span class="red">${goods.Author}</span></span></td>
+                                <td width="48%">字数：${goods.WordCount}</td>
+                              </tr>
+                              <tr>
+                                <td><span style="width:100%;">出版社：<span class="red">${goods.Factory}</span></span></td>
+                                <td>页数：${goods.PageCount}</td>
+                              </tr>
+                              <tr>
+                                <td>出版日期：${goods.PublishDate|Format=yyyy-MM-dd}</td>
+                                <td>包装：${goods.baozhuang}</td>
+                              </tr>
+                              <tr>
+                                <td>ISBN：${goods.ISBN}</td>
+                                <td>规格：${goods.Standard}</td>
+                              </tr>
+                            </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><hr /></td>
+                      </tr>
+                      <tr>
+                        <td style="padding-left:10px;">
+                        	市场价：￥${goods.MarketPrice}元&nbsp;&nbsp;&nbsp;销售价：<span class="price">￥${goods.Price}元</span>
+                        	<a href="javascript:void(0);" onClick="priceNote('${goods.ID}');">降价提醒</a><br />
+                            <span class="red">库存:${goods.Store}${goods.Unit}</span><br/><br/>
+                            <a href="javascript:addCart(${goods.ID});">加入购物车</a>
+                            <a href="javascript:buyNow('${Goods.ID}');"><img src="../images/button_buy.gif" height="25" width="80" alt="直接购买" class="button_book" /></a>
+                            <a href="javascript:addToFav('${Goods.ID}');"><img src="../images/button_collect.gif" height="25" width="80" alt="收藏" class="button_book" /></a>
+                        </td>
+                      </tr>
+                </table>
+                
+                <!-- 内容简介 -->
+                <div class="introduction">
+                	<ul id="introduction_menu" class="introduction_menu">
+                    	<li class="current" style="margin-left:20px;" onmouseover="setTab(0)"><a href="#">内容简介</a></li>
+                        <li onmouseover="setTab(1)"><a href="#">编辑推荐</a></li>
+                        <li onmouseover="setTab(2)"><a href="#">作者简介</a></li>
+                    </ul>
+                    <div id="introduction_main" class="introduction_main">
+                    	<div class="block"><%=goods.getString("neirongjianjie").replaceAll("\\n","<br>")%></div>
+                        <div><%=goods.getString("bianjituijian").replaceAll("\\n","<br>")%></div>
+                        <div><%=goods.getString("zuozhejianjie").replaceAll("\\n","<br>")%></div>
+                    </div>
+                </div>
+                <!-- 内容简介结束 -->
+                
+                <!-- 评论 -->
+                <div style="margin:0px 15px;"><cms:comment count="5">{ZCMS:评论区域}</cms:comment>
+</div>
+                <!-- 评论结束 -->
+           	  </div>
+              <!-- 左侧内容结束 -->
+            </td>
+            <td valign="top" width="310">
+                  	<div class="threeContentRight" style="margin-top:18px; margin-left:0px; margin-bottom:18px;">
+                	<div class="threeTuijianHeader">
+                    	<h3>${Catalog.name}</h3>
+                        <p style="width:280px;"><a href="${Catalog.link}">更多</a>>></p>
+                    </div>
+                    <div class="threeTuijianContent" style="width:269px;">
+                   	  <table width="268" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <cms:list item="Article" type="Recent" name="精彩专题" count="2">
+                                <td class="threeTuijianPic">
+                                    <a href="${Article.Link}" target="_blank"><img src="../${Article.ImagePath}" height="90" width="120"/></a><br />
+                                    <a href="${Article.Link}" target="_blank">${Article.Title|charwidth=10}</a>
+                                </td>
+                            </cms:list>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <ul>
+                                      <cms:list item="Article" type="Recent" name="精彩专题" count="5" begin=2>
+                                        <li><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=20}</a></li>
+                                      </cms:list>
+                                    </ul>
+            
+                                </td>
+                            </tr>
+                        </table>      	
+                  </div>
+                  
+                  <div class="threeXinzhiHeader" style="margin-top:15px;">
+                    	<h3>今日导读</h3>
+                        <p style="width:280px;"><a href="<cms:link type='Catalog' name='今日导读'/>">更多</a>>></p>
+                    </div>
+                    <div class="threeTuijianContent" style="width:269px;">
+                   	  <table width="268" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <cms:list item="Article"  name="今日导读" count="2">
+                                <td class="threeTuijianPic">
+                                    <a href="${Article.Link}" target="_blank"><img src="../${Article.ImagePath}" height="90" width="120"/></a><br />
+                                    <a href="${Article.Link}" target="_blank">${Article.Title|charwidth=10}</a>
+                                </td>
+                                </cms:list>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <ul>
+                                      <cms:list item="Article"  count="5" begin=2 name="今日导读">
+                                        <li><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=20}</a></li>
+                                      </cms:list>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>      	
+                  </div>
+                </div>
+                  </td>
+        </tr>
+    </table></td>
+  </tr>
+</table>
+<cms:include file="include/footer.html"></cms:include>
+</body>
+</html>

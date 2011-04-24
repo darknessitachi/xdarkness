@@ -1,0 +1,61 @@
+<td valign="top" width="310">
+<div class="threeContentRight" style="margin-top:18px; margin-left:0px; margin-bottom:18px;">
+        <div class="threeTuijianHeader">
+            <h3>魅力科学</h3>
+            <p style="width:280px;"><a href="<cms:link type='Catalog' name='魅力科学'/>">更多</a>>></p>
+        </div>
+        <div class="threeTuijianContent" style="width:269px;">
+            <table width="268" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <cms:list item="Article" type="Recent" name="魅力科学" count="2">
+                    <td class="threeTuijianPic">
+                        <a href="${Article.Link}" target="_blank"><img src="../${Article.ImagePath}" height="90" width="120"/></a><br />
+                        <a href="${Article.Link}" target="_blank">${Article.Title|charwidth=10}</a>
+                    </td>
+                </cms:list>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <ul>
+                          <cms:list item="Article" type="Recent" count="5" begin=2 name="魅力科学">
+                            <li><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=20}</a></li>
+                          </cms:list>
+                        </ul>
+
+                    </td>
+                </tr>
+            </table>      	
+      </div>
+      
+      <div class="threeXinzhiHeader" style="margin-top:15px;">
+            <h3>今日导读</h3>
+            <p style="width:280px;"><a href="<cms:link type='Catalog' name='今日导读'/>">更多</a>>></p>
+        </div>
+        <div class="threeTuijianContent" style="width:269px;">
+            <table width="268" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <cms:list item="Article"  name="今日导读" count="2">
+                    <td class="threeTuijianPic">
+                        <a href="${Article.Link}" target="_blank"><img src="../${Article.ImagePath}" height="90" width="120"/></a><br />
+                        <a href="${Article.Link}" target="_blank">${Article.Title|charwidth=10}</a>
+                    </td>
+                	</cms:list>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <ul>
+                          <cms:list item="Article"  count="5" begin=2 name="今日导读">
+                            <li><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=20}</a></li>
+                          </cms:list>
+                        </ul>
+                    </td>
+                </tr>
+            </table>      	
+      </div>
+      
+      <div class="threeAd">
+     <cms:ad name="详细页横幅" size="290*240" type="1">{ZCMS:广告版位 名称:详细页横幅}</cms:ad>
+
+      </div>
+    </div>
+</td>

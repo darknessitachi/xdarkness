@@ -1,0 +1,12 @@
+
+                    	<div class="twoRightContent">
+                        	<ul>
+                            	<cms:list item="Article" name="科学在线,生活百科" pagesize="5" page="true">
+                                	<li><a href="${Article.Link}" target="_blank">${Article.Title|CharWidth=30}</a><span>&nbsp;[${Article.PublishDate|Format=yy年MM月dd日}]</span></li>
+                              </cms:list>
+                            </ul>
+                        </div>
+                        <div class="page">
+                            	${pagebar}
+                        </div>
+  

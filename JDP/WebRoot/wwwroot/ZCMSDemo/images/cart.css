@@ -1,0 +1,21 @@
+@charset "gb2312";
+/* CSS Document */
+.container{ text-align:center;}
+.container .gouwu{ text-align:right; margin:25px 5px 5px; padding-right:20px;}
+.container .gouwu h1{ font-size:25px; color:#0568c5; font-family:"黑体"; float:left; margin-top:-15px; font-weight:normal; padding-left:20px;}
+.container table{ text-align:left; clear:both;}
+.container tr.title{ font-weight:bold; background-color:#f4f4f4;}
+.container tr.title td{ border-bottom:1px solid #CBCBCB; padding:12px 0 7px; font-size:13px; color:#1f376d;}
+.container td.num{ vertical-align:top; color:#666;}
+.container td img{ border:1px solid #d8d8d8;}
+.container tr.middle td{ border-bottom:1px solid #cbcbcb;}
+.container td input{ width:30px; padding:2px 0; margin:0;}
+.container td.btn a{ display:block; margin:10px 0; text-align:right; padding-right:20px;}
+.container td.btn img{ border:none;}
+.container tr.bottom td{ background-color:#f7f7f7;}
+.gouwubtn{ padding:27px 18px 29px; text-align:right;}
+.about{ margin:0 5px; text-align:left;}
+.about h2{ color:#1F376D; background-color:#e5f3fe; padding:5px 20px; font-size:13px;}
+.about ol{ margin:12px 20px 23px; list-style:none; padding:0px;}
+.book_name{ font-size:16px; font-weight:bold; color:#1f376d;}
+.red{ color:#900;}

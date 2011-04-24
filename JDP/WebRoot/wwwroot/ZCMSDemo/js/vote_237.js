@@ -1,0 +1,17 @@
+document.write("<div id='vote_237' class='votecontainer' style='text-align:left' >");
+document.write(" <form id='voteForm_237' name='voteForm_237' action='http://localhost:8080/ZCMS/Services/VoteResult.jsp' method='post' target='_blank'>");
+document.write(" <input type='hidden' id='ID' name='ID' value='237'>");
+document.write(" <input type='hidden' id='VoteFlag' name='VoteFlag' value='Y'>");
+document.write(" <dl>");
+document.write("  <dt id='414'>1.你觉得ZCMS怎么样？</dt>");
+document.write("<dd><textarea style='height:60px;width:500px;vertical-align:top;' id='Subject_414' name='Subject_414'></textarea></dd>");
+document.write("  <dt id='415'>2.你觉得泽元软件公司怎么样？</dt>");
+document.write("<dd><label><input name='Subject_415' type='checkbox' value='1908' />好</label></dd>");
+document.write("<dd><label><input name='Subject_415' type='checkbox' value='1909' />一般</label></dd>");
+document.write("<dd><label><input name='Subject_415' type='checkbox' value='1910' />不好</label></dd>");
+document.write("<dd><label><input name='Subject_415' type='checkbox' value='1911' />差</label></dd>");
+document.write(" <dl>");
+document.write(" <dd><input type='submit' value='提交' onclick='return checkVote(237);'>&nbsp;&nbsp<input type='button' value='查看' onclick='javascript:window.open(\"http://localhost:8080/ZCMS/Services/VoteResult.jsp?ID=237\",\"VoteResult\")'></dd>");
+document.write(" </dl>");
+document.write(" </form>");
+document.write("</div>");

@@ -1,0 +1,9 @@
+<!--循环：article count：7-->
+<% DataTable dt_8 = TemplateData.getDocList("article","海外趣闻","current","null","Recent","7","null");
+if(dt_8==null){write("没有找到栏目。parent：null  catalog：海外趣闻");}else{
+for(int i=0;i<dt_8.getRowCount();i++){
+DataRow article_8  = dt_8.getDataRow(i);
+%>
+
+          <li><a href="${article_8.Link}" target="_blank">${article_8.Title|CharWidth=20}</a>&nbsp;${article_8.PublishDate|Format=yyyy-MM-dd}</li>
+        <%}}%>

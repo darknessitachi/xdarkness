@@ -1,0 +1,35 @@
+<!-- 图片播放器 类型一：后台管理的播放器 -->
+<cms:imageplayer code="index">图片播放器</cms:imageplayer>
+
+
+
+
+
+
+<!--图片播放器 类型二：针对栏目的图片播放器  例如：栏目的名称为'图片新闻'  -->
+<script type="text/javascript">
+	var pics,links,texts="";
+	var aUrls=[],aTexts=[],aLinks=[];
+	<cms:list item="article" count="4" begin="0" type="recent" name="图片新闻">                          
+	aUrls.push("${level}${article.ArticleLogo}");  //ArticleLogo为图片新闻栏目的文档自定义字段 类型为图片
+	aTexts.push("${article.Title|charwidth=20}");
+	aLinks.push(escape("${article.link}"));
+	</cms:list>
+	
+	
+	var focus_width=290;         //设置图片播放器的宽
+	var focus_height=204;        //设置图片播放器的高
+	var text_height=20;          //播放器图片下的文字  图片播放器的总高度为204+20
+	var swf_height = focus_height+text_height;
+	
+	var pics=aUrls.join("|");
+	var links=aLinks.join("|");
+	var texts=aTexts.join("|");
+	var flashCode = '<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/hotdeploy/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">';
+	flashCode = flashCode + '<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="images/focus2.swf"><param name="quality" value="high"><param name="bgcolor" value="#F0F0F0">';
+	flashCode = flashCode + '<param name="menu" value="false"><param name=wmode value="opaque">';
+	flashCode = flashCode + '<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">';
+	flashCode = flashCode + '<embed src="images/focus2.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="'+ focus_width +'" height="'+ swf_height +'" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'"></embed>';
+	flashCode = flashCode + '</object>';
+	document.write(flashCode);	                            	
+</script>

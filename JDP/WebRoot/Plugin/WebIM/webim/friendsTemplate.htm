@@ -1,0 +1,27 @@
+﻿#foreach($u in $ListUsers)
+#beforeall
+<table id="tbUsers" style="font-size:12px; border:1px;" count="$Count">
+    <tr>
+        <td style="width:80px;text-align:center;"><input type="checkbox" id="ckAllId" name="ckAllId" style="border:none;" onclick="LayoutAddFriends.selectAll(this);" /></td>
+        <td style="width:80px;text-align:left;">编号</td>
+        <td style="width:184px; padding-left:10px;">姓名</td>
+    </tr>
+    
+     #each
+     
+    <tr>
+        <td style="text-align:center;">
+            #if ( !$u.IsFriend ) 
+            <input type="checkbox" name="ckUserId" userId="$u.Id" userName="$u.UserName" loginName="$u.LoginName" isOutter="$u.IsOutter" style="border:none;" onclick="LayoutAddFriends.saveFriendsInfo(this);" />
+            #end 
+            #if ( $u.IsFriend ) 
+            <input type="checkbox" name="ckUserId" userId="$u.Id" userName="$u.UserName" loginName="$u.LoginName" isOutter="$u.IsOutter" style="border:none;" disabled="disabled" checked="checked" />
+            #end 
+        </td>
+        <td style="text-align:left; padding-left:10px;">$u.Index</td>
+        <td>$u.UserName</td>
+    </tr>
+    
+#afterall
+</table>
+#end

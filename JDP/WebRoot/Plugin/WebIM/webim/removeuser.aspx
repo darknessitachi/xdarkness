@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="removeuser.aspx.cs" Inherits="Sky.WebIm.removeuser" %>

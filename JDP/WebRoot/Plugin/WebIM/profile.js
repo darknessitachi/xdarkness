@@ -1,0 +1,67 @@
+var Profile = {
+    imPanelLeft: 226,
+    imPanelHeight: 60,
+    logoutPanelTop: 63,
+    userPanelHeight: 155,
+    
+    chatDivDateTop: 76,
+    chatButtonLeft: 43,
+    chatToolbarTop: 140,
+    chatFontLinkTop: 132,
+    chatDivDateLeft: 133,
+    chatDialogHeight: 57,
+    chatContentWidth: 16,
+    chatContentHeight: 164,
+    chatSendContentTop: 112,
+    chatSendContentWidth: 20,
+    chatCurrentMessageLeft: 329,
+    chatCurrentMessageHeight: 82,
+        
+    chatButtonSourceLeft: 88,
+    chatDivDateSourceTop: 318,
+    chatToolbarSourceTop: 252,
+    chatFontLinkSourceTop: 260,
+    chatDialogSourceWidth: 320,
+    chatButtonSourceWidth: 233,
+    chatDivDateSourceLeft: 515,
+    chatDialogSourceHeight: 335,
+    chatContentSourceWidth: 310,
+    chatContentSourceHeight: 229,
+    chatContainerSourceWidth: 324,
+    chatSendContentSourceTop: 280,
+    chatSendContentSourceWidth: 304,
+    chatCurrentMessageSourceLeft: 319,
+    chatCurrentMessageSourceWidth: 318,
+    chatCurrentMessageSourceHeight: 310,
+    
+    unknowGroup: "陌生人",
+    gruopArrowFoot: "/window/",
+    groupArrowTopImage: "arrow.png",
+    groupArrowFootImage: "arrow_up.png",
+    groupArrowTop: "../include/themes/",
+        
+    chatPanelTotal: 3,
+    chatPanelOverError: "<br />同时聊天窗口过多，请关闭一些后，再进行聊天！",
+    
+    contentLength: 200,
+    contentFontColorNewLine: 5,
+    contentFontSize: "8, 10, 12, 14, 16, 18, 20, 22, 24",
+    contentFontFamily: "宋体,新宋体,黑体,华文宋体,仿宋_GB2312,Arial, Comic Sans MS, Courier New, Garamond, Georgia, Impact, Tahoma, Verdana",
+    contentFontColor: "#000000,#b8b8b8,#b4ad3b,#bb5c54,#755a5c,#a9b5ef,#d65a20,#e39230,#a71334,#590099,#d40088,#0030ac,#676f11,#769321,#3966fe",
+    
+    busyStatus: 1,
+    onLineStatus: 0,
+    offLineStatus: 2,
+    userStatus: ["在线", "忙碌", "离线"],
+    userStatusIconPath: "../include/images/",
+    userStatusIconList: ["online.png", "away.png", "offline.png"],
+    
+    userHeadImageCount: 14,
+    userHeadImage: "1.gif",
+    userHeadImagePath: "../upload/head/",
+    userDefaultHeadImagePath: "../include/images/head/",
+        
+    themes: ["dark"],
+    //basePath: "c:\\imcm"
+    basePath: "\\imcm"
+};

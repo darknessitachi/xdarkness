@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="sendcontent.aspx.cs" Inherits="Sky.WebIm.sendcontent" %>

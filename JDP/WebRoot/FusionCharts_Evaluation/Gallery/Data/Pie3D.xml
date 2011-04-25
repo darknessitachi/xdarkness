@@ -1,0 +1,10 @@
+<chart palette='4' decimals='0' enableSmartLabels='1' baseFontSize='11'
+	enableRotation='0' bgColor='99CCFF,FFFFFF' bgAlpha='40,100' 
+	bgRatio='0,100' bgAngle='360' showBorder='1' startingAngle='70' >
+            <set label='其他行政事项' value='17'  />
+            <set label='行政服务事项' value='12' />
+            <set label='行政强制' value='18' />
+            <set label='行政征收' value='8' isSliced='1'/>
+            <set label='行政许可' value='10' isSliced='1'/>
+            <set label='心中处罚' value='16' isSliced='1'/>
+</chart>

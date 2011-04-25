@@ -1,0 +1,37 @@
+﻿<html>
+	<head>
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="expires" content="0">
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<link href="TreePanel.css" rel="stylesheet" type="text/css">
+		<script type=text/javascript src="common.js"></script>
+		<script type=text/javascript src="jquery.js"></script>
+		<script type=text/javascript src="TreePanel.js"></script>
+		<script type=text/javascript src="china_2_code.js"></script>
+	</head>
+<body>
+	<div id='tree-div'></div>
+</body>
+<script type=text/javascript>
+	root = {
+		'text':'根',children:[
+			{'text':'google','URL':'http://www.google.com'},
+			{'text':'baidu','URL':'http://www.baidu.com'}
+		]
+	}
+	tree = new TreePanel({
+		renderTo:'tree-div',
+		'root' : root
+	});
+	tree.render();
+	//选择事件
+	tree.on(function(node){
+		alert( '你选中的是'+ node.attributes.text );
+		if(node.attributes.URL){
+			var elframe1 = parent.document.getElementById('content');
+			elframe1.src=node.attributes.URL;
+		}
+	})
+
+</script>
+</html>

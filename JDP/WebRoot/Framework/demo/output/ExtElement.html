@@ -1,0 +1,1529 @@
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../resources/ext-all.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/docs.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/style.css" />
+		<script>
+		window.onload=function(){
+			var tds = document.getElementsByTagName('td');
+			for(var i=0;i<tds.length;i++) {
+				var td = tds[i];
+				if(td.name != 'methodTd') continue;
+				td.onclick = dispalyRow;
+			}
+		}
+		function dispalyRow() {
+			var className = this.parentElement.className;
+			this.parentElement.className = className.indexOf('expanded')>0?'method-row expandable ':'method-row expandable expanded';
+		}
+		</script>
+	</head>
+	<body style="overflow:auto">
+		<div class="body-wrap">
+			<div class="top-tools">
+				<a class="inner-link" href="#String-props"><img
+						src="../../resources/images/default/blank.gif"
+						style="border-color: #0000ff;" class="item-icon icon-prop">属性</a>&#13;
+				<a class="inner-link" href="#String-methods"><img
+						src="../../resources/images/default/blank.gif"
+						class="item-icon icon-method">方法</a>&#13;
+				<a class="inner-link" href="#String-events"><img
+						src="../../resources/images/default/blank.gif"
+						class="item-icon icon-event">事件</a>&#13;
+			</div>
+			<h1>
+				类
+				<a href="#">ExtElement</a>
+			</h1>
+			<table cellspacing="0">
+				<tr>
+					<td class="label">
+						包:
+					</td>
+					<td class="hd-info">
+						全局
+					</td>
+				</tr>
+				<tr>
+					<td class="label">
+						定义在:
+					</td>
+					<td class="hd-info">
+						<a href="#">Core.js</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="label">
+						类:
+					</td>
+					<td class="hd-info">
+						<a href="#">ExtElement</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="label">
+						继承:
+					</td>
+					<td class="hd-info">
+						Object
+					</td>
+				</tr>
+			</table>
+			<div class="description">
+				DOM元素的扩展，提供一些常用辅助函数
+			</div>
+			<div class="hr"></div>
+			<a id="String-props"></a>
+			<h2>
+				公有属性
+			</h2>
+									<div class="no-members">
+				这个类没有公有属性.
+			</div>
+						<a id="String-methods"></a>
+			<h2>
+				公有方法
+			</h2>
+						<table cellspacing="0" class="member-table">
+				<tbody>
+					<tr>
+						<th colspan="2" class="sig-header">
+							方法
+						</th>
+						<th class="msource-header">
+							属于
+						</th>
+					</tr>
+															<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">$A</a></b>(&nbsp;
+							<code>
+																String attr 
+																， Object ele 
+															</code>
+							&nbsp;) : Object
+							<div class="mdesc">
+								<div class="short">
+									&lt;&gt;&nbsp;获取元素的属性
+								</div>
+								<div class="long">
+									&lt;&gt;&nbsp;获取元素的属性
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+																						
+											<li>
+												<code>
+													attr
+												</code>
+												: String
+												<div class="sub-desc">
+													属性名称
+												</div>
+											</li>
+											
+																						
+											<li>
+												<code>
+													ele
+												</code>
+												: Object
+												<div class="sub-desc">
+													DOM元素对象或其id
+												</div>
+											</li>
+											
+																						
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													Object
+												</code>
+												<div class="sub-desc">
+													属性的值
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							ExtElement
+						</td>
+					</tr>
+																				<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">$T</a></b>(&nbsp;
+							<code>
+																String tagName 
+																， Object ele 
+															</code>
+							&nbsp;) : Array
+							<div class="mdesc">
+								<div class="short">
+									&lt;&gt;&nbsp;获取元素下指定的标签对象
+								</div>
+								<div class="long">
+									&lt;&gt;&nbsp;获取元素下指定的标签对象
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+																						
+											<li>
+												<code>
+													tagName
+												</code>
+												: String
+												<div class="sub-desc">
+													标签的名称
+												</div>
+											</li>
+											
+																						
+											<li>
+												<code>
+													ele
+												</code>
+												: Object
+												<div class="sub-desc">
+													DOM元素对象或其id
+												</div>
+											</li>
+											
+																						
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													Array
+												</code>
+												<div class="sub-desc">
+													对象数组
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							ExtElement
+						</td>
+					</tr>
+																				<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">visible</a></b>(&nbsp;
+							<code>
+																Object ele 
+															</code>
+							&nbsp;) : Boolean
+							<div class="mdesc">
+								<div class="short">
+									&lt;&gt;&nbsp;查看元素是否可见
+								</div>
+								<div class="long">
+									&lt;&gt;&nbsp;查看元素是否可见
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+																						
+											<li>
+												<code>
+													ele
+												</code>
+												: Object
+												<div class="sub-desc">
+													DOM元素对象或其id
+												</div>
+											</li>
+											
+																						
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													Boolean
+												</code>
+												<div class="sub-desc">
+													元素是否可见
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							ExtElement
+						</td>
+					</tr>
+																				<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">toggle</a></b>(&nbsp;
+							<code>
+																Object ele 
+															</code>
+							&nbsp;) : void
+							<div class="mdesc">
+								<div class="short">
+									&lt;&gt;&nbsp;展开或收缩元素
+								</div>
+								<div class="long">
+									&lt;&gt;&nbsp;展开或收缩元素
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+																						
+											<li>
+												<code>
+													ele
+												</code>
+												: Object
+												<div class="sub-desc">
+													DOM元素对象或其id
+												</div>
+											</li>
+											
+																						
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													void
+												</code>
+												<div class="sub-desc">
+													
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							ExtElement
+						</td>
+					</tr>
+																				<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">toString</a></b>(&nbsp;
+							<code>
+																Boolean flag 
+																， Number index 
+																， Object ele 
+															</code>
+							&nbsp;) : String
+							<div class="mdesc">
+								<div class="short">
+									&lt;&gt;&nbsp;查看元素的所有属性
+								</div>
+								<div class="long">
+									&lt;&gt;&nbsp;查看元素的所有属性
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+																						
+											<li>
+												<code>
+													flag
+												</code>
+												: Boolean
+												<div class="sub-desc">
+													是否显示函数内容
+												</div>
+											</li>
+											
+																						
+											<li>
+												<code>
+													index
+												</code>
+												: Number
+												<div class="sub-desc">
+													从第几个下标开始
+												</div>
+											</li>
+											
+																						
+											<li>
+												<code>
+													ele
+												</code>
+												: Object
+												<div class="sub-desc">
+													DOM元素
+												</div>
+											</li>
+											
+																						
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													String
+												</code>
+												<div class="sub-desc">
+													包含元素所有属性的字符串
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							ExtElement
+						</td>
+					</tr>
+																				<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">focusEx</a></b>(&nbsp;
+							<code>
+																Object ele 
+															</code>
+							&nbsp;) : void
+							<div class="mdesc">
+								<div class="short">
+									&lt;&gt;&nbsp;函数获得焦点
+								</div>
+								<div class="long">
+									&lt;&gt;&nbsp;函数获得焦点
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+																						
+											<li>
+												<code>
+													ele
+												</code>
+												: Object
+												<div class="sub-desc">
+													DOM元素对象或其id
+												</div>
+											</li>
+											
+																						
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													void
+												</code>
+												<div class="sub-desc">
+													
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							ExtElement
+						</td>
+					</tr>
+																				<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">getForm</a></b>(&nbsp;
+							<code>
+																Object ele 
+															</code>
+							&nbsp;) : Element
+							<div class="mdesc">
+								<div class="short">
+									&lt;&gt;&nbsp;获取该元素所在的form对象
+								</div>
+								<div class="long">
+									&lt;&gt;&nbsp;获取该元素所在的form对象
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+																						
+											<li>
+												<code>
+													ele
+												</code>
+												: Object
+												<div class="sub-desc">
+													DOM元素对象或其id
+												</div>
+											</li>
+											
+																						
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													Element
+												</code>
+												<div class="sub-desc">
+													表单对象
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							ExtElement
+						</td>
+					</tr>
+																				<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">hide</a></b>(&nbsp;
+							<code>
+																Object ele 
+															</code>
+							&nbsp;) : void
+							<div class="mdesc">
+								<div class="short">
+									&lt;&gt;&nbsp;隐藏元素
+								</div>
+								<div class="long">
+									&lt;&gt;&nbsp;隐藏元素
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+																						
+											<li>
+												<code>
+													ele
+												</code>
+												: Object
+												<div class="sub-desc">
+													DOM元素对象或其id
+												</div>
+											</li>
+											
+																						
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													void
+												</code>
+												<div class="sub-desc">
+													
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							ExtElement
+						</td>
+					</tr>
+																				<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">show</a></b>(&nbsp;
+							<code>
+																Object ele 
+															</code>
+							&nbsp;) : void
+							<div class="mdesc">
+								<div class="short">
+									&lt;&gt;&nbsp;显示元素
+								</div>
+								<div class="long">
+									&lt;&gt;&nbsp;显示元素
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+																						
+											<li>
+												<code>
+													ele
+												</code>
+												: Object
+												<div class="sub-desc">
+													DOM元素对象或其id
+												</div>
+											</li>
+											
+																						
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													void
+												</code>
+												<div class="sub-desc">
+													
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							ExtElement
+						</td>
+					</tr>
+																				<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">disable</a></b>(&nbsp;
+							<code>
+																Object ele 
+															</code>
+							&nbsp;) : void
+							<div class="mdesc">
+								<div class="short">
+									&lt;&gt;&nbsp;禁用元素
+								</div>
+								<div class="long">
+									&lt;&gt;&nbsp;禁用元素
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+																						
+											<li>
+												<code>
+													ele
+												</code>
+												: Object
+												<div class="sub-desc">
+													DOM元素对象或其id
+												</div>
+											</li>
+											
+																						
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													void
+												</code>
+												<div class="sub-desc">
+													
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							ExtElement
+						</td>
+					</tr>
+																				<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">enable</a></b>(&nbsp;
+							<code>
+																Object ele 
+															</code>
+							&nbsp;) : void
+							<div class="mdesc">
+								<div class="short">
+									&lt;&gt;&nbsp;启用元素
+								</div>
+								<div class="long">
+									&lt;&gt;&nbsp;启用元素
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+																						
+											<li>
+												<code>
+													ele
+												</code>
+												: Object
+												<div class="sub-desc">
+													DOM元素对象或其id
+												</div>
+											</li>
+											
+																						
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													void
+												</code>
+												<div class="sub-desc">
+													
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							ExtElement
+						</td>
+					</tr>
+																														<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">getDimensions</a></b>(&nbsp;
+							<code>
+																Object ele 
+															</code>
+							&nbsp;) : Object
+							<div class="mdesc">
+								<div class="short">
+									&lt;&gt;&nbsp;获取元素的大小
+								</div>
+								<div class="long">
+									&lt;&gt;&nbsp;获取元素的大小
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+																						
+											<li>
+												<code>
+													ele
+												</code>
+												: Object
+												<div class="sub-desc">
+													DOM元素对象或其id
+												</div>
+											</li>
+											
+																						
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													Object
+												</code>
+												<div class="sub-desc">
+													10,
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							ExtElement
+						</td>
+					</tr>
+																				<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">getPosition</a></b>(&nbsp;
+							<code>
+																Object ele 
+															</code>
+							&nbsp;) : Object
+							<div class="mdesc">
+								<div class="short">
+									&lt;&gt;&nbsp;获取元素的坐标
+								</div>
+								<div class="long">
+									&lt;&gt;&nbsp;获取元素的坐标
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+																						
+											<li>
+												<code>
+													ele
+												</code>
+												: Object
+												<div class="sub-desc">
+													DOM元素对象或其id
+												</div>
+											</li>
+											
+																						
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													Object
+												</code>
+												<div class="sub-desc">
+													10,
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							ExtElement
+						</td>
+					</tr>
+																				<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">getPositionEx</a></b>(&nbsp;
+							<code>
+																Object ele 
+															</code>
+							&nbsp;) : Object
+							<div class="mdesc">
+								<div class="short">
+									&lt;&gt;&nbsp;获取元素的坐标，计算滚动条的宽高
+								</div>
+								<div class="long">
+									&lt;&gt;&nbsp;获取元素的坐标，计算滚动条的宽高
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+																						
+											<li>
+												<code>
+													ele
+												</code>
+												: Object
+												<div class="sub-desc">
+													DOM元素对象或其id
+												</div>
+											</li>
+											
+																						
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													Object
+												</code>
+												<div class="sub-desc">
+													10,
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							ExtElement
+						</td>
+					</tr>
+																				<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">getParent</a></b>(&nbsp;
+							<code>
+																String tagName 
+																， Object ele 
+															</code>
+							&nbsp;) : Element
+							<div class="mdesc">
+								<div class="short">
+									&lt;&gt;&nbsp;获取元素指定标签名的父节点
+								</div>
+								<div class="long">
+									&lt;&gt;&nbsp;获取元素指定标签名的父节点
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+																						
+											<li>
+												<code>
+													tagName
+												</code>
+												: String
+												<div class="sub-desc">
+													父节点的标签名称
+												</div>
+											</li>
+											
+																						
+											<li>
+												<code>
+													ele
+												</code>
+												: Object
+												<div class="sub-desc">
+													DOM元素对象或其id
+												</div>
+											</li>
+											
+																						
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													Element
+												</code>
+												<div class="sub-desc">
+													父节点
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							ExtElement
+						</td>
+					</tr>
+																				<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">getParentByAttr</a></b>(&nbsp;
+							<code>
+																String attrName 
+																， String attrValue 
+																， Object ele 
+															</code>
+							&nbsp;) : Element
+							<div class="mdesc">
+								<div class="short">
+									&lt;&gt;&nbsp;根据父节点元素的属性名称获取指定父节点
+								</div>
+								<div class="long">
+									&lt;&gt;&nbsp;根据父节点元素的属性名称获取指定父节点
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+																						
+											<li>
+												<code>
+													attrName
+												</code>
+												: String
+												<div class="sub-desc">
+													父节点的属性名称
+												</div>
+											</li>
+											
+																						
+											<li>
+												<code>
+													attrValue
+												</code>
+												: String
+												<div class="sub-desc">
+													父节点属性的值
+												</div>
+											</li>
+											
+																						
+											<li>
+												<code>
+													ele
+												</code>
+												: Object
+												<div class="sub-desc">
+													DOM元素对象或其id
+												</div>
+											</li>
+											
+																						
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													Element
+												</code>
+												<div class="sub-desc">
+													父节点
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							ExtElement
+						</td>
+					</tr>
+																				<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">nextElement</a></b>(&nbsp;
+							<code>
+																Object ele 
+															</code>
+							&nbsp;) : Element
+							<div class="mdesc">
+								<div class="short">
+									&lt;&gt;&nbsp;获取该节点的下一个兄弟节点
+								</div>
+								<div class="long">
+									&lt;&gt;&nbsp;获取该节点的下一个兄弟节点
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+																						
+											<li>
+												<code>
+													ele
+												</code>
+												: Object
+												<div class="sub-desc">
+													DOM元素对象或其id
+												</div>
+											</li>
+											
+																						
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													Element
+												</code>
+												<div class="sub-desc">
+													兄弟节点
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							ExtElement
+						</td>
+					</tr>
+																				<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">previousElement</a></b>(&nbsp;
+							<code>
+																Object ele 
+															</code>
+							&nbsp;) : Element
+							<div class="mdesc">
+								<div class="short">
+									&lt;&gt;&nbsp;获取该节点的上一个兄弟节点
+								</div>
+								<div class="long">
+									&lt;&gt;&nbsp;获取该节点的上一个兄弟节点
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+																						
+											<li>
+												<code>
+													ele
+												</code>
+												: Object
+												<div class="sub-desc">
+													DOM元素对象或其id
+												</div>
+											</li>
+											
+																						
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													Element
+												</code>
+												<div class="sub-desc">
+													兄弟节点
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							ExtElement
+						</td>
+					</tr>
+																				<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">getTopLevelWindow</a></b>(&nbsp;
+							<code>
+															</code>
+							&nbsp;) : window
+							<div class="mdesc">
+								<div class="short">
+									&lt;&gt;&nbsp;获取最顶层window对象
+								</div>
+								<div class="long">
+									&lt;&gt;&nbsp;获取最顶层window对象
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+																						
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													window
+												</code>
+												<div class="sub-desc">
+													最顶层window对象
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							ExtElement
+						</td>
+					</tr>
+																				<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">hasClassName</a></b>(&nbsp;
+							<code>
+																String className 
+																， Object ele 
+															</code>
+							&nbsp;) : Boolean
+							<div class="mdesc">
+								<div class="short">
+									&lt;&gt;&nbsp;检测元素是否拥有某class样式
+								</div>
+								<div class="long">
+									&lt;&gt;&nbsp;检测元素是否拥有某class样式
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+																						
+											<li>
+												<code>
+													className
+												</code>
+												: String
+												<div class="sub-desc">
+													class样式的名称
+												</div>
+											</li>
+											
+																						
+											<li>
+												<code>
+													ele
+												</code>
+												: Object
+												<div class="sub-desc">
+													DOM元素对象或其id
+												</div>
+											</li>
+											
+																						
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													Boolean
+												</code>
+												<div class="sub-desc">
+													元素是否拥有某class样式
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							ExtElement
+						</td>
+					</tr>
+																				<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">addClassName</a></b>(&nbsp;
+							<code>
+																String className 
+																， Object ele 
+																， Boolean before 
+															</code>
+							&nbsp;) : String
+							<div class="mdesc">
+								<div class="short">
+									&lt;&gt;&nbsp;给元素添加样式
+								</div>
+								<div class="long">
+									&lt;&gt;&nbsp;给元素添加样式
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+																						
+											<li>
+												<code>
+													className
+												</code>
+												: String
+												<div class="sub-desc">
+													样式的名称
+												</div>
+											</li>
+											
+																						
+											<li>
+												<code>
+													ele
+												</code>
+												: Object
+												<div class="sub-desc">
+													DOM元素对象或其id
+												</div>
+											</li>
+											
+																						
+											<li>
+												<code>
+													before
+												</code>
+												: Boolean
+												<div class="sub-desc">
+													是否加在当前样式之前
+												</div>
+											</li>
+											
+																						
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													String
+												</code>
+												<div class="sub-desc">
+													该元素的样式
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							ExtElement
+						</td>
+					</tr>
+																				<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">removeClassName</a></b>(&nbsp;
+							<code>
+																String className 
+																， Object ele 
+															</code>
+							&nbsp;) : String
+							<div class="mdesc">
+								<div class="short">
+									&lt;&gt;&nbsp;移除样式
+								</div>
+								<div class="long">
+									&lt;&gt;&nbsp;移除样式
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+																						
+											<li>
+												<code>
+													className
+												</code>
+												: String
+												<div class="sub-desc">
+													需要移除的样式
+												</div>
+											</li>
+											
+																						
+											<li>
+												<code>
+													ele
+												</code>
+												: Object
+												<div class="sub-desc">
+													DOM元素对象或其id
+												</div>
+											</li>
+											
+																						
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													String
+												</code>
+												<div class="sub-desc">
+													该元素的样式
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							ExtElement
+						</td>
+					</tr>
+																				<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">setClassName</a></b>(&nbsp;
+							<code>
+																String className 
+																， Object ele 
+															</code>
+							&nbsp;) : Element
+							<div class="mdesc">
+								<div class="short">
+									&lt;&gt;&nbsp;给元素设置样式，原来样式将被替换
+								</div>
+								<div class="long">
+									&lt;&gt;&nbsp;给元素设置样式，原来样式将被替换
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+																						
+											<li>
+												<code>
+													className
+												</code>
+												: String
+												<div class="sub-desc">
+													样式的名称
+												</div>
+											</li>
+											
+																						
+											<li>
+												<code>
+													ele
+												</code>
+												: Object
+												<div class="sub-desc">
+													DOM元素对象或其id
+												</div>
+											</li>
+											
+																						
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													Element
+												</code>
+												<div class="sub-desc">
+													返回该对象
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							ExtElement
+						</td>
+					</tr>
+																				<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">setValue</a></b>(&nbsp;
+							<code>
+																Object value 
+																， Element ele 
+															</code>
+							&nbsp;) : Element
+							<div class="mdesc">
+								<div class="short">
+									&lt;&gt;&nbsp;设置值
+								</div>
+								<div class="long">
+									&lt;&gt;&nbsp;设置值
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+																						
+											<li>
+												<code>
+													value
+												</code>
+												: Object
+												<div class="sub-desc">
+													需要设置的值
+												</div>
+											</li>
+											
+																						
+											<li>
+												<code>
+													ele
+												</code>
+												: Element
+												<div class="sub-desc">
+													DOM元素对象或其id
+												</div>
+											</li>
+											
+																						
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													Element
+												</code>
+												<div class="sub-desc">
+													返回该对象
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							ExtElement
+						</td>
+					</tr>
+																				<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">getValue</a></b>(&nbsp;
+							<code>
+																Element ele 
+															</code>
+							&nbsp;) : Object
+							<div class="mdesc">
+								<div class="short">
+									&lt;&gt;&nbsp;获取元素的值
+								</div>
+								<div class="long">
+									&lt;&gt;&nbsp;获取元素的值
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+																						
+											<li>
+												<code>
+													ele
+												</code>
+												: Element
+												<div class="sub-desc">
+													DOM元素对象或其id
+												</div>
+											</li>
+											
+																						
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													Object
+												</code>
+												<div class="sub-desc">
+													该元素的值
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							ExtElement
+						</td>
+					</tr>
+														</tbody>
+			</table>
+									<a id="String-events"></a>
+			<h2>
+				公有事件
+			</h2>
+			<div class="no-members">
+				这个类没有公有事件.
+			</div>
+		</div>
+
+	</body>
+</html>

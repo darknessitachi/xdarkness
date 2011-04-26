@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="removecontent.aspx.cs" Inherits="Sky.WebIm.removecontent" %>

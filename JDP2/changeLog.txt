@@ -1,0 +1,6 @@
+PubFun.java public static List getRoleCodesByUserName(String userName)==>Priv.java
+PubFun.java public static String getUserRealName(String userName)==>UserLogPage.java
+
+ApplicationPage.java public static String getCurrentSiteAlias()==>Cms.java
+
+

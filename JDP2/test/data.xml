@@ -1,0 +1,926 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataset>
+
+
+<data createTime="2009-12-29" useFor="话费" money="50"/>
+<data createTime="2010-2-16" useFor="话费" money="150"/>
+<data createTime="2010-3-20" useFor="话费" money="50"/>
+<data createTime="2010-4-30" useFor="话费" money="50"/>
+<data createTime="2010-6-20" useFor="话费" money="50"/>
+<data createTime="2010-7-27" useFor="话费" money="50"/>
+
+
+              	      
+<data createTime="2009-1-15" useFor="工资" moneyType="in" money="268.84"/>
+<data createTime="2009-2-15" useFor="工资" moneyType="in" money="400.00"/>
+<data createTime="2009-3-15" useFor="工资" moneyType="in" money="400.00"/>
+<data createTime="2009-4-15" useFor="工资" moneyType="in" money="500.00"/>
+<data createTime="2009-5-15" useFor="工资" moneyType="in" money="378.95"/>
+<data createTime="2009-6-15" useFor="工资" moneyType="in" money="209.09"/>
+<data createTime="2009-7-15" useFor="工资" moneyType="in" money="1669.05"/>
+<data createTime="2009-8-15" useFor="工资" moneyType="in" money="1629.95"/>
+<data createTime="2009-9-15" useFor="工资" moneyType="in" money="2356.45"/>
+<data createTime="2009-10-15" useFor="工资" moneyType="in" money="2413.20"/>
+<data createTime="2009-11-15" useFor="工资" moneyType="in" money="2175.70"/>
+<data createTime="2009-12-15" useFor="工资" moneyType="in" money="2551.45"/>
+<data createTime="2010-1-15" useFor="工资" moneyType="in" money="2385.70"/>
+<data createTime="2010-1-15" useFor="工资" moneyType="in" money="1500" description="奖金"/>
+<data createTime="2010-2-15" useFor="工资" moneyType="in" money="2265.95"/>
+<data createTime="2010-2-15" useFor="工资" moneyType="in" money="11550" description="出差补贴"/>
+<data createTime="2010-3-15" useFor="工资" moneyType="in" money="2668.45"/>
+<data createTime="2010-4-15" useFor="工资" moneyType="in" money="2648.65"/>
+<data createTime="2010-5-15" useFor="工资" moneyType="in" money="2641.45"/>
+<data createTime="2010-6-15" useFor="工资" moneyType="in" money="2649.55"/>
+<data createTime="2010-6-15" useFor="外接项目" moneyType="in" money="500"/>
+<data createTime="2010-7-15" useFor="工资" moneyType="in" money="2635.38"/>
+<data createTime="2010-8-15" useFor="工资" moneyType="in" money="2635.38"/>
+<data createTime="2010-9-15" useFor="工资" moneyType="in" money="2509.88"/>
+<data createTime="2010-9-15" useFor="工资" moneyType="in" money="1300" description="奖金"/>
+<data createTime="2010-10-15" useFor="工资" moneyType="in" money="2859.18"/>
+<data createTime="2010-11-15" useFor="工资" moneyType="in" money="501"/>
+<data createTime="2010-12-15" useFor="工资" moneyType="in" money="240"/>
+<data createTime="2010-11-15" useFor="工资" moneyType="in" money="2707.08"/>
+<data createTime="2010-12-15" useFor="外接项目" moneyType="in" money="2000"/>
+
+<data createTime="2009-2-1" useFor="坐车" money="14"/>
+<data createTime="2009-2-2" useFor="坐车" money="6"/>
+<data createTime="2009-2-2" useFor="吃饭" money="1"/>
+<data createTime="2009-2-2" useFor="牛奶" money="14.3"/>
+<data createTime="2009-2-3" useFor="坐车" money="8"/>
+<data createTime="2009-2-3" useFor="吃饭" money="0.8"/>
+<data createTime="2009-2-4" useFor="吃饭" money="100.8"/>
+<data createTime="2009-2-5" useFor="吃饭" money="1.8"/>
+<data createTime="2009-2-6" useFor="吃饭" money="19.5"/>
+<data createTime="2009-2-6" useFor="坐车" money="6"/>
+<data createTime="2009-2-7" useFor="吃饭" money="20"/>
+<data createTime="2009-2-7" useFor="坐车" money="1"/>
+<data createTime="2009-2-8" useFor="坐车" money="2"/>
+<data createTime="2009-2-8" useFor="吃饭" money="10.6"/>
+<data createTime="2009-2-9" useFor="吃饭" money="3.2"/>
+<data createTime="2009-2-9" useFor="坐车" money="8.5"/>
+<data createTime="2009-2-10" useFor="吃饭" money="2.9"/>
+<data createTime="2009-2-10" useFor="牛奶" money="8.4"/>
+<data createTime="2009-2-11" useFor="牛奶" money="9.5"/>
+<data createTime="2009-2-11" useFor="吃饭" money="2.2"/>
+<data createTime="2009-2-12" useFor="吃饭" money="1.2"/>
+<data createTime="2009-2-13" useFor="吃饭" money="2.2"/>
+<data createTime="2009-2-13" useFor="看病" money="29"/>
+<data createTime="2009-2-15" useFor="吃饭" money="6"/>
+<data createTime="2009-2-15" useFor="坐车" money="4"/>
+<data createTime="2009-2-15" useFor="牛奶" money="16"/>
+<data createTime="2009-2-15" useFor="日常用品" money="19.5" description="买伞"/>
+<data createTime="2009-2-16" useFor="吃饭" money="9.5"/>
+<data createTime="2009-2-16" useFor="坐车" money="4"/>
+<data createTime="2009-2-17" useFor="坐车" money="8"/>
+<data createTime="2009-2-17" useFor="吃饭" money="1.2"/>
+<data createTime="2009-2-18" useFor="吃饭" money="1.8"/>
+<data createTime="2009-2-18" useFor="坐车" money="7"/>
+<data createTime="2009-2-19" useFor="坐车" money="7"/>
+<data createTime="2009-2-19" useFor="吃饭" money="1.8"/>
+<data createTime="2009-2-20" useFor="吃饭" money="6"/>
+<data createTime="2009-2-20" useFor="坐车" money="8"/>
+<data createTime="2009-2-21" useFor="坐车" money="7"/>
+<data createTime="2009-2-21" useFor="吃饭" money="5.2"/>
+<data createTime="2009-2-22" useFor="吃饭" money="11.5"/>
+<data createTime="2009-2-22" useFor="房租水电" money="175"/>
+<data createTime="2009-2-23" useFor="吃饭" money="10.8"/>
+<data createTime="2009-2-23" useFor="坐车" money="7"/>
+<data createTime="2009-2-24" useFor="坐车" money="7"/>
+<data createTime="2009-2-24" useFor="吃饭" money="17.8"/>
+<data createTime="2009-2-25" useFor="吃饭" money="13"/>
+<data createTime="2009-2-25" useFor="坐车" money="7"/>
+<data createTime="2009-2-26" useFor="坐车" money="7"/>
+<data createTime="2009-2-26" useFor="吃饭" money="14"/>
+<data createTime="2009-2-27" useFor="吃饭" money="13.5"/>
+<data createTime="2009-2-27" useFor="坐车" money="7"/>
+<data createTime="2009-2-28" useFor="吃饭" money="2.4"/>
+
+<data createTime="2009-3-1" useFor="吃饭" money="15.9"/>
+<data createTime="2009-3-1" useFor="牛奶" money="49.2"/>
+<data createTime="2009-3-1" useFor="其他" money="8" description="理发"/>
+<data createTime="2009-3-2" useFor="吃饭" money="13.2"/>
+<data createTime="2009-3-2" useFor="坐车" money="6"/>
+<data createTime="2009-3-3" useFor="吃饭" money="18.2"/>
+<data createTime="2009-3-3" useFor="坐车" money="7"/>
+<data createTime="2009-3-4" useFor="坐车" money="6"/>
+<data createTime="2009-3-4" useFor="吃饭" money="12.1"/>
+<data createTime="2009-3-5" useFor="吃饭" money="13.2"/>
+<data createTime="2009-3-5" useFor="坐车" money="6"/>
+<data createTime="2009-3-6" useFor="吃饭" money="16.1"/>
+<data createTime="2009-3-7" useFor="吃饭" money="4"/>
+<data createTime="2009-3-8" useFor="吃饭" money="10"/>
+<data createTime="2009-3-8" useFor="看病" money="7"/>
+<data createTime="2009-3-9" useFor="吃饭" money="13"/>
+<data createTime="2009-3-10" useFor="吃饭" money="11.1"/>
+<data createTime="2009-3-11" useFor="吃饭" money="14.5"/>
+<data createTime="2009-3-12" useFor="吃饭" money="13"/>
+<data createTime="2009-3-12" useFor="坐车" money="7"/>
+<data createTime="2009-3-13" useFor="坐车" money="6"/>
+<data createTime="2009-3-13" useFor="吃饭" money="9.5"/>
+<data createTime="2009-3-14" useFor="吃饭" money="9"/>
+<data createTime="2009-3-15" useFor="吃饭" money="14"/>
+<data createTime="2009-3-16" useFor="吃饭" money="10.6"/>
+<data createTime="2009-3-16" useFor="坐车" money="8"/>
+<data createTime="2009-3-17" useFor="吃饭" money="11"/>
+<data createTime="2009-3-17" useFor="坐车" money="7"/>
+<data createTime="2009-3-18" useFor="吃饭" money="11"/>
+<data createTime="2009-3-18" useFor="坐车" money="7"/>
+<data createTime="2009-3-19" useFor="坐车" money="8"/>
+<data createTime="2009-3-19" useFor="吃饭" money="152.5"/>
+<data createTime="2009-3-19" useFor="牛奶" money="43.2"/>
+<data createTime="2009-3-19" useFor="看病" money="14"/>
+<data createTime="2009-3-20" useFor="坐车" money="8"/>
+<data createTime="2009-3-20" useFor="吃饭" money="12"/>
+<data createTime="2009-3-21" useFor="吃饭" money="10"/>
+<data createTime="2009-3-22" useFor="坐车" money="3"/>
+<data createTime="2009-3-22" useFor="吃饭" money="22.8"/>
+<data createTime="2009-3-22" useFor="其他" money="220" description="买车"/>
+<data createTime="2009-3-23" useFor="吃饭" money="4.5"/>
+<data createTime="2009-3-24" useFor="吃饭" money="8.5"/>
+<data createTime="2009-3-25" useFor="吃饭" money="3.5"/>
+<data createTime="2009-3-26" useFor="吃饭" money="10.7"/>
+<data createTime="2009-3-27" useFor="吃饭" money="6.5"/>
+<data createTime="2009-3-27" useFor="坐车" money="8"/>
+<data createTime="2009-3-28" useFor="房租水电" money="75" description="水电费"/>
+<data createTime="2009-3-29" useFor="吃饭" money="10.6"/>
+<data createTime="2009-3-29" useFor="看病" money="14"/>
+<data createTime="2009-3-29" useFor="话费" money="1.2"/>
+<data createTime="2009-3-30" useFor="吃饭" money="5"/>
+<data createTime="2009-3-30" useFor="牛奶" money="15.4"/>
+<data createTime="2009-3-30" useFor="其他" money="5" description="照片"/>
+<data createTime="2009-3-31" useFor="吃饭" money="105"/>
+
+<data createTime="2009-4-4" useFor="日常用品" money="4.5" description="纸巾"/>
+<data createTime="2009-4-4" useFor="话费" money="2.2"/>
+<data createTime="2009-4-7" useFor="坐车" money="4"/>
+<data createTime="2009-4-7" useFor="日常用品" money="1.9" description="刷子"/>
+<data createTime="2009-4-7" useFor="吃饭" money="8.9"/>
+<data createTime="2009-4-7" useFor="牛奶" money="21"/>
+<data createTime="2009-4-8" useFor="吃饭" money="1"/>
+<data createTime="2009-4-11" useFor="房租水电" money="825"/>
+<data createTime="2009-4-12" useFor="日常用品" money="6.3" description="夹被子的镊子"/>
+<data createTime="2009-4-12" useFor="话费" money="1"/>
+<data createTime="2009-4-13" useFor="坐车" money="8"/>
+<data createTime="2009-4-15" useFor="吃饭" money="1.2"/>
+<data createTime="2009-4-16" useFor="吃饭" money="2.5"/>
+<data createTime="2009-4-16" useFor="坐车" money="7"/>
+<data createTime="2009-4-17" useFor="吃饭" money="100"/>
+<data createTime="2009-4-17" useFor="坐车" money="7"/>
+<data createTime="2009-4-18" useFor="吃饭" money="1.8"/>
+<data createTime="2009-4-20" useFor="吃饭" money="1.2"/>
+<data createTime="2009-4-21" useFor="牛奶" money="21"/>
+<data createTime="2009-4-21" useFor="吃饭" money="4.4"/>
+<data createTime="2009-4-21" useFor="日常用品" money="25.9" description="洗发水"/>
+<data createTime="2009-4-22" useFor="吃饭" money="1.2"/>
+<data createTime="2009-4-23" useFor="吃饭" money="1.2"/>
+<data createTime="2009-4-23" useFor="坐车" money="8"/>
+<data createTime="2009-4-24" useFor="吃饭" money="14"/>
+<data createTime="2009-4-25" useFor="吃饭" money="1.2"/>
+<data createTime="2009-4-26" useFor="吃饭" money="1.2"/>
+<data createTime="2009-4-27" useFor="吃饭" money="1.2"/>
+<data createTime="2009-4-28" useFor="吃饭" money="1.2"/>
+<data createTime="2009-4-29" useFor="吃饭" money="85.1"/>
+
+<data createTime="2009-5-1" useFor="其他" money="600" description="手机"/>
+<data createTime="2009-5-2" useFor="话费" money="60"/>
+<data createTime="2009-5-3" useFor="牛奶" money="22"/>
+<data createTime="2009-5-3" useFor="吃饭" money="14.8"/>
+<data createTime="2009-5-3" useFor="日常用品" money="3" description="牙膏"/>
+<data createTime="2009-5-3" useFor="其他" money="2.5" description="牌"/>
+<data createTime="2009-5-6" useFor="吃饭" money="100"/>
+<data createTime="2009-5-10" useFor="吃饭" money="1.5"/>
+<data createTime="2009-5-10" useFor="话费" money="90"/>
+<data createTime="2009-5-16" useFor="吃饭" money="13"/>
+<data createTime="2009-5-17" useFor="坐车" money="4"/>
+<data createTime="2009-5-17" useFor="牛奶" money="21"/>
+<data createTime="2009-5-17" useFor="日常用品" money="6.9" description="电池"/>
+<data createTime="2009-5-17" useFor="吃饭" money="9"/>
+<data createTime="2009-5-18" useFor="吃饭" money="10"/>
+<data createTime="2009-5-21" useFor="吃饭" money="16"/>
+<data createTime="2009-5-24" useFor="坐车" money="8"/>
+<data createTime="2009-5-24" useFor="吃饭" money="2.7"/>
+<data createTime="2009-5-25" useFor="坐车" money="2"/>
+<data createTime="2009-5-25" useFor="吃饭" money="7.2"/>
+<data createTime="2009-5-26" useFor="坐车" money="8"/>
+<data createTime="2009-5-26" useFor="吃饭" money="10.2"/>
+<data createTime="2009-5-27" useFor="坐车" money="8"/>
+<data createTime="2009-5-27" useFor="吃饭" money="11.2"/>
+<data createTime="2009-5-28" useFor="日常用品" money="2.5" description="蚊香"/>
+<data createTime="2009-5-28" useFor="吃饭" money="7"/>
+<data createTime="2009-5-29" useFor="吃饭" money="15"/>
+<data createTime="2009-5-30" useFor="牛奶" money="2"/>
+<data createTime="2009-5-30" useFor="日常用品" money="3" description="面纸"/>
+<data createTime="2009-5-30" useFor="日常用品" money="2" description="洗衣粉"/>
+<data createTime="2009-5-30" useFor="吃饭" money="11.5"/>
+<data createTime="2009-5-30" useFor="日常用品" money="6.5" description="牙膏牙刷"/>
+<data createTime="2009-5-31" useFor="吃饭" money="11.5"/>
+
+<data createTime="2009-6-1" useFor="吃饭" money="2"/>
+<data createTime="2009-6-3" useFor="吃饭" money="20"/>
+<data createTime="2009-6-4" useFor="吃饭" money="15.5"/>
+<data createTime="2009-6-5" useFor="吃饭" money="15"/>
+<data createTime="2009-6-6" useFor="吃饭" money="16"/>
+<data createTime="2009-6-7" useFor="吃饭" money="14"/>
+<data createTime="2009-6-8" useFor="吃饭" money="16"/>
+<data createTime="2009-6-9" useFor="吃饭" money="18"/>
+<data createTime="2009-6-10" useFor="吃饭" money="10"/>
+<data createTime="2009-6-11" useFor="吃饭" money="3.5"/>
+<data createTime="2009-6-12" useFor="吃饭" money="46.6"/>
+<data createTime="2009-6-12" useFor="其他" money="5" description="宿舍赔款"/>
+<data createTime="2009-6-13" useFor="坐车" money="2"/>
+<data createTime="2009-6-13" useFor="吃饭" money="4"/>
+<data createTime="2009-6-14" useFor="吃饭" money="1.5"/>
+<data createTime="2009-6-14" useFor="话费" money="50"/>
+<data createTime="2009-6-15" useFor="吃饭" money="9.5"/>
+<data createTime="2009-6-17" useFor="吃饭" money="50"/>
+<data createTime="2009-6-18" useFor="吃饭" money="12.2"/>
+<data createTime="2009-6-18" useFor="牛奶" money="6"/>
+<data createTime="2009-6-19" useFor="吃饭" money="4.8"/>
+<data createTime="2009-6-20" useFor="吃饭" money="17.7"/>
+<data createTime="2009-6-20" useFor="牛奶" money="6"/>
+<data createTime="2009-6-20" useFor="其他" money="8" description="网吧"/>
+<data createTime="2009-6-20" useFor="穿" money="13" description="凉鞋"/>
+<data createTime="2009-6-21" useFor="吃饭" money="8"/>
+<data createTime="2009-6-22" useFor="吃饭" money="10.5"/>
+<data createTime="2009-6-23" useFor="牛奶" money="6"/>
+<data createTime="2009-6-23" useFor="坐车" money="4"/>
+<data createTime="2009-6-23" useFor="吃饭" money="13.8"/>
+<data createTime="2009-6-24" useFor="吃饭" money="2"/>
+<data createTime="2009-6-25" useFor="吃饭" money="20"/>
+<data createTime="2009-6-26" useFor="吃饭" money="4.5"/>
+<data createTime="2009-6-26" useFor="牛奶" money="6"/>
+<data createTime="2009-6-27" useFor="穿" money="10" description="袜子"/>
+<data createTime="2009-6-27" useFor="日常用品" money="30" description="电风扇"/>
+<data createTime="2009-6-27" useFor="吃饭" money="23.2"/>
+<data createTime="2009-6-27" useFor="坐车" money="1"/>
+<data createTime="2009-6-28" useFor="日常用品" money="21.9" description="洗面乳"/>
+<data createTime="2009-6-28" useFor="日常用品" money="19.2" description="蚊香液"/>
+<data createTime="2009-6-29" useFor="吃饭" money="33.3"/>
+<data createTime="2009-6-30" useFor="吃饭" money="11"/>
+<data createTime="2009-6-30" useFor="牛奶" money="6"/>
+<data createTime="2009-6-30" useFor="坐车" money="4"/>
+
+<data createTime="2009-7-1" useFor="吃饭" money="14"/>
+<data createTime="2009-7-2" useFor="吃饭" money="17.6"/>
+<data createTime="2009-7-3" useFor="吃饭" money="24.9"/>
+<data createTime="2009-7-3" useFor="牛奶" money="6.6"/>
+<data createTime="2009-7-4" useFor="吃饭" money="5"/>
+<data createTime="2009-7-5" useFor="吃饭" money="53"/>
+<data createTime="2009-7-5" useFor="坐车" money="5"/>
+<data createTime="2009-7-5" useFor="买书" money="126"/>
+<data createTime="2009-7-7" useFor="吃饭" money="19.5"/>
+<data createTime="2009-7-7" useFor="坐车" money="4"/>
+<data createTime="2009-7-7" useFor="牛奶" money="24"/>
+<data createTime="2009-7-8" useFor="吃饭" money="2"/>
+<data createTime="2009-7-8" useFor="其他" money="12" description="修车篮"/>
+<data createTime="2009-7-9" useFor="吃饭" money="9"/>
+<data createTime="2009-7-10" useFor="吃饭" money="9"/>
+<data createTime="2009-7-11" useFor="吃饭" money="7"/>
+<data createTime="2009-7-12" useFor="吃饭" money="4.5"/>
+<data createTime="2009-7-12" useFor="日常用品" money="17" description="毛巾"/>
+<data createTime="2009-7-13" useFor="吃饭" money="15.5"/>
+<data createTime="2009-7-13" useFor="其他" money="43" description="路由"/>
+<data createTime="2009-7-14" useFor="吃饭" money="5"/>
+<data createTime="2009-7-15" useFor="吃饭" money="21.1"/>
+<data createTime="2009-7-16" useFor="吃饭" money="9"/>
+<data createTime="2009-7-17" useFor="吃饭" money="15"/>
+<data createTime="2009-7-19" useFor="吃饭" money="10"/>
+<data createTime="2009-7-20" useFor="吃饭" money="16"/>
+<data createTime="2009-7-20" useFor="坐车" money="8"/>
+<data createTime="2009-7-21" useFor="吃饭" money="28"/>
+<data createTime="2009-7-21" useFor="坐车" money="7"/>
+<data createTime="2009-7-22" useFor="吃饭" money="19.2"/>
+<data createTime="2009-7-22" useFor="坐车" money="7"/>
+<data createTime="2009-7-23" useFor="吃饭" money="19.2"/>
+<data createTime="2009-7-23" useFor="坐车" money="7"/>
+<data createTime="2009-7-24" useFor="吃饭" money="9.4"/>
+<data createTime="2009-7-24" useFor="坐车" money="7"/>
+<data createTime="2009-7-24" useFor="牛奶" money="3.3"/>
+<data createTime="2009-7-24" useFor="日常用品" money="4" description="香皂"/>
+<data createTime="2009-7-25" useFor="吃饭" money="8.2"/>
+<data createTime="2009-7-26" useFor="吃饭" money="8"/>
+<data createTime="2009-7-26" useFor="牛奶" money="8"/>
+<data createTime="2009-7-26" useFor="其他" money="175" description="自行车"/>
+<data createTime="2009-7-26" useFor="坐车" money="2"/>
+<data createTime="2009-7-27" useFor="吃饭" money="8.2"/>
+<data createTime="2009-7-28" useFor="吃饭" money="12"/>
+<data createTime="2009-7-29" useFor="吃饭" money="13"/>
+<data createTime="2009-7-30" useFor="吃饭" money="16.5"/>
+<data createTime="2009-7-31" useFor="吃饭" money="15"/>
+
+<data createTime="2009-9-1" useFor="看病" money="650"/>
+<data createTime="2009-9-1" useFor="家" money="1500"/>
+<data createTime="2009-9-1" useFor="房租水电" money="1025"/>
+<data createTime="2009-9-28" useFor="家" money="1000"/>
+
+<data createTime="2009-10-25" useFor="看病" money="140"/>
+<data createTime="2009-10-25" useFor="坐车" money="12"/>
+<data createTime="2009-10-25" useFor="吃饭" money="52"/>
+<data createTime="2009-10-25" useFor="其他" money="5" description="理发"/>
+<data createTime="2009-10-26" useFor="吃饭" money="19"/>
+<data createTime="2009-10-27" useFor="吃饭" money="19"/>
+<data createTime="2009-10-28" useFor="吃饭" money="19"/>
+<data createTime="2009-10-29" useFor="吃饭" money="19"/>
+<data createTime="2009-10-30" useFor="吃饭" money="19"/>
+<data createTime="2009-10-31" useFor="吃饭" money="9"/>
+<data createTime="2009-10-31" useFor="穿" money="50" description="保暖内衣"/>
+
+<data createTime="2009-11-1" useFor="吃饭" money="105"/>
+<data createTime="2009-11-1" useFor="看病" money="135"/>
+<data createTime="2009-11-1" useFor="坐车" money="14"/>
+<data createTime="2009-11-4" useFor="坐车" money="7.5"/>
+<data createTime="2009-11-8" useFor="坐车" money="7"/>
+<data createTime="2009-11-8" useFor="牛奶" money="11.5"/>
+<data createTime="2009-11-8" useFor="吃饭" money="2"/>
+<data createTime="2009-11-8" useFor="其他" money="10" description="彩票"/>
+<data createTime="2009-11-12" useFor="吃饭" money="15.7"/>
+<data createTime="2009-11-12" useFor="话费" money="50"/>
+<data createTime="2009-11-14" useFor="吃饭" money="18"/>
+<data createTime="2009-11-14" useFor="看病" money="155"/>
+<data createTime="2009-11-14" useFor="坐车" money="4"/>
+<data createTime="2009-11-14" useFor="其他" money="10" description="彩票"/>
+<data createTime="2009-11-15" useFor="坐车" money="3.5"/>
+<data createTime="2009-11-16" useFor="坐车" money="5"/>
+<data createTime="2009-11-16" useFor="穿" money="155" description="鞋子"/>
+<data createTime="2009-11-16" useFor="穿" money="10" description="袜子"/>
+<data createTime="2009-11-16" useFor="吃饭" money="16"/>
+<data createTime="2009-11-16" useFor="家" money="1000"/>
+<data createTime="2009-11-16" useFor="其他" money="500" description="借给朋友"/>
+<data createTime="2009-11-17" useFor="吃饭" money="40"/>
+<data createTime="2009-11-20" useFor="吃饭" money="10"/>
+<data createTime="2009-11-21" useFor="吃饭" money="8"/>
+<data createTime="2009-11-21" useFor="坐车" money="3.5"/>
+<data createTime="2009-11-22" useFor="坐车" money="7.5"/>
+<data createTime="2009-11-22" useFor="吃饭" money="8"/>
+<data createTime="2009-11-22" useFor="看病" money="157"/>
+<data createTime="2009-11-23" useFor="吃饭" money="18"/>
+<data createTime="2009-11-24" useFor="吃饭" money="13"/>
+<data createTime="2009-11-24" useFor="其他" money="11" description="打印纸"/>
+<data createTime="2009-11-25" useFor="其他" money="390" description="移动硬盘"/>
+<data createTime="2009-11-25" useFor="吃饭" money="18"/>
+<data createTime="2009-11-26" useFor="吃饭" money="10"/>
+<data createTime="2009-11-26" useFor="穿" money="256" description="衣服"/>
+<data createTime="2009-11-26" useFor="其他" money="1000" description="被偷"/>
+<data createTime="2009-11-26" useFor="家" money="3000"/>
+<data createTime="2009-11-27" useFor="坐车" money="3.5"/>
+<data createTime="2009-11-27" useFor="吃饭" money="16"/>
+<data createTime="2009-11-28" useFor="吃饭" money="10"/>
+<data createTime="2009-11-29" useFor="吃饭" money="4"/>
+<data createTime="2009-11-29" useFor="坐车" money="4"/>
+<data createTime="2009-11-29" useFor="看病" money="160"/>
+<data createTime="2009-11-29" useFor="其他" money="10" description="彩票"/>
+<data createTime="2009-12-1" useFor="吃饭" money="8"/>
+<data createTime="2009-12-1" useFor="坐车" money="4"/>
+<data createTime="2009-12-2" useFor="吃饭" money="18"/>
+<data createTime="2009-12-3" useFor="吃饭" money="18"/>
+<data createTime="2009-12-4" useFor="吃饭" money="18"/>
+<data createTime="2009-12-5" useFor="吃饭" money="18"/>
+<data createTime="2009-12-6" useFor="吃饭" money="9"/>
+<data createTime="2009-12-6" useFor="坐车" money="7"/>
+<data createTime="2009-12-7" useFor="吃饭" money="18"/>
+<data createTime="2009-12-8" useFor="吃饭" money="18"/>
+<data createTime="2009-12-9" useFor="吃饭" money="18"/>
+<data createTime="2009-12-10" useFor="吃饭" money="18"/>
+<data createTime="2009-12-11" useFor="吃饭" money="18"/>
+<data createTime="2009-12-12" useFor="吃饭" money="18"/>
+<data createTime="2009-12-12" useFor="坐车" money="2"/>
+<data createTime="2009-12-12" useFor="其他" money="10" description="彩票"/>
+<data createTime="2009-12-12" useFor="看病" money="130"/>
+<data createTime="2009-12-12" useFor="家" money="2000"/>
+<data createTime="2009-12-13" useFor="看病" money="10"/>
+<data createTime="2009-12-14" useFor="吃饭" money="16"/>
+<data createTime="2009-12-15" useFor="吃饭" money="18"/>
+<data createTime="2009-12-16" useFor="吃饭" money="18"/>
+<data createTime="2009-12-17" useFor="吃饭" money="42.8"/>
+<data createTime="2009-12-17" useFor="其他" money="31" description="体检"/>
+<data createTime="2009-12-18" useFor="吃饭" money="26.5"/>
+<data createTime="2009-12-18" useFor="坐车" money="4.6"/>
+<data createTime="2009-12-19" useFor="牛奶" money="4"/>
+<data createTime="2009-12-19" useFor="坐车" money="8.5"/>
+<data createTime="2009-12-20" useFor="坐车" money="7"/>
+<data createTime="2009-12-20" useFor="吃饭" money="8"/>
+<data createTime="2009-12-20" useFor="看病" money="148"/>
+<data createTime="2009-12-20" useFor="其他" money="5" description="彩票"/>
+<data createTime="2009-12-21" useFor="吃饭" money="17"/>
+<data createTime="2009-12-21" useFor="其他" money="10" description="彩票"/>
+<data createTime="2009-12-21" useFor="穿" money="58" description="裤子"/>
+<data createTime="2009-12-22" useFor="吃饭" money="18"/>
+<data createTime="2009-12-23" useFor="吃饭" money="18"/>
+<data createTime="2009-12-24" useFor="吃饭" money="18"/>
+<data createTime="2009-12-25" useFor="吃饭" money="34"/>
+<data createTime="2009-12-25" useFor="其他" money="10" description="彩票"/>
+<data createTime="2009-12-25" useFor="买书" money="24.3"/>
+<data createTime="2009-12-26" useFor="吃饭" money="18"/>
+<data createTime="2009-12-27" useFor="吃饭" money="19"/>
+<data createTime="2009-12-27" useFor="坐车" money="5"/>
+<data createTime="2009-12-27" useFor="买书" money="59"/>
+<data createTime="2009-12-27" useFor="话费" money="50"/>
+<data createTime="2009-12-27" useFor="日常用品" money="10" description="牙膏牙刷"/>
+<data createTime="2009-12-28" useFor="吃饭" money="8.5"/>
+<data createTime="2009-12-28" useFor="坐车" money="5"/>
+<data createTime="2009-12-28" useFor="其他" money="400" description="同事结婚"/>
+<data createTime="2009-12-28" useFor="房租水电" money="1350"/>
+<data createTime="2009-12-28" useFor="其他" money="10" description="陀螺"/>
+<data createTime="2009-12-28" useFor="看病" money="100" description="医保卡"/>
+<data createTime="2009-12-29" useFor="吃饭" money="15"/>
+<data createTime="2009-12-30" useFor="吃饭" money="18"/>
+<data createTime="2009-12-30" useFor="其他" money="12" description="洗澡"/>
+<data createTime="2009-12-30" useFor="看病" money="5.5" description="买洗脚的药"/>
+
+<data createTime="2010-1-1" useFor="吃饭" money="15"/>
+<data createTime="2010-1-1" useFor="坐车" money="9"/>
+<data createTime="2010-1-3" useFor="家" money="84"/>
+<data createTime="2010-1-3" useFor="看病" money="140"/>
+<data createTime="2010-1-3" useFor="吃饭" money="9"/>
+<data createTime="2010-1-3" useFor="坐车" money="5.5"/>
+<data createTime="2010-1-3" useFor="其他" money="10" description="彩票"/>
+<data createTime="2010-1-4" useFor="吃饭" money="18"/>
+<data createTime="2010-1-4" useFor="买书" money="66.5"/>
+<data createTime="2010-1-5" useFor="看病" money="5.5" description="买洗脚的药"/>
+<data createTime="2010-1-5" useFor="其他" money="5" description="彩票"/>
+<data createTime="2010-1-5" useFor="吃饭" money="18"/>
+<data createTime="2010-1-6" useFor="吃饭" money="18"/>
+<data createTime="2010-1-7" useFor="吃饭" money="18"/>
+<data createTime="2010-1-8" useFor="吃饭" money="18"/>
+<data createTime="2010-1-9" useFor="吃饭" money="28"/>
+<data createTime="2010-1-9" useFor="其他" money="10" description="上网"/>
+<data createTime="2010-1-9" useFor="坐车" money="5"/>
+<data createTime="2010-1-10" useFor="其他" money="12" description="洗澡"/>
+<data createTime="2010-1-10" useFor="看病" money="148"/>
+<data createTime="2010-1-10" useFor="吃饭" money="26"/>
+<data createTime="2010-1-11" useFor="吃饭" money="18"/>
+<data createTime="2010-1-12" useFor="吃饭" money="18"/>
+<data createTime="2010-1-13" useFor="吃饭" money="18"/>
+<data createTime="2010-1-14" useFor="吃饭" money="18"/>
+<data createTime="2010-1-15" useFor="吃饭" money="18"/>
+<data createTime="2010-1-16" useFor="家" money="2010"/>
+<data createTime="2010-1-16" useFor="坐车" money="7"/>
+<data createTime="2010-1-17" useFor="坐车" money="15"/>
+<data createTime="2010-1-17" useFor="日常用品" money="245" description="245"/>
+<data createTime="2010-1-17" useFor="看病" money="130"/>
+<data createTime="2010-1-17" useFor="穿" money="58" description="羊毛衫"/>
+<data createTime="2010-1-17" useFor="吃饭" money="16"/>
+<data createTime="2010-1-18" useFor="坐车" money="3.2"/>
+<data createTime="2010-1-18" useFor="吃饭" money="16"/>
+<data createTime="2010-1-18" useFor="日常用品" money="35" description="陶瓷锅"/>
+<data createTime="2010-1-19" useFor="坐车" money="3.2"/>
+<data createTime="2010-1-19" useFor="吃饭" money="26"/>
+<data createTime="2010-1-20" useFor="坐车" money="3.2"/>
+<data createTime="2010-1-20" useFor="吃饭" money="14.5"/>
+<data createTime="2010-1-20" useFor="日常用品" money="43" description="洗发水"/>
+<data createTime="2010-1-21" useFor="坐车" money="3.2"/>
+<data createTime="2010-1-22" useFor="坐车" money="3.2"/>
+<data createTime="2010-1-22" useFor="吃饭" money="22"/>
+<data createTime="2010-1-23" useFor="吃饭" money="13"/>
+<data createTime="2010-1-23" useFor="坐车" money="4"/>
+<data createTime="2010-1-23" useFor="其他" money="160" description="电脑电源"/>
+<data createTime="2010-1-24" useFor="坐车" money="37"/>
+<data createTime="2010-1-24" useFor="其他" money="48" description="KTV"/>
+<data createTime="2010-1-25" useFor="吃饭" money="13.5"/>
+<data createTime="2010-1-26" useFor="吃饭" money="7.5"/>
+<data createTime="2010-1-27" useFor="吃饭" money="30.5"/>
+<data createTime="2010-1-28" useFor="吃饭" money="13"/>
+<data createTime="2010-1-29" useFor="吃饭" money="13"/>
+<data createTime="2010-1-30" useFor="坐车" money="38"/>
+<data createTime="2010-1-31" useFor="坐车" money="39"/>
+<data createTime="2010-1-31" useFor="吃饭" money="18.5"/>
+
+<data createTime="2010-2-1" useFor="吃饭" money="7"/>
+<data createTime="2010-2-2" useFor="吃饭" money="2"/>
+<data createTime="2010-2-3" useFor="吃饭" money="2"/>
+<data createTime="2010-2-4" useFor="吃饭" money="2"/>
+<data createTime="2010-2-5" useFor="吃饭" money="2"/>
+<data createTime="2010-2-6" useFor="吃饭" money="24"/>
+<data createTime="2010-2-11" useFor="坐车" money="33"/>
+<data createTime="2010-2-12" useFor="坐车" money="30"/>
+<data createTime="2010-2-12" useFor="家" money="3000"/>
+<data createTime="2010-2-12" useFor="其他" money="112" description="雪源康"/>
+<data createTime="2010-2-14" useFor="话费" money="52"/>
+<data createTime="2010-2-15" useFor="其他" money="35" description="打牌输掉"/>
+<data createTime="2010-2-17" useFor="坐车" money="50"/>
+<data createTime="2010-2-17" useFor="吃饭" money="20"/>
+<data createTime="2010-2-18" useFor="看病" money="215"/>
+<data createTime="2010-2-17" useFor="坐车" money="11"/>
+<data createTime="2010-2-20" useFor="坐车" money="39"/>
+<data createTime="2010-2-23" useFor="吃饭" money="10"/>
+<data createTime="2010-2-26" useFor="吃饭" money="10.2"/>
+<data createTime="2010-2-27" useFor="吃饭" money="6"/>
+<data createTime="2010-2-27" useFor="买书" money="116.7"/>
+<data createTime="2010-2-28" useFor="吃饭" money="102"/>
+
+<data createTime="2010-3-1" useFor="吃饭" money="86.5"/>
+<data createTime="2010-3-3" useFor="日常用品" money="30" description="眼罩"/>
+<data createTime="2010-3-9" useFor="吃饭" money="20"/>
+<data createTime="2010-3-10" useFor="吃饭" money="17"/>
+<data createTime="2010-3-14" useFor="家" money="50"/>
+<data createTime="2010-3-14" useFor="坐车" money="105"/>
+<data createTime="2010-3-14" useFor="看病" money="198"/>
+<data createTime="2010-3-14" useFor="吃饭" money="10"/>
+<data createTime="2010-3-15" useFor="吃饭" money="73"/>
+<data createTime="2010-3-17" useFor="吃饭" money="11.5"/>
+<data createTime="2010-3-17" useFor="日常用品" money="30" description="洗面奶"/>
+<data createTime="2010-3-18" useFor="吃饭" money="21"/>
+<data createTime="2010-3-20" useFor="吃饭" money="12"/>
+<data createTime="2010-3-20" useFor="穿" money="878" description="衣服"/>
+<data createTime="2010-3-20" useFor="日常用品" money="131" description="皮包"/>
+<data createTime="2010-3-21" useFor="其他" money="500" description="头发"/>
+<data createTime="2010-3-21" useFor="吃饭" money="16"/>
+<data createTime="2010-3-21" useFor="日常用品" money="32" description="发蜡"/>
+<data createTime="2010-3-21" useFor="日常用品" money="55" description="吹风机"/>
+<data createTime="2010-3-22" useFor="吃饭" money="10"/>
+<data createTime="2010-3-28" useFor="吃饭" money="19"/>
+<data createTime="2010-3-28" useFor="牛奶" money="40"/>
+<data createTime="2010-3-21" useFor="日常用品" money="6" description="手纸"/>
+<data createTime="2010-3-21" useFor="日常用品" money="4" description="牙刷"/>
+<data createTime="2010-3-21" useFor="房租水电" money="36" description="物业费"/>
+<data createTime="2010-3-30" useFor="吃饭" money="10"/>
+<data createTime="2010-3-31" useFor="吃饭" money="8"/>
+<data createTime="2010-3-31" useFor="看病" money="12"/>
+
+<data createTime="2010-4-1" useFor="吃饭" money="8"/>
+<data createTime="2010-4-2" useFor="吃饭" money="8"/>
+<data createTime="2010-4-5" useFor="吃饭" money="15"/>
+<data createTime="2010-4-5" useFor="看病" money="137"/>
+<data createTime="2010-4-5" useFor="坐车" money="77"/>
+<data createTime="2010-4-6" useFor="吃饭" money="29.6"/>
+<data createTime="2010-4-8" useFor="吃饭" money="16"/>
+<data createTime="2010-4-10" useFor="吃饭" money="19.5"/>
+<data createTime="2010-4-11" useFor="吃饭" money="19.5"/>
+<data createTime="2010-4-11" useFor="牛奶" money="10.5"/>
+<data createTime="2010-4-12" useFor="吃饭" money="8"/>
+<data createTime="2010-4-13" useFor="吃饭" money="17"/>
+<data createTime="2010-4-14" useFor="吃饭" money="16.5"/>
+<data createTime="2010-4-15" useFor="吃饭" money="145"/>
+<data createTime="2010-4-15" useFor="房租水电" money="1000"/>
+<data createTime="2010-4-16" useFor="吃饭" money="36"/>
+<data createTime="2010-4-17" useFor="其他" money="38" description="娱乐"/>
+<data createTime="2010-4-17" useFor="坐车" money="6"/>
+<data createTime="2010-4-21" useFor="吃饭" money="16"/>
+<data createTime="2010-4-22" useFor="吃饭" money="18"/>
+<data createTime="2010-4-23" useFor="吃饭" money="20"/>
+<data createTime="2010-4-24" useFor="吃饭" money="37.5"/>
+<data createTime="2010-4-24" useFor="买书" money="80"/>
+<data createTime="2010-4-24" useFor="坐车" money="6"/>
+<data createTime="2010-4-24" useFor="日常用品" money="28" description="耳机"/>
+<data createTime="2010-4-25" useFor="吃饭" money="36"/>
+<data createTime="2010-4-26" useFor="吃饭" money="7"/>
+<data createTime="2010-4-28" useFor="吃饭" money="87"/>
+<data createTime="2010-4-29" useFor="吃饭" money="7"/>
+<data createTime="2010-4-30" useFor="吃饭" money="22"/>
+
+<data createTime="2010-5-1" useFor="吃饭" money="20"/>
+<data createTime="2010-5-1" useFor="坐车" money="54"/>
+<data createTime="2010-5-1" useFor="看病" money="160"/>
+<data createTime="2010-5-3" useFor="坐车" money="7"/>
+<data createTime="2010-5-3" useFor="坐车" money="7"/>
+<data createTime="2010-5-3" useFor="吃饭" money="14"/>
+<data createTime="2010-5-3" useFor="家" money="1050"/>
+<data createTime="2010-5-4" useFor="吃饭" money="15"/>
+<data createTime="2010-5-5" useFor="吃饭" money="35"/>
+<data createTime="2010-5-6" useFor="吃饭" money="15"/>
+<data createTime="2010-5-7" useFor="吃饭" money="7"/>
+<data createTime="2010-5-8" useFor="吃饭" money="49"/>
+<data createTime="2010-5-8" useFor="坐车" money="3"/>
+<data createTime="2010-5-9" useFor="吃饭" money="95"/>
+<data createTime="2010-5-11" useFor="吃饭" money="7"/>
+<data createTime="2010-5-12" useFor="吃饭" money="32"/>
+<data createTime="2010-5-13" useFor="吃饭" money="8"/>
+<data createTime="2010-5-14" useFor="吃饭" money="15"/>
+<data createTime="2010-5-15" useFor="吃饭" money="20"/>
+<data createTime="2010-5-15" useFor="坐车" money="8"/>
+<data createTime="2010-5-15" useFor="买书" money="275"/>
+<data createTime="2010-5-16" useFor="买书" money="142"/>
+<data createTime="2010-5-16" useFor="吃饭" money="16"/>
+<data createTime="2010-5-16" useFor="其他" money="12" description="修车篮"/>
+<data createTime="2010-5-17" useFor="吃饭" money="20"/>
+<data createTime="2010-5-18" useFor="吃饭" money="10"/>
+<data createTime="2010-5-18" useFor="日常用品" money="5" description="香皂"/>
+<data createTime="2010-5-20" useFor="吃饭" money="12.7"/>
+<data createTime="2010-5-23" useFor="吃饭" money="26"/>
+<data createTime="2010-5-23" useFor="看病" money="203"/>
+<data createTime="2010-5-23" useFor="坐车" money="97"/>
+<data createTime="2010-5-24" useFor="坐车" money="2.4"/>
+<data createTime="2010-5-25" useFor="坐车" money="2.4"/>
+<data createTime="2010-5-25" useFor="吃饭" money="13"/>
+<data createTime="2010-5-26" useFor="吃饭" money="13"/>
+<data createTime="2010-5-28" useFor="吃饭" money="12"/>
+<data createTime="2010-5-29" useFor="吃饭" money="9"/>
+<data createTime="2010-5-29" useFor="买书" money="49"/>
+<data createTime="2010-5-29" useFor="其他" money="133" description="自考"/>
+<data createTime="2010-5-30" useFor="吃饭" money="12.5"/>
+<data createTime="2010-5-31" useFor="吃饭" money="7"/>
+<data createTime="2010-5-31" useFor="日常用品" money="59.5" description="台灯"/>
+<data createTime="2010-5-31" useFor="日常用品" money="15.5" description="钢笔"/>
+<data createTime="2010-5-31" useFor="日常用品" money="18" description="笔记簿"/>
+<data createTime="2010-5-31" useFor="日常用品" money="5" description="墨水"/>
+
+<data createTime="2010-6-1" useFor="吃饭" money="7"/>
+<data createTime="2010-6-2" useFor="吃饭" money="9.4"/>
+<data createTime="2010-6-3" useFor="吃饭" money="10.6"/>
+<data createTime="2010-6-4" useFor="吃饭" money="7"/>
+<data createTime="2010-6-5" useFor="吃饭" money="12.5"/>
+<data createTime="2010-6-5" useFor="牛奶" money="10.5"/>
+<data createTime="2010-6-5" useFor="日常用品" money="8.5" description="手纸"/>
+<data createTime="2010-6-6" useFor="吃饭" money="19"/>
+<data createTime="2010-6-7" useFor="吃饭" money="17"/>
+<data createTime="2010-6-8" useFor="吃饭" money="12"/>
+<data createTime="2010-6-8" useFor="坐车" money="112"/>
+<data createTime="2010-6-9" useFor="吃饭" money="10"/>
+<data createTime="2010-6-10" useFor="吃饭" money="18"/>
+<data createTime="2010-6-11" useFor="吃饭" money="7"/>
+<data createTime="2010-6-12" useFor="吃饭" money="10"/>
+<data createTime="2010-6-13" useFor="吃饭" money="30"/>
+<data createTime="2010-6-14" useFor="坐车" money="8"/>
+<data createTime="2010-6-15" useFor="日常用品" money="3" description="牙膏"/>
+<data createTime="2010-6-15" useFor="日常用品" money="18" description="洗发水"/>
+<data createTime="2010-6-15" useFor="日常用品" money="3.5" description="樟脑"/>
+<data createTime="2010-6-15" useFor="日常用品" money="6.5" description="香水"/>
+<data createTime="2010-6-16" useFor="其他" money="5" description="彩票"/>
+<data createTime="2010-6-16" useFor="坐车" money="10"/>
+<data createTime="2010-6-16" useFor="吃饭" money="9.5"/>
+<data createTime="2010-6-17" useFor="吃饭" money="7"/>
+<data createTime="2010-6-18" useFor="吃饭" money="7"/>
+<data createTime="2010-6-19" useFor="吃饭" money="110"/>
+<data createTime="2010-6-20" useFor="吃饭" money="5"/>
+<data createTime="2010-6-21" useFor="吃饭" money="20.5"/>
+<data createTime="2010-6-21" useFor="牛奶" money="9"/>
+<data createTime="2010-6-22" useFor="吃饭" money="7"/>
+<data createTime="2010-6-23" useFor="吃饭" money="8"/>
+<data createTime="2010-6-24" useFor="吃饭" money="7"/>
+<data createTime="2010-6-25" useFor="吃饭" money="38"/>
+<data createTime="2010-6-27" useFor="吃饭" money="14"/>
+<data createTime="2010-6-28" useFor="吃饭" money="25"/>
+<data createTime="2010-6-29" useFor="吃饭" money="9"/>
+<data createTime="2010-6-30" useFor="吃饭" money="28"/>
+
+<data createTime="2010-7-1" useFor="吃饭" money="19"/>
+<data createTime="2010-7-2" useFor="吃饭" money="25"/>
+<data createTime="2010-7-4" useFor="吃饭" money="26"/>
+<data createTime="2010-7-5" useFor="吃饭" money="23.5"/>
+<data createTime="2010-7-6" useFor="吃饭" money="15.5"/>
+<data createTime="2010-7-6" useFor="看病" money="17"/>
+<data createTime="2010-7-7" useFor="吃饭" money="20"/>
+<data createTime="2010-7-8" useFor="吃饭" money="19"/>
+<data createTime="2010-7-8" useFor="日常用品" money="5" description="肥皂"/>
+<data createTime="2010-7-9" useFor="吃饭" money="20"/>
+<data createTime="2010-7-9" useFor="房租水电" money="900"/>
+<data createTime="2010-7-10" useFor="吃饭" money="20"/>
+<data createTime="2010-7-11" useFor="吃饭" money="4"/>
+<data createTime="2010-7-11" useFor="坐车" money="6"/>
+<data createTime="2010-7-12" useFor="坐车" money="62"/>
+<data createTime="2010-7-12" useFor="吃饭" money="28.5"/>
+<data createTime="2010-7-12" useFor="其他" money="5" description="彩票"/>
+<data createTime="2010-7-12" useFor="看病" money="195"/>
+<data createTime="2010-7-13" useFor="吃饭" money="11"/>
+<data createTime="2010-7-14" useFor="吃饭" money="19.5"/>
+<data createTime="2010-7-15" useFor="吃饭" money="24.5"/>
+<data createTime="2010-7-16" useFor="吃饭" money="17"/>
+<data createTime="2010-7-16" useFor="牛奶" money="12"/>
+<data createTime="2010-7-17" useFor="买书" money="152"/>
+<data createTime="2010-7-17" useFor="吃饭" money="24.5"/>
+<data createTime="2010-7-17" useFor="坐车" money="8"/>
+<data createTime="2010-7-18" useFor="坐车" money="10"/>
+<data createTime="2010-7-18" useFor="吃饭" money="60"/>
+<data createTime="2010-7-18" useFor="穿" money="180" description="买衣服"/>
+<data createTime="2010-7-19" useFor="吃饭" money="37"/>
+<data createTime="2010-7-20" useFor="吃饭" money="31"/>
+<data createTime="2010-7-21" useFor="吃饭" money="2.4"/>
+<data createTime="2010-7-22" useFor="吃饭" money="16"/>
+<data createTime="2010-7-23" useFor="吃饭" money="50"/>
+<data createTime="2010-7-23" useFor="坐车" money="55"/>
+<data createTime="2010-7-24" useFor="坐车" money="56"/>
+<data createTime="2010-7-25" useFor="坐车" money="56"/>
+<data createTime="2010-7-26" useFor="吃饭" money="43.5"/>
+<data createTime="2010-7-27" useFor="吃饭" money="17"/>
+<data createTime="2010-7-27" useFor="日常用品" money="27" description="洗发水"/>
+<data createTime="2010-7-28" useFor="吃饭" money="15.5"/>
+<data createTime="2010-7-29" useFor="吃饭" money="15.6"/>
+<data createTime="2010-7-30" useFor="吃饭" money="43.2"/>
+<data createTime="2010-7-30" useFor="日常用品" money="3.5"/>
+<data createTime="2010-7-31" useFor="坐车" money="8"/>
+<data createTime="2010-7-31" useFor="穿" money="100" description="鞋"/>
+<data createTime="2010-7-31" useFor="吃饭" money="60"/>
+
+<data createTime="2010-8-1" useFor="坐车" money="4"/>
+<data createTime="2010-8-1" useFor="吃饭" money="11.5"/>
+<data createTime="2010-8-1" useFor="日常用品" money="27" description="螺丝刀"/>
+<data createTime="2010-8-1" useFor="房租水电" money="75"/>
+<data createTime="2010-8-2" useFor="吃饭" money="21.1"/>
+<data createTime="2010-8-3" useFor="吃饭" money="25.6"/>
+<data createTime="2010-8-4" useFor="吃饭" money="15.4"/>
+<data createTime="2010-8-5" useFor="吃饭" money="19.5"/>
+<data createTime="2010-8-5" useFor="坐车" money="55"/>
+<data createTime="2010-8-6" useFor="吃饭" money="17.8"/>
+<data createTime="2010-8-7" useFor="坐车" money="7"/>
+<data createTime="2010-8-7" useFor="吃饭" money="52.5"/>
+<data createTime="2010-8-7" useFor="看病" money="170"/>
+<data createTime="2010-8-8" useFor="吃饭" money="5.5"/>
+<data createTime="2010-8-8" useFor="坐车" money="39"/>
+<data createTime="2010-8-8" useFor="看病" money="12"/>
+<data createTime="2010-8-9" useFor="吃饭" money="33.5"/>
+<data createTime="2010-8-10" useFor="吃饭" money="76.3"/>
+<data createTime="2010-8-11" useFor="吃饭" money="10.8"/>
+<data createTime="2010-8-12" useFor="吃饭" money="22.3"/>
+<data createTime="2010-8-13" useFor="吃饭" money="10.2"/>
+<data createTime="2010-8-14" useFor="吃饭" money="5"/>
+<data createTime="2010-8-14" useFor="牛奶" money="8"/>
+<data createTime="2010-8-14" useFor="买书" money="92.8"/>
+<data createTime="2010-8-14" useFor="坐车" money="3.8"/>
+<data createTime="2010-8-15" useFor="吃饭" money="25.8"/>
+<data createTime="2010-8-16" useFor="吃饭" money="5.3"/>
+<data createTime="2010-8-19" useFor="吃饭" money="10.9"/>
+<data createTime="2010-8-19" useFor="日常用品" money="5" description="海绵百洁擦"/>
+<data createTime="2010-8-19" useFor="日常用品" money="8.5" description="刀片"/>
+<data createTime="2010-8-20" useFor="吃饭" money="2.5"/>
+<data createTime="2010-8-20" useFor="其他" money="2" description="彩票"/>
+<data createTime="2010-8-21" useFor="吃饭" money="10.1"/>
+<data createTime="2010-8-21" useFor="其他" money="2" description="修车"/>
+<data createTime="2010-8-22" useFor="吃饭" money="3"/>
+<data createTime="2010-8-22" useFor="坐车" money="3.5"/>
+<data createTime="2010-8-22" useFor="看病" money="2.5"/>
+<data createTime="2010-8-22" useFor="看病" money="338.3"/>
+<data createTime="2010-8-23" useFor="吃饭" money="15.2"/>
+<data createTime="2010-8-24" useFor="吃饭" money="8.2"/>
+<data createTime="2010-8-25" useFor="吃饭" money="25"/>
+<data createTime="2010-8-26" useFor="吃饭" money="15.8"/>
+<data createTime="2010-8-29" useFor="坐车" money="3.2"/>
+<data createTime="2010-8-30" useFor="吃饭" money="25"/>
+<data createTime="2010-8-30" useFor="穿" money="13.9" description="内裤"/>
+<data createTime="2010-8-31" useFor="吃饭" money="19.7"/>
+
+<data createTime="2010-9-1" useFor="吃饭" money="6.1"/>
+<data createTime="2010-9-2" useFor="坐车" money="55"/>
+<data createTime="2010-9-2" useFor="吃饭" money="14.2"/>
+<data createTime="2010-9-3" useFor="吃饭" money="10.6"/>
+<data createTime="2010-9-4" useFor="坐车" money="7.6"/>
+<data createTime="2010-9-4" useFor="看病" money="280"/>
+<data createTime="2010-9-4" useFor="吃饭" money="2"/>
+<data createTime="2010-9-4" useFor="其他" money="5" description="彩票"/>
+<data createTime="2010-9-4" useFor="家" money="1000"/>
+<data createTime="2010-9-5" useFor="吃饭" money="21.1"/>
+<data createTime="2010-9-5" useFor="房租水电" money="24" description="煤气"/>
+<data createTime="2010-9-5" useFor="坐车" money="38.6"/>
+<data createTime="2010-9-6" useFor="吃饭" money="26.4"/>
+<data createTime="2010-9-9" useFor="吃饭" money="1.4"/>
+<data createTime="2010-9-10" useFor="吃饭" money="6.3"/>
+<data createTime="2010-9-11" useFor="吃饭" money="15.1"/>
+<data createTime="2010-9-11" useFor="日常用品" money="3.5" description="卫生纸"/>
+<data createTime="2010-9-12" useFor="吃饭" money="23"/>
+<data createTime="2010-9-13" useFor="吃饭" money="7.9"/>
+<data createTime="2010-9-14" useFor="吃饭" money="20"/>
+<data createTime="2010-9-14" useFor="坐车" money="93"/>
+<data createTime="2010-9-14" useFor="房租水电" money="90" description="水电"/>
+<data createTime="2010-9-15" useFor="吃饭" money="7.9"/>
+<data createTime="2010-9-16" useFor="吃饭" money="12.2"/>
+<data createTime="2010-9-18" useFor="吃饭" money="7.5"/>
+<data createTime="2010-9-19" useFor="其他" money="115" description="沙袋"/>
+<data createTime="2010-9-19" useFor="吃饭" money="11"/>
+<data createTime="2010-9-20" useFor="吃饭" money="5.9"/>
+<data createTime="2010-9-22" useFor="坐车" money="36"/>
+<data createTime="2010-9-22" useFor="其他" money="10" description="彩票"/>
+<data createTime="2010-9-22" useFor="吃饭" money="23"/>
+<data createTime="2010-9-24" useFor="坐车" money="6"/>
+<data createTime="2010-9-24" useFor="家" money="30"/>
+<data createTime="2010-9-24" useFor="吃饭" money="8.4"/>
+<data createTime="2010-9-25" useFor="房租水电" money="300"/>
+<data createTime="2010-9-25" useFor="吃饭" money="2.9"/>
+<data createTime="2010-9-25" useFor="吃饭" money="8"/>
+<data createTime="2010-9-25" useFor="吃饭" money="7.5"/>
+<data createTime="2010-9-25" useFor="日常用品" money="18.7" description="牙膏"/>
+<data createTime="2010-9-25" useFor="日常用品" money="22.6" description="洗面奶"/>
+<data createTime="2010-9-26" useFor="吃饭" money="9.3"/>
+<data createTime="2010-9-27" useFor="其他" money="50" description="海宝"/>
+<data createTime="2010-9-28" useFor="吃饭" money="20.6"/>
+<data createTime="2010-9-28" useFor="吃饭" money="6"/>
+<data createTime="2010-9-28" useFor="吃饭" money="28"/>
+<data createTime="2010-9-28" useFor="吃饭" money="2.9"/>
+<data createTime="2010-9-28" useFor="买书" money="54"/>
+<data createTime="2010-9-29" useFor="吃饭" money="7.3"/>
+<data createTime="2010-9-29" useFor="穿" money="70" description="保暖内衣"/>
+<data createTime="2010-9-30" useFor="吃饭" money="96"/>
+
+<data createTime="2010-10-1" useFor="吃饭" money="4"/>
+<data createTime="2010-10-1" useFor="坐车" money="17"/>
+<data createTime="2010-10-1" useFor="坐车" money="2"/>
+<data createTime="2010-10-1" useFor="坐车" money="4"/>
+<data createTime="2010-10-4" useFor="吃饭" money="6"/>
+<data createTime="2010-10-5" useFor="吃饭" money="7.5"/>
+<data createTime="2010-10-6" useFor="坐车" money="27"/>
+<data createTime="2010-10-7" useFor="坐车" money="7"/>
+<data createTime="2010-10-7" useFor="吃饭" money="3.5"/>
+<data createTime="2010-10-8" useFor="吃饭" money="18.4"/>
+<data createTime="2010-10-8" useFor="日常用品" money="4" description="502胶水"/>
+<data createTime="2010-10-9" useFor="吃饭" money="9.6"/>
+<data createTime="2010-10-9" useFor="日常用品" money="5.3" description="香皂"/>
+<data createTime="2010-10-10" useFor="买书" money="97.6"/>
+<data createTime="2010-10-10" useFor="吃饭" money="14.7"/>
+<data createTime="2010-10-11" useFor="吃饭" money="10"/>
+<data createTime="2010-10-12" useFor="吃饭" money="19"/>
+<data createTime="2010-10-13" useFor="吃饭" money="25.3"/>
+<data createTime="2010-10-14" useFor="吃饭" money="10"/>
+<data createTime="2010-10-15" useFor="吃饭" money="21"/>
+<data createTime="2010-10-16" useFor="吃饭" money="19.3"/>
+<data createTime="2010-10-16" useFor="房租水电" money="25" description="煤气费"/>
+<data createTime="2010-10-17" useFor="吃饭" money="8.5"/>
+<data createTime="2010-10-17" useFor="买书" money="100" description="办图书馆借书证"/>
+<data createTime="2010-10-17" useFor="其他" money="7.5" description="买零件修电脑电源"/>
+<data createTime="2010-10-18" useFor="吃饭" money="10.9"/>
+<data createTime="2010-10-19" useFor="吃饭" money="22.5"/>
+<data createTime="2010-10-19" useFor="坐车" money="4"/>
+<data createTime="2010-10-20" useFor="吃饭" money="15.3"/>
+<data createTime="2010-10-21" useFor="吃饭" money="22.6"/>
+<data createTime="2010-10-21" useFor="坐车" money="55"/>
+<data createTime="2010-10-22" useFor="吃饭" money="10.9"/>
+<data createTime="2010-10-23" useFor="吃饭" money="2.5"/>
+<data createTime="2010-10-23" useFor="家" money="1000"/>
+<data createTime="2010-10-23" useFor="坐车" money="4.8"/>
+<data createTime="2010-10-24" useFor="坐车" money="54.8"/>
+<data createTime="2010-10-24" useFor="牛奶" money="5"/>
+<data createTime="2010-10-25" useFor="吃饭" money="19"/>
+<data createTime="2010-10-26" useFor="吃饭" money="17.4"/>
+<data createTime="2010-10-27" useFor="吃饭" money="10.2"/>
+<data createTime="2010-10-28" useFor="吃饭" money="25.8"/>
+<data createTime="2010-10-29" useFor="吃饭" money="23.8"/>
+<data createTime="2010-10-30" useFor="吃饭" money="15"/>
+<data createTime="2010-10-30" useFor="坐车" money="4"/>
+<data createTime="2010-10-31" useFor="吃饭" money="24"/>
+<data createTime="2010-10-31" useFor="坐车" money="6.5"/>
+
+<data createTime="2010-11-1" useFor="吃饭" money="15.5"/>
+<data createTime="2010-11-1" useFor="坐车" money="4"/>
+<data createTime="2010-11-2" useFor="吃饭" money="22.9"/>
+<data createTime="2010-11-2" useFor="坐车" money="2.4"/>
+<data createTime="2010-11-3" useFor="吃饭" money="10.9"/>
+<data createTime="2010-11-3" useFor="坐车" money="2.4"/>
+<data createTime="2010-11-4" useFor="吃饭" money="16.8"/>
+<data createTime="2010-11-4" useFor="其他" money="10" description="彩票"/>
+<data createTime="2010-11-4" useFor="坐车" money="2.4"/>
+<data createTime="2010-11-5" useFor="吃饭" money="3"/>
+<data createTime="2010-11-5" useFor="坐车" money="1.2"/>
+<data createTime="2010-11-5" useFor="吃饭" money="501" description="11月份公司"/>
+<data createTime="2010-11-6" useFor="吃饭" money="14.5"/>
+<data createTime="2010-11-6" useFor="日常用品" money="3" description="洗衣粉"/>
+<data createTime="2010-11-21" useFor="吃饭" money="12.5"/>
+<data createTime="2010-11-25" useFor="吃饭" money="9"/>
+<data createTime="2010-11-26" useFor="日常用品" money="33.9" description="洗发露"/>
+<data createTime="2010-11-26" useFor="穿" money="11.9" description="袜子"/>
+<data createTime="2010-11-26" useFor="牛奶" money="13"/>
+<data createTime="2010-11-27" useFor="坐车" money="92.5"/>
+<data createTime="2010-11-27" useFor="吃饭" money="9"/>
+<data createTime="2010-11-28" useFor="牛奶" money="4"/>
+<data createTime="2010-11-28" useFor="坐车" money="10.5"/>
+<data createTime="2010-11-29" useFor="穿" money="141" description="皮外套"/>
+<data createTime="2010-11-29" useFor="买书" money="74.5"/>
+
+<data createTime="2010-12-1" useFor="吃饭" money="21"/>
+<data createTime="2010-12-2" useFor="吃饭" money="21"/>
+<data createTime="2010-12-3" useFor="吃饭" money="21"/>
+<data createTime="2010-12-3" useFor="吃饭" money="34.7"/>
+<data createTime="2010-12-3" useFor="日常用品" money="10.1" description="杯子、勺子"/>
+<data createTime="2010-12-3" useFor="日常用品" money="5" description="梳子"/>
+<data createTime="2010-12-4" useFor="吃饭" money="21"/>
+<data createTime="2010-12-5" useFor="吃饭" money="7"/>
+<data createTime="2010-12-5" useFor="坐车" money="15"/>
+<data createTime="2010-12-6" useFor="吃饭" money="21"/>
+<data createTime="2010-12-7" useFor="吃饭" money="21"/>
+<data createTime="2010-12-8" useFor="吃饭" money="21"/>
+<data createTime="2010-12-9" useFor="吃饭" money="21"/>
+<data createTime="2010-12-10" useFor="吃饭" money="21"/>
+<data createTime="2010-12-11" useFor="坐车" money="107"/>
+<data createTime="2010-12-11" useFor="吃饭" money="11"/>
+<data createTime="2010-12-11" useFor="买书" money="38"/>
+<data createTime="2010-12-11" useFor="家" money="500"/>
+<data createTime="2010-12-11" useFor="日常用品" money="20" description="刷碗的手套两副"/>
+<data createTime="2010-12-12" useFor="坐车" money="11.5"/>
+<data createTime="2010-12-12" useFor="吃饭" money="8"/>
+<data createTime="2010-12-12" useFor="穿" money="10" description="袜子"/>
+<data createTime="2010-12-13" useFor="吃饭" money="21"/>
+<data createTime="2010-12-14" useFor="吃饭" money="21"/>
+<data createTime="2010-12-14" useFor="穿" money="111" description="皮鞋"/>
+<data createTime="2010-12-14" useFor="穿" money="146" description="两条牛仔裤"/>
+<data createTime="2010-12-15" useFor="吃饭" money="21"/>
+<data createTime="2010-12-16" useFor="吃饭" money="18"/>
+<data createTime="2010-12-17" useFor="吃饭" money="21"/>
+<data createTime="2010-12-18" useFor="吃饭" money="21"/>
+<data createTime="2010-12-19" useFor="吃饭" money="16"/>
+<data createTime="2010-12-19" useFor="坐车" money="11"/>
+<data createTime="2010-12-20" useFor="吃饭" money="18"/>
+<data createTime="2010-12-21" useFor="吃饭" money="21"/>
+<data createTime="2010-12-21" useFor="穿" money="250" description="两件外套：红、灰"/>
+<data createTime="2010-12-21" useFor="穿" money="165" description="增高鞋"/>
+<data createTime="2010-12-22" useFor="吃饭" money="21"/>
+<data createTime="2010-12-23" useFor="吃饭" money="21"/>
+<data createTime="2010-12-24" useFor="吃饭" money="21"/>
+<data createTime="2010-12-25" useFor="吃饭" money="18"/>
+<data createTime="2010-12-26" useFor="吃饭" money="18"/>
+<data createTime="2010-12-26" useFor="买书" money="71"/>
+<data createTime="2010-12-26" useFor="其他" money="278" description="域名"/>
+<data createTime="2010-12-27" useFor="吃饭" money="25.5"/>
+<data createTime="2010-12-27" useFor="日常用品" money="8" description="卫生纸"/>
+<data createTime="2010-12-28" useFor="吃饭" money="21"/>
+<data createTime="2010-12-28" useFor="买书" money="81"/>
+<data createTime="2010-12-29" useFor="吃饭" money="21"/>
+<data createTime="2010-12-30" useFor="吃饭" money="21"/>
+<data createTime="2010-12-31" useFor="吃饭" money="21"/>
+
+</dataset>

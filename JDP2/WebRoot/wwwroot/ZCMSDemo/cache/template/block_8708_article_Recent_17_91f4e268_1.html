@@ -1,0 +1,9 @@
+<!--循环：article count：17-->
+<% DataTable dt_9 = TemplateData.getDocList("article","出国人生","current","null","Recent","17","null");
+if(dt_9==null){write("没有找到栏目。parent：null  catalog：出国人生");}else{
+for(int i=0;i<dt_9.getRowCount();i++){
+DataRow article_9  = dt_9.getDataRow(i);
+%>
+
+        <li><a href="${article_9.Link}" target="_blank">${article_9.Title|CharWidth=20}</a>&nbsp;${article_9.PublishDate|Format=yyyy-MM-dd}</li>
+      <%}}%>

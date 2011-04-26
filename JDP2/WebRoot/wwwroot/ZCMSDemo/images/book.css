@@ -1,0 +1,46 @@
+@charset "gb2312";
+/* CSS Document */
+.book_list dl,
+.book_list dt,
+.book_list dd,
+.book_detail ul,
+.book_detail li{ margin: 0; padding:0;}
+.book_detail ul,
+.book_detail li{list-style: none;}
+.twoRightContent { border-bottom:none;}
+.threeContentLeft img{ margin:0px;}
+.red{ color:#90171a;}
+.price{ font-size:14px; font-weight:bold; color:#90171a;}
+img.button_book{ margin:8px 0px 0px;}
+.describe,
+.book_detail{ color:#474747;}
+
+/* 列表页 */
+.book_list td{ border-bottom:1px dashed #ccc; padding-top:20px; padding-bottom:20px;}
+.describe dt{ font-size:16px; font-weight:bold;}
+.describe dt a:link,
+.describe dt a:visited{ color:#1f376d;}
+.describe dt a:hover,
+.describe dt a:active{ color:#90171a;}
+.describe div.red{ margin:10px 0px;}
+
+/* 详细页 */
+.threeContentLeft{ background-color:#fff;}
+.book_detail .base{ overflow:hidden; _height:1%; _overflow:visible;}
+.book_detail .base li{ width:49.5%; float:left; display:inline;}
+.book_detail hr{ border:0 none; border-bottom:1px dashed #ccc; font-size:1px; height:1px; line-height:1px; margin:7px 0; _margin:0px;}
+h3.name{ font-size:16px; font-weight:bold; padding-left:15px;}
+.introduction{ margin:40px 0px 20px;}
+.introduction_menu{ background:url(introduction_menubg.gif) no-repeat center; overflow:hidden; _height:1%; _overflow:visible;}
+.introduction_menu li{ float:left; display:inline; font:13px "宋体"; font-weight:bold;}
+.introduction_menu a{ display:block; width:88px; height:27px; text-align:center; margin:0px 4px; background:url(introduction_menu.gif) no-repeat top center; padding-top:8px;}
+.introduction_menu a:link,
+.introduction_menu a:visited{ color:#474747;}
+.introduction_menu a:hover,
+.introduction_menu a:active{ text-decoration:none;}
+.introduction_menu li.current a{ background:url(introduction_current.gif) no-repeat top center;}
+.introduction_menu li.current a:link,
+.introduction_menu li.current a:visited{ color:#fff;}
+.introduction_main{ padding:10px 25px; color:#6C6C6C; margin-bottom:20px;}
+.introduction_main div{ display:none;}
+.introduction_main div.block{ display:block;}

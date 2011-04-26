@@ -1,0 +1,157 @@
+<script type="text/javascript">
+
+function getXMLHttpRequest(){
+	if (window.XMLHttpRequest){
+		return new XMLHttpRequest();
+	}else if(window.ActiveXObject){
+		for(var i =5;i>1;i--){
+	      try{
+	        if(i==2){
+				return new ActiveXObject( "Microsoft.XMLHTTP" );
+	        }else{
+				return new ActiveXObject( "Msxml2.XMLHTTP." + i + ".0" );
+	        }
+	      }catch(ex){}
+    	}
+	}
+}
+
+var req;
+function doTopLogin(){
+	req = getXMLHttpRequest();
+	var url = document.getElementById("cmscontext").value + "/Member/DoLogin.jsp?SiteID=206&UserName=" 
+		+ document.getElementById("name").value + "&PassWord=" + document.getElementById("code").value;
+	
+	req.open("POST", url, true);
+	req.send(null);
+	req.onreadystatechange = callback;
+	document.getElementById("LoginMessage").style.display = "";
+}
+
+function doTopRegister(){
+	window.open(document.getElementById("cmscontext").value + "/Member/Register.jsp?SiteID=" + '206');
+}
+
+function doTopLogout(){
+	if(confirm("您确认退出吗？")){
+		req = getXMLHttpRequest();
+		var url = document.getElementById("cmscontext").value + "/Member/DoLogout.jsp"
+		
+		req.open("POST", url, true);
+		req.send(null);
+		//req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+		req.onreadystatechange = callback;
+	}
+}
+
+function callback(){
+	try{
+		if (req.readyState==4&&req.status==200){
+            var txt = req.responseText;
+            var flag = txt.substring(0,1);
+            txt = txt.substring(2);
+            if(flag=="Y"){
+				window.location.reload();
+            	//document.getElementById("UserMenu").innerHTML = txt;
+				//document.getElementById("LoginMessage").style.display = "none";
+            }else{
+            	alert(txt);
+				document.getElementById("LoginMessage").style.display = "none";
+            }
+        }
+    }catch(ex){
+    	alert(ex);
+    };
+}
+
+function goMemberCenter(){
+	window.open(document.getElementById("cmscontext").value + "/Member/MemberInfo.jsp?cur=Menu_MI&SiteID=" + '206'); 
+}
+
+function goShopCart(){
+	window.open(document.getElementById("cmscontext").value + "/Shop/Web/ShopCart.jsp?cur=Menu_SC&SiteID=" + '206');
+}
+
+function goFavorite(){
+	window.open(document.getElementById("cmscontext").value + "/Shop/Web/Favorite.jsp?cur=Menu_Fav&SiteID=" + '206');
+}
+</script>
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+    <td colspan="3">
+    	<div id="header">
+        	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+            	<tr>
+                	<td width="450">
+                    	<input type="hidden" id="SiteID" value="206">
+						<input type="hidden" id="cmscontext" value="http://localhost:8080/ZCMS">
+                    	<div id="UserMenu">
+                    		<script src="http://localhost:8080/ZCMS/Member/LoginVerify.jsp?SiteID=206"></script>
+                    	</div>
+                    </td>
+                    <td><span id="LoginMessage" style="display:none;">登录中...</span></td>
+                    <td align="right">
+        			·<a href="../../../../">返回首页</a>·<a href="http://localhost:8080/ZCMS/Services/MessageBoardPage.jsp?BoardID=50&SiteID=206">在线留言</a>·<a href="../../../../form.shtml">自定义表单</a>·<a href="#">设为首页</a>  
+            		</td>
+                </tr>
+            </table>    
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3">
+    	<div id="navi">
+        	<a href="../../../../index.shtml"><img src="../../../../images/logo.jpg" height="60" width="168" /></a>
+            
+            <p><!--循环：catalog count：1-->
+
+			 <a href="../../../../gdxw/index.shtml" target="_blank">滚动新闻</a>
+			  
+			  
+			<!--循环：catalog count：9-->
+
+			 &nbsp;|&nbsp;<a href="../../../../kpzt/index.shtml" target="_blank">科普专题</a>
+			  
+			 &nbsp;|&nbsp;<a href="../../../../kxzx/index.shtml" target="_blank">科学在线</a>
+			  
+			 &nbsp;|&nbsp;<a href="../../../../fmx/index.shtml" target="_blank">封面秀</a>
+			  
+			 &nbsp;|&nbsp;<a href="../../../../kxgc/index.shtml" target="_blank">科学观察</a>
+			  
+			 &nbsp;|&nbsp;<a href="../../../../bksl/index.shtml" target="_blank">博客沙龙</a>
+			  
+			 &nbsp;|&nbsp;<a href="../../../../twht/index.shtml" target="_blank">天文航天</a>
+			  
+			 &nbsp;|&nbsp;<a href="../../../../lskg/index.shtml" target="_blank">历史考古</a>
+			  
+			 &nbsp;|&nbsp;<a href="../../../../zrdl/index.shtml" target="_blank">自然地理</a>
+			  
+			 	<br>
+			<!--循环：catalog count：10-->
+
+			 <a href="../../../../smyx/index.shtml" target="_blank">生命医学</a>
+			  
+			
+			<!--循环：catalog count：18-->
+
+			 &nbsp;|&nbsp;<a href="../../../../shbk/index.shtml" target="_blank">生活百科</a>
+			  
+			 &nbsp;|&nbsp;<a href="../../../../qwqg/index.shtml" target="_blank">奇闻奇观</a>
+			  
+			 &nbsp;|&nbsp;<a href="../../../../xfxp/index.shtml" target="_blank">先锋新品</a>
+			  
+			 &nbsp;|&nbsp;<a href="../../../../jczt/index.shtml" target="_blank">精彩专题</a>
+			  
+			 &nbsp;|&nbsp;<a href="../../../../kpsp/index.shtml" target="_blank">科普视频</a>
+			  
+			 &nbsp;|&nbsp;<a href="../../../../0lkx/index.shtml" target="_blank">魅力科学</a>
+			  
+			 &nbsp;|&nbsp;<a href="../../../../kxtb/index.shtml" target="_blank">科学图吧</a>
+			  
+			 &nbsp;|&nbsp;<a href="../../../../jrdd/index.shtml" target="_blank">今日导读</a>
+			  
+
+		</p><br/>
+     </div></td>
+  </tr>
+</table>

@@ -1,0 +1,9 @@
+<!--循环：article count：8-->
+<% DataTable dt_43 = TemplateData.getDocList("article","奇闻奇观","current","null","null","8","null");
+if(dt_43==null){write("没有找到栏目。parent：null  catalog：奇闻奇观");}else{
+for(int i=0;i<dt_43.getRowCount();i++){
+DataRow article_43  = dt_43.getDataRow(i);
+%>
+
+                <li><img src="images/num<%=i+1%>.gif" style=" padding-right:6px;" /> <a href="${article_43.Link}" target="_blank">${article_43.Title|CharWidth=11}</a></li>
+              <%}}%>

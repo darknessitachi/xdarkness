@@ -1,0 +1,15 @@
+document.write("<div id='vote_159' class='votecontainer' style='text-align:left' >");
+document.write(" <form id='voteForm_159' name='voteForm_159' action='http://localhost:8080/ZCMS/Services/VoteResult.jsp' method='post' target='_blank'>");
+document.write(" <input type='hidden' id='ID' name='ID' value='159'>");
+document.write(" <input type='hidden' id='VoteFlag' name='VoteFlag' value='Y'>");
+document.write(" <dl>");
+document.write("  <dt id='113'>1.您认为ZCMS应该加强哪方面的功能？</dt>");
+document.write("<dd><label><input name='Subject_113' type='radio' value='1017' />Web 2.0式的动态功能</label></dd>");
+document.write("<dd><label><input name='Subject_113' type='radio' value='1018' />标签应该能够扩展</label></dd>");
+document.write("<dd><label><input name='Subject_113' type='radio' value='1019' />应能拖拽式地生成快速专题</label></dd>");
+document.write("<dd><label><input name='Subject_113' type='radio' value='1020' />界面美观程度和易用性</label></dd>");
+document.write(" <dl>");
+document.write(" <dd><input type='submit' value='提交' onclick='return checkVote(159);'>&nbsp;&nbsp<input type='button' value='查看' onclick='javascript:window.open(\"http://localhost:8080/ZCMS/Services/VoteResult.jsp?ID=159\",\"VoteResult\")'></dd>");
+document.write(" </dl>");
+document.write(" </form>");
+document.write("</div>");

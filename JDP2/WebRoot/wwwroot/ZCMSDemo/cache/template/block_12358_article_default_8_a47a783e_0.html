@@ -1,0 +1,9 @@
+<!--循环：article count：8-->
+<% DataTable dt_20 = TemplateData.getDocList("article","天文航天","current","null","null","8","null");
+if(dt_20==null){write("没有找到栏目。parent：null  catalog：天文航天");}else{
+for(int i=7;i<dt_20.getRowCount();i++){
+DataRow article_20  = dt_20.getDataRow(i);
+%>
+
+                        <li class="last"><a href="${article_20.Link}" target="_blank">${article_20.Title|CharWidth=18}</a></li>
+                      <%}}%>

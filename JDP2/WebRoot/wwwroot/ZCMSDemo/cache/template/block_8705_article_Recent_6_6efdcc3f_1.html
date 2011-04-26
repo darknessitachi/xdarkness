@@ -1,0 +1,7 @@
+<!--循环：article count：6-->
+<% DataTable dt_5 = TemplateData.getDocList("article","海外移民","current","null","Recent","6","null");
+if(dt_5==null){write("没有找到栏目。parent：null  catalog：海外移民");}else{
+for(int i=1;i<dt_5.getRowCount();i++){
+DataRow article_5  = dt_5.getDataRow(i);
+%>
+ <a href="${article_5.Link}" target="_blank"> <img src="../${article_5.ImagePath}" width="125" height="122" style="padding-top:15px;padding-left:15px;"/></a> <%}}%>

@@ -1,0 +1,9 @@
+<!--循环：article count：1-->
+<% DataTable dt_34 = TemplateData.getDocList("article","生活百科","current","null","null","1","null");
+if(dt_34==null){write("没有找到栏目。parent：null  catalog：生活百科");}else{
+for(int i=0;i<dt_34.getRowCount();i++){
+DataRow article_34  = dt_34.getDataRow(i);
+%>
+
+                      <h3><a href="${article_34.Link}" target="_blank">${article_34.Title|CharWidth=16}</a></h3>
+                    <%}}%>

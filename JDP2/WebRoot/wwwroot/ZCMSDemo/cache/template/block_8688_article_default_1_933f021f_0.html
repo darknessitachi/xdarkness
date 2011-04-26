@@ -1,0 +1,9 @@
+<!--循环：article count：1-->
+<% DataTable dt_21 = TemplateData.getDocList("article","自然地理","current","null","null","1","null");
+if(dt_21==null){write("没有找到栏目。parent：null  catalog：自然地理");}else{
+for(int i=0;i<dt_21.getRowCount();i++){
+DataRow article_21  = dt_21.getDataRow(i);
+%>
+ <a href="${article_21.Link}" target="_blank"> <img src="${article_21.ImagePath}" height="120" width="160"/></a> <a href="${article_21.Link}" target="_blank">${article_21.Title|CharWidth=12}</a>
+                      <p class="newsleftcontent">${article_21.Summary|CharWidth=35}<span>[<a href="${article_21.Link}">详细</a>]</span></p>
+                    <%}}%>

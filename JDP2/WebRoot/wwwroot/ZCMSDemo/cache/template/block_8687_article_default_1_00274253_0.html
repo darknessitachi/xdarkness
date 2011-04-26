@@ -1,0 +1,9 @@
+<!--循环：article count：1-->
+<% DataTable dt_25 = TemplateData.getDocList("article","历史考古","current","null","null","1","null");
+if(dt_25==null){write("没有找到栏目。parent：null  catalog：历史考古");}else{
+for(int i=0;i<dt_25.getRowCount();i++){
+DataRow article_25  = dt_25.getDataRow(i);
+%>
+ <a href="${article_25.Link}" target="_blank"> <img src="${article_25.ImagePath}" height="120" width="160"/></a> <a href="${article_25.Link}" target="_blank">${article_25.Title|CharWidth=12}</a>
+                      <p class="newsleftcontent">${article_25.Summary|CharWidth=35}<span>[<a href="${article_25.Link}">详细</a>]</span></p>
+                    <%}}%>

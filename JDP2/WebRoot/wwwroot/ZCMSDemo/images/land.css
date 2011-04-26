@@ -1,0 +1,26 @@
+@charset "gb2312";
+/* CSS Document */
+h2,form,ul,li{ margin:0; padding:0;}
+ul,li{ list-style:none;}
+.threeContentHeader { border-top:none; margin:0; padding:10px;}
+.threeContentHeader p { padding:0;}
+.container{ margin:15px 5px 0; font-size:13px; color:#000; font-family:"宋体";}
+.content{ padding:40px 35px 50px;}
+.content .land{ width:410px; float:left; display:inline;}
+.content .land h2{ background:url(land_titlebg.gif) no-repeat left top; padding:16px 30px 10px;}
+.content .land form{ padding:35px; background:url(landbg.gif) repeat-y left top; font-size:13px;}
+.content .land input{ border:1px solid #999; padding:0; height:21px; width:177px; vertical-align:middle;}
+.content .land form img{ vertical-align:middle; margin-left:5px;}
+.content .land form a{ display:inline-block; margin-left:10px;}
+.content .land form a:link, .content .land form a:visited{ color:#f15d10;}
+.content .land input.land_btn{ background:url(land_btn.gif) no-repeat left top; border:none; width:78px; height:27px; margin:23px 10px 0 50px;}
+.content .land input.enrol_btn{ background:url(enrol_btn.gif) no-repeat left top; border:none; width:78px; height:27px; margin-top:23px;}
+
+.content .enrol{ width:410px; float:right; display:inline;}
+.content .enrol h2{ background:url(land_titlebg.gif) no-repeat left top; padding:16px 30px 10px;}
+.content .enrol div{ padding:30px 50px; background:url(landbg.gif) repeat-y left top; font-size:13px; padding-bottom:58px;+padding-bottom:64px;}
+.content .enrol div ul{ margin:10px 20px; color:#666; line-height:25px;}
+.content .enrol div li{ background:url(enrol_icon.gif) no-repeat left center; padding-left:15px;}
+.content .enrol div img{ float:right; display:inline;}
+
+.content .clear{ clear:both;}

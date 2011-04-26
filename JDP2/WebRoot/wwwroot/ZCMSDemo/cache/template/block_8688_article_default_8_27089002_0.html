@@ -1,0 +1,9 @@
+<!--循环：article count：8-->
+<% DataTable dt_24 = TemplateData.getDocList("article","自然地理","current","null","null","8","null");
+if(dt_24==null){write("没有找到栏目。parent：null  catalog：自然地理");}else{
+for(int i=7;i<dt_24.getRowCount();i++){
+DataRow article_24  = dt_24.getDataRow(i);
+%>
+
+                        <li class="last"><a href="${article_24.Link}" target="_blank">${article_24.Title|CharWidth=18}</a></li>
+                      <%}}%>

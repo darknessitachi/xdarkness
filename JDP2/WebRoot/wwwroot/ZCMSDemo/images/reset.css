@@ -1,0 +1,21 @@
+@charset "gb2312";
+/* CSS Document */
+a {color: #000; text-decoration: none; border: 0; background-color: transparent; }
+a:hover {color: #f15d10; text-decoration: underline; background-color: transparent; }
+a:active{color: #f15d10; outline:0;}
+body,div,form,
+ul,li,ol,dl,dt,dd,h1,h2,h3,h4,h5,h6,p{ margin: 0; padding: 0;}
+ul,dl,li{list-style: none;}
+img{border: none 0;}
+body,td,textarea{word-break: break-all;word-wrap: break-word; line-height:1.5;}
+body,input,textarea,select,button{margin: 0; font-size: 12px;font-family:"宋体" sans-serif;}
+div,p,table,th,td{ font-size:12px; line-height:inherit;}
+h1 { font-size:16px; font-family:"宋体", sans-serif; font-weight: bold; color:#000;}
+h2 { font-size: 14px; font-family:"宋体", sans-serif; font-weight: bold; color:#267c00;}
+h3 { font-size: 13px; font-family:"宋体", sans-serif; font-weight: bold;}
+body{
+	margin:0 auto; 
+	padding:0; 
+	width:950px; 
+	text-align:center;
+}

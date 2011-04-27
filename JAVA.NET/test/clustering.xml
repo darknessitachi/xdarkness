@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clustering>
+	<config name="ClusteringEnable">false</config>
+	<config name="UserAsClusteringServer">false</config>
+	<config name="ClusteringServerType">Socket</config>
+	<config name="SocketPort">10301</config>
+	<servers>
+		<server weight="1" url="socket://10.1.43.57:10301" retrycount="5" timeout="10"/>
+		<server weight="1" url="http://10.1.43.57:8080/ClusteringServer" retrycount="5" timeout="10"/>
+	</servers>
+</clustering>

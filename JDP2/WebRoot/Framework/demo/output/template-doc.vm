@@ -1,0 +1,211 @@
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../resources/ext-all.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/docs.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/style.css" />
+		<script>
+		window.onload=function(){
+			var tds = document.getElementsByTagName('td');
+			for(var i=0;i<tds.length;i++) {
+				var td = tds[i];
+				if(td.name != 'methodTd') continue;
+				td.onclick = dispalyRow;
+			}
+		}
+		function dispalyRow() {
+			var className = this.parentElement.className;
+			this.parentElement.className = className.indexOf('expanded')>0?'method-row expandable ':'method-row expandable expanded';
+		}
+		</script>
+	</head>
+	<body style="overflow:auto">
+		<div class="body-wrap">
+			<div class="top-tools">
+				<a class="inner-link" href="#String-props"><img
+						src="../../resources/images/default/blank.gif"
+						style="border-color: #0000ff;" class="item-icon icon-prop">属性</a>&#13;
+				<a class="inner-link" href="#String-methods"><img
+						src="../../resources/images/default/blank.gif"
+						class="item-icon icon-method">方法</a>&#13;
+				<a class="inner-link" href="#String-events"><img
+						src="../../resources/images/default/blank.gif"
+						class="item-icon icon-event">事件</a>&#13;
+			</div>
+			<h1>
+				类
+				<a href="#">$ClassName</a>
+			</h1>
+			<table cellspacing="0">
+				<tr>
+					<td class="label">
+						包:
+					</td>
+					<td class="hd-info">
+						全局
+					</td>
+				</tr>
+				<tr>
+					<td class="label">
+						定义在:
+					</td>
+					<td class="hd-info">
+						<a href="#">$DefinedInFileName</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="label">
+						类:
+					</td>
+					<td class="hd-info">
+						<a href="#">$ClassName</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="label">
+						继承:
+					</td>
+					<td class="hd-info">
+						Object
+					</td>
+				</tr>
+			</table>
+			<div class="description">
+				$ClassComment
+			</div>
+			<div class="hr"></div>
+			<a id="String-props"></a>
+			<h2>
+				公有属性
+			</h2>
+			#if($Properties.size()>0)
+			<table cellspacing="0" class="member-table">
+				<tbody>
+					<tr>
+						<th colspan="2" class="sig-header">
+							属性
+						</th>
+						<th class="msource-header">
+							属于
+						</th>
+					</tr>
+					#foreach($Property in $Properties)
+					<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">$Property.Name</a></b>: $Property.Type
+							<div class="mdesc">
+								<div class="short">
+									&lt;$Property.Type&gt;&nbsp;$Property.Comment
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							$ClassName
+						</td>
+					</tr>
+					#end
+				</tbody>
+			</table>
+			
+			#end
+			#if($Properties.size()==0)
+			<div class="no-members">
+				这个类没有公有属性.
+			</div>
+			#end
+			<a id="String-methods"></a>
+			<h2>
+				公有方法
+			</h2>
+			#if($Methods.size()>0)
+			<table cellspacing="0" class="member-table">
+				<tbody>
+					<tr>
+						<th colspan="2" class="sig-header">
+							方法
+						</th>
+						<th class="msource-header">
+							属于
+						</th>
+					</tr>
+					#foreach($Method in $Methods)
+					#if($Method.Type!="private")
+					<tr class="method-row expandable ">
+						<td class="micon" name="methodTd">
+							<a href="#expand" class="exi">&nbsp;</a>
+						</td>
+						<td class="sig">
+							<a id="String-escape"></a><b><a href="#">$Method.Name</a></b>(&nbsp;
+							<code>
+								#foreach($Property in $Method.Properties)
+								#if($velocityCount != 1)， #end$Property.Type $Property.Name 
+								#end
+							</code>
+							&nbsp;) : $Method.Return.Type
+							<div class="mdesc">
+								<div class="short">
+									&lt;$Method.Type&gt;&nbsp;$Method.Comment
+								</div>
+								<div class="long">
+									&lt;$Method.Type&gt;&nbsp;$Method.Comment
+									<div class="mdetail-params">
+										<strong>参数:</strong>
+										<ul>
+											#foreach($Property in ${Method.Properties})
+											
+											<li>
+												<code>
+													${Property.Name}
+												</code>
+												: ${Property.Type}
+												<div class="sub-desc">
+													${Property.Comment}
+												</div>
+											</li>
+											
+											#end
+											
+										</ul>
+										<strong>返回:</strong>
+										<ul>
+											<li>
+												<code>
+													$Method.Return.Type
+												</code>
+												<div class="sub-desc">
+													$Method.Return.Comment
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="msource">
+							$ClassName
+						</td>
+					</tr>
+					#end
+					#end
+				</tbody>
+			</table>
+			#end
+			#if($Methods.size()==0)
+			<div class="no-members">
+				这个类没有公有方法.
+			</div>
+			#end
+			<a id="String-events"></a>
+			<h2>
+				公有事件
+			</h2>
+			<div class="no-members">
+				这个类没有公有事件.
+			</div>
+		</div>
+
+	</body>
+</html>

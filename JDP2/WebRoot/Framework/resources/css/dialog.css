@@ -1,0 +1,233 @@
+
+A.zButton INPUT {
+	BORDER-RIGHT: #fff 0px;
+	PADDING-RIGHT: 8px;
+	BORDER-TOP: #fff 0px;
+	PADDING-LEFT: 6px;
+	BACKGROUND: url(../images/default/input/zButtonBg.gif) no-repeat right top;
+	LEFT: 2px;
+	PADDING-BOTTOM: 0px;
+	VERTICAL-ALIGN: middle;
+	BORDER-LEFT: #fff 0px;
+	CURSOR: pointer;
+	COLOR: #09d;
+	LINE-HEIGHT: 12px;
+	PADDING-TOP: 0px;
+	BORDER-BOTTOM: #fff 0px;
+	POSITION: relative;
+	HEIGHT: 21px;
+	outline: none
+}
+
+A.zButton INPUT.inputButton {
+	BORDER-RIGHT: #fff 0px;
+	PADDING-RIGHT: 8px;
+	BORDER-TOP: #fff 0px;
+	PADDING-LEFT: 6px;
+	BACKGROUND: url(../images/default/input/zButtonBg.gif) no-repeat right top;
+	LEFT: 2px;
+	PADDING-BOTTOM: 0px;
+	VERTICAL-ALIGN: middle;
+	BORDER-LEFT: #fff 0px;
+	CURSOR: pointer;
+	COLOR: #09d;
+	LINE-HEIGHT: 12px;
+	PADDING-TOP: 0px;
+	BORDER-BOTTOM: #fff 0px;
+	POSITION: relative;
+	HEIGHT: 21px;
+	outline: none
+}
+
+A.zButton INPUT:hover {
+	BORDER-RIGHT: #fff 0px;
+	BORDER-TOP: #fff 0px;
+	BORDER-LEFT: #fff 0px;
+	BORDER-BOTTOM: #fff 0px;
+	outline: none;
+	moz-outline: none
+}
+
+A.zButton INPUT:active {
+	BORDER-RIGHT: #fff 0px;
+	BORDER-TOP: #fff 0px;
+	BORDER-LEFT: #fff 0px;
+	BORDER-BOTTOM: #fff 0px;
+	outline: none;
+	moz-outline: none
+}
+
+A.zButton INPUT:unknown {
+	BORDER-RIGHT: #fff 0px;
+	BORDER-TOP: #fff 0px;
+	BORDER-LEFT: #fff 0px;
+	BORDER-BOTTOM: #fff 0px;
+	outline: none;
+	moz-outline: none
+}
+
+A.zButton INPUT:unknown {
+	COLOR: #000
+}
+
+A.zButton:hover {
+	BACKGROUND-IMAGE: url(../images/default/input/zButtonBg_over.gif);
+	TEXT-DECORATION: none
+}
+
+A.zButton:hover INPUT {
+	BACKGROUND-IMAGE: url(../images/default/input/zButtonBg_over.gif)
+}
+
+/* Rule 33 of Include/Default.css */
+TD {
+	WORD-BREAK: break-all;
+	LINE-HEIGHT: 1.4;
+	WORD-WRAP: break-word
+}  /* Rule 44 of Include/Default.css */
+TD {
+	FONT-SIZE: 1em;
+	FONT-FAMILY: inherit
+}  /* Rule 42 of Include/Default.css */
+TABLE {
+	FONT-SIZE: 1em;
+	FONT-FAMILY: inherit
+}  /* Rule 83 of Include/Default.css */
+TABLE {
+	BORDER-COLLAPSE: collapse
+}  /* Rule 206 of Include/Default.css */
+.blockTable {
+	BORDER-RIGHT: #bbbbbb 0px solid;
+	BORDER-TOP: #bbbbbb 0px solid;
+	BACKGROUND: url(../images/default/dataTable/tableBg_left.gif) no-repeat left top
+		;
+	BORDER-LEFT: #bbbbbb 0px solid;
+	BORDER-BOTTOM: #bbbbbb 0px solid
+}  /* Rule 2 of Include/Default.css */
+BODY {
+	SCROLLBAR-FACE-COLOR: #ddeeff;
+	SCROLLBAR-HIGHLIGHT-COLOR: #ffffff;
+	SCROLLBAR-SHADOW-COLOR: #99bbcc;
+	SCROLLBAR-3DLIGHT-COLOR: #aaccdd;
+	SCROLLBAR-ARROW-COLOR: #6688aa;
+	SCROLLBAR-TRACK-COLOR: #eeeeee;
+	SCROLLBAR-DARKSHADOW-COLOR: #ddeeff
+}  /* Rule 4 of Include/Default.css */
+BODY {
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	BACKGROUND: #ffffff;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0px;
+	COLOR: #444444;
+	PADDING-TOP: 0px;
+	HEIGHT: 100%
+}  /* Rule 32 of Include/Default.css */
+BODY {
+	WORD-BREAK: break-all;
+	LINE-HEIGHT: 1.4;
+	WORD-WRAP: break-word
+}  /* Rule 35 of Include/Default.css */
+BODY {
+	FONT-SIZE: 12px;
+	FONT-FAMILY: Tahoma, SimSun, sans-serif
+}  /* Rule 1 of Include/Default.css */
+HTML {
+	SCROLLBAR-FACE-COLOR: #ddeeff;
+	SCROLLBAR-HIGHLIGHT-COLOR: #ffffff;
+	SCROLLBAR-SHADOW-COLOR: #99bbcc;
+	SCROLLBAR-3DLIGHT-COLOR: #aaccdd;
+	SCROLLBAR-ARROW-COLOR: #6688aa;
+	SCROLLBAR-TRACK-COLOR: #eeeeee;
+	SCROLLBAR-DARKSHADOW-COLOR: #ddeeff
+}  /* Rule 3 of Include/Default.css */
+HTML {
+	HEIGHT: 100%
+}  /* Rule 11 of Include/Default.css */
+DIV {
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0px;
+	PADDING-TOP: 0px
+}  /* Rule 40 of Include/Default.css */
+DIV {
+	FONT-SIZE: 1em;
+	FONT-FAMILY: inherit
+}  /* Rule 166 of Include/Default.css */
+.optgroup {
+	Z-INDEX: 666;
+	LEFT: 0px;
+	COLOR: #336699;
+	POSITION: absolute;
+	TOP: 0px
+}  /* Rule 167 of Include/Default.css */
+.optgroup DIV {
+	BORDER-RIGHT: #667788 1px solid;
+	PADDING-RIGHT: 2px;
+	BORDER-TOP: #667788 1px solid;
+	PADDING-LEFT: 2px;
+	Z-INDEX: 888;
+	BACKGROUND: url(../images/default/input/textarea_bg.gif) #f7fafc 0px 2px;
+	OVERFLOW-X: hidden;
+	PADDING-BOTTOM: 2px;
+	OVERFLOW: auto;
+	BORDER-LEFT: #667788 1px solid;
+	WIDTH: auto;
+	COLOR: #336699;
+	PADDING-TOP: 2px;
+	BORDER-BOTTOM: #667788 1px solid;
+	max-height: 300px
+}  /* Rule 5 of Include/Default.css */
+A {
+	BORDER-TOP-WIDTH: 0px;
+	BORDER-LEFT-WIDTH: 0px;
+	BORDER-BOTTOM-WIDTH: 0px;
+	COLOR: #0099ee;
+	BACKGROUND-COLOR: transparent;
+	BORDER-RIGHT-WIDTH: 0px;
+	TEXT-DECORATION: none
+}  /* Rule 168 of Include/Default.css */
+.optgroup A {
+	PADDING-RIGHT: 3px;
+	DISPLAY: block;
+	PADDING-LEFT: 6px;
+	PADDING-BOTTOM: 0px;
+	CURSOR: default;
+	COLOR: #336699;
+	PADDING-TOP: 0px;
+	WHITE-SPACE: nowrap;
+	HEIGHT: 18px;
+	TEXT-DECORATION: none;
+	min-width: 2em
+}  /* Rule 31 of Include/Default.css */
+IMG {
+	BORDER-RIGHT: 0px;
+	BORDER-TOP: 0px;
+	VERTICAL-ALIGN: middle;
+	BORDER-LEFT: 0px;
+	BORDER-BOTTOM: 0px
+}  /* Rule 36 of Include/Default.css */
+INPUT {
+	FONT-SIZE: 12px;
+	FONT-FAMILY: Tahoma, SimSun, sans-serif
+}  /* Rule 94 of Include/Default.css */
+INPUT {
+	MARGIN: 0px;
+	VERTICAL-ALIGN: middle;
+	COLOR: #114477
+}  /* Rule 95 of Include/Default.css */
+INPUT.inputText {
+	BORDER-RIGHT: #aabbcc 1px solid;
+	PADDING-RIGHT: 2px;
+	BORDER-TOP: #778899 1px solid;
+	PADDING-LEFT: 2px;
+	BACKGROUND: url(../images/default/input/text_bg.gif) #f7fafc repeat-x left
+		top;
+	PADDING-BOTTOM: 1px;
+	VERTICAL-ALIGN: middle;
+	BORDER-LEFT: #8899aa 1px solid;
+	COLOR: #336699;
+	PADDING-TOP: 2px;
+	BORDER-BOTTOM: #aabbcc 1px solid
+}

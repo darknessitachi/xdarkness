@@ -1,0 +1,59 @@
+package cmscore.template;
+
+import com.zving.framework.utility.DateUtil;
+import com.zving.framework.utility.StringUtil;
+
+public class Index extends TemplateBase{
+	public Index(){
+		this.Name = ;
+		this.Version = ;
+	}
+	
+	public void execute(){
+		PrintWriter out = new PrintWriter();
+		out.write("a");
+		out.write(context.getValue("Article.Title"));
+		out.write("b\n");
+		Tag_cms_list  tag_cms_list1 = new Tag_cms_list(context);
+		tag_cms_list1.setAttribute("name","今日导读");
+		tag_cms_list1.setAttribute("count","5");
+		if(tag_cms_list1.onTagStart()!=TagBase.SKIP){
+			if(tag_cms_list1.isIterative()){//能否迭代在模板编译时尚不能确定，有可能模板编译之后标签有被修改
+				while(tag_cms_list1.prepareNext()){
+					Tag_z_if  tag_z_if1 = new Tag_z_if(context);
+					if(tag_z_if1.onTagStart()==TagBase.CONTINUE){
+						out.write("<a href='");
+						out.write(${Article.URL}'>${Article.Title|CharLength=20}</a>");
+						out.write(context.getValue("Article.URL"));
+						out.write("'>");
+						out.write(Format.charLength(context.getValue("Article.Title")));
+						out.write("</a>\n");
+					}
+					if(tag_z_if1.onTagEnd()==TagBase.SKIP){
+						break;
+					}
+					if(tag_z_if1.onTagEnd()==TagBase.END){
+						return;
+					}
+				}
+			}else{
+				Tag_z_if  tag_z_if1 = new Tag_z_if(context);
+				if(tag_z_if1.onTagStart()==TagBase.CONTINUE){
+					out.write("<a href='");
+					out.write(${Article.URL}'>${Article.Title|CharLength=20}</a>");
+					out.write(context.getValue("Article.URL"));
+					out.write("'>");
+					out.write(Format.charLength(context.getValue("Article.Title")));
+					out.write("</a>\n");
+				}
+				if(tag_z_if1.onTagEnd()==TagBase.END){
+					return;
+				}
+			}			
+			if(tag_cms_list1.onTagEnd()==TagBase.END){
+				return;
+			}
+		}
+		out.write("\ntail");	
+	}
+}

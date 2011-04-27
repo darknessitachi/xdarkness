@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<extend>
+	<!-- 
+		<action class="com.zving.shop.extend.ShopMenuExtend" />
+		<action class="com.zving.shop.extend.ShopLoginExtend" />
+		<action class="com.zving.bbs.extend.BBSMenuExtend" />
+		<action class="com.zving.bbs.extend.BBSLoginExtend" />
+		 -->
+	</extend>
+</config>

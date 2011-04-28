@@ -1349,4 +1349,12 @@
 	<data createTime="2011-4-20" useFor="eat" money="21" />
 	<data createTime="2011-4-21" useFor="eat" money="13" />
 	<data createTime="2011-4-22" useFor="eat" money="21" />
+	<data createTime="2011-4-23" useFor="eat" money="18" />
+	<data createTime="2011-4-24" useFor="milk" money="66.2" />
+	<data createTime="2011-4-25" useFor="eat" money="13" />
+	<data createTime="2011-4-25" useFor="traffic" money="83" />
+	<data createTime="2011-4-26" useFor="eat" money="13" />
+	<data createTime="2011-4-27" useFor="eat" money="13" />
+	<data createTime="2011-4-28" useFor="eat" money="13" />
+	<data createTime="2011-4-22" useFor="eat" money="21" />
 </dataset>

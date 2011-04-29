@@ -4,81 +4,69 @@
 
 
 	<data createTime="2009-12-29" useFor="phone" money="50" />
+	<data createTime="2010-4-30" useFor="phone" money="50" />
+	<data createTime="2010-3-21" useFor="phone" money="50" />
+	<data createTime="2010-6-20" useFor="phone" money="50" />
+	<data createTime="2010-7-27" useFor="phone" money="50" />
+	<data createTime="2010-9-4" useFor="phone" money="50" />
+	<data createTime="2010-9-25" useFor="phone" money="50" />
+	<data createTime="2010-11-5" useFor="phone" money="50" />
+	<data createTime="2010-12-5" useFor="phone" money="50" />
 	<data createTime="2010-2-16" useFor="phone" money="150" />
+	<data createTime="2010-2-3" useFor="phone" money="50" />
+	<data createTime="2010-1-13" useFor="phone" money="50" />
 	<data createTime="2010-3-20" useFor="phone" money="50" />
 	<data createTime="2010-4-30" useFor="phone" money="50" />
 	<data createTime="2010-6-20" useFor="phone" money="50" />
 	<data createTime="2010-7-27" useFor="phone" money="50" />
+	<data createTime="2011-4-15" useFor="phone" money="50" />
+	<data createTime="2011-4-21" useFor="phone" money="36" />
+	<data createTime="2011-4-4" useFor="phone" money="30" />
+	<data createTime="2011-3-24" useFor="phone" money="50" />
+	<data createTime="2011-3-4" useFor="phone" money="50" />
 
 
-	<data createTime="2009-1-15" useFor="salary" moneyType="in"
-		money="268.84" />
-	<data createTime="2009-2-15" useFor="salary" moneyType="in"
-		money="400.00" />
-	<data createTime="2009-3-15" useFor="salary" moneyType="in"
-		money="400.00" />
-	<data createTime="2009-4-15" useFor="salary" moneyType="in"
-		money="500.00" />
-	<data createTime="2009-5-15" useFor="salary" moneyType="in"
-		money="378.95" />
-	<data createTime="2009-6-15" useFor="salary" moneyType="in"
-		money="209.09" />
-	<data createTime="2009-7-15" useFor="salary" moneyType="in"
-		money="1669.05" />
-	<data createTime="2009-8-15" useFor="salary" moneyType="in"
-		money="1629.95" />
-	<data createTime="2009-9-15" useFor="salary" moneyType="in"
-		money="2356.45" />
-	<data createTime="2009-10-15" useFor="salary" moneyType="in"
-		money="2413.20" />
-	<data createTime="2009-11-15" useFor="salary" moneyType="in"
-		money="2175.70" />
-	<data createTime="2009-12-15" useFor="salary" moneyType="in"
-		money="2551.45" />
-	<data createTime="2010-1-15" useFor="salary" moneyType="in"
-		money="2385.70" />
-	<data createTime="2010-1-15" useFor="salary" moneyType="in"
-		money="1500" description="award" />
-	<data createTime="2010-2-15" useFor="salary" moneyType="in"
-		money="2265.95" />
-	<data createTime="2010-2-15" useFor="salary" moneyType="in"
-		money="11550" description="allowance" />
-	<data createTime="2010-3-15" useFor="salary" moneyType="in"
-		money="2668.45" />
-	<data createTime="2010-4-15" useFor="salary" moneyType="in"
-		money="2648.65" />
-	<data createTime="2010-5-15" useFor="salary" moneyType="in"
-		money="2641.45" />
-	<data createTime="2010-6-15" useFor="salary" moneyType="in"
-		money="2649.55" />
-	<data createTime="2010-6-15" useFor="outerSystem" moneyType="in"
-		money="500" />
-	<data createTime="2010-7-15" useFor="salary" moneyType="in"
-		money="2635.38" />
-	<data createTime="2010-8-15" useFor="salary" moneyType="in"
-		money="2635.38" />
-	<data createTime="2010-9-15" useFor="salary" moneyType="in"
-		money="2509.88" />
-	<data createTime="2010-9-15" useFor="salary" moneyType="in"
-		money="1300" description="award" />
-	<data createTime="2010-10-15" useFor="salary" moneyType="in"
-		money="2859.18" />
-	<data createTime="2010-11-15" useFor="salary" moneyType="in"
-		money="501" />
-	<data createTime="2010-11-15" useFor="salary" moneyType="in"
-		money="2707.08" />
-	<data createTime="2010-12-15" useFor="salary" moneyType="in"
-		money="240" />
-	<data createTime="2010-12-15" useFor="salary" moneyType="in"
-		money="2707.08" />
-	<data createTime="2010-12-15" useFor="outerSystem" moneyType="in"
-		money="2000" />
-	<data createTime="2011-1-15" useFor="salary" moneyType="in"
-		money="220" />
-	<data createTime="2011-1-15" useFor="salary" moneyType="in"
-		money="4600" description="award" />
-	<data createTime="2011-2-15" useFor="salary" moneyType="in"
-		money="120" />
+	<data createTime="2009-1-15" useFor="salary" moneyType="in" money="268.84" />
+	<data createTime="2009-2-15" useFor="salary" moneyType="in" money="400.00" />
+	<data createTime="2009-3-15" useFor="salary" moneyType="in" money="400.00" />
+	<data createTime="2009-4-15" useFor="salary" moneyType="in" money="500.00" />
+	<data createTime="2009-5-15" useFor="salary" moneyType="in" money="378.95" />
+	<data createTime="2009-6-15" useFor="salary" moneyType="in" money="209.09" />
+	<data createTime="2009-7-15" useFor="salary" moneyType="in" money="1669.05" />
+	<data createTime="2009-8-15" useFor="salary" moneyType="in" money="1629.95" />
+	<data createTime="2009-9-15" useFor="salary" moneyType="in" money="2356.45" />
+	<data createTime="2009-10-15" useFor="salary" moneyType="in" money="2413.20" />
+	<data createTime="2009-11-15" useFor="salary" moneyType="in" money="2175.70" />
+	<data createTime="2009-12-15" useFor="salary" moneyType="in" money="2551.45" />
+	<data createTime="2010-1-15" useFor="salary" moneyType="in" money="2385.70" />
+	<data createTime="2010-1-15" useFor="salary" moneyType="in" money="1500" description="award" />
+	<data createTime="2010-2-15" useFor="salary" moneyType="in" money="2265.95" />
+	<data createTime="2010-2-15" useFor="salary" moneyType="in" money="11550" description="allowance" />
+	<data createTime="2010-3-15" useFor="salary" moneyType="in" money="2668.45" />
+	<data createTime="2010-4-15" useFor="salary" moneyType="in" money="2648.65" />
+	<data createTime="2010-5-15" useFor="salary" moneyType="in" money="2641.45" />
+	<data createTime="2010-6-15" useFor="salary" moneyType="in" money="2649.55" />
+	<data createTime="2010-6-15" useFor="outerSystem" moneyType="in" money="500" />
+	<data createTime="2010-7-15" useFor="salary" moneyType="in" money="2635.38" />
+	<data createTime="2010-8-15" useFor="salary" moneyType="in" money="2635.38" />
+	<data createTime="2010-9-15" useFor="salary" moneyType="in" money="2509.88" />
+	<data createTime="2010-9-15" useFor="salary" moneyType="in" money="1300" description="award" />
+	<data createTime="2010-10-15" useFor="salary" moneyType="in" money="2859.18" />
+	<data createTime="2010-11-15" useFor="salary" moneyType="in" money="501" />
+	<data createTime="2010-11-15" useFor="salary" moneyType="in" money="2707.08" />
+	<data createTime="2010-12-15" useFor="salary" moneyType="in" money="240" />
+	<data createTime="2010-12-15" useFor="salary" moneyType="in" money="2707.08" />
+	<data createTime="2010-12-15" useFor="outerSystem" moneyType="in" money="2000" />
+	<data createTime="2011-1-15" useFor="salary" moneyType="in" money="220" />
+	<data createTime="2011-1-15" useFor="salary" moneyType="in" money="2482.08" />
+	<data createTime="2011-1-15" useFor="salary" moneyType="in" money="4600" description="award" />
+	<data createTime="2011-2-15" useFor="salary" moneyType="in" money="120" />
+	<data createTime="2011-2-15" useFor="salary" moneyType="in" money="2707.08" />
+	<data createTime="2011-3-15" useFor="salary" moneyType="in" money="4184.94" />
+	<data createTime="2011-3-15" useFor="salary" moneyType="in" money="220" />
+	<data createTime="2011-3-15" useFor="salary" moneyType="in" money="150" />
+	      
+	
 
 	<data createTime="2009-2-1" useFor="traffic" money="14" />
 	<data createTime="2009-2-2" useFor="traffic" money="6" />
@@ -1006,29 +994,26 @@
 	<data createTime="2010-11-3" useFor="eat" money="10.9" />
 	<data createTime="2010-11-3" useFor="traffic" money="2.4" />
 	<data createTime="2010-11-4" useFor="eat" money="16.8" />
-	<data createTime="2010-11-4" useFor="other" money="10"
-		description="彩票" />
+	<data createTime="2010-11-4" useFor="other" money="10" description="彩票" />
 	<data createTime="2010-11-4" useFor="traffic" money="2.4" />
 	<data createTime="2010-11-5" useFor="eat" money="3" />
 	<data createTime="2010-11-5" useFor="traffic" money="1.2" />
-	<data createTime="2010-11-5" useFor="eat" money="501"
-		description="11月份公司" />
+	<data createTime="2010-11-5" useFor="eat" money="501" description="11月份公司" />
 	<data createTime="2010-11-6" useFor="eat" money="14.5" />
-	<data createTime="2010-11-6" useFor="articlesForDailyUse" money="3"
-		description="洗衣粉" />
+	<data createTime="2010-11-6" useFor="articlesForDailyUse" money="3" description="洗衣粉" />
+	<data createTime="2010-11-10" useFor="book" money="104.1" />
+	<data createTime="2010-11-11" useFor="book" money="23.9" />
+	<data createTime="2010-11-14" useFor="book" money="110" />
 	<data createTime="2010-11-21" useFor="eat" money="12.5" />
 	<data createTime="2010-11-25" useFor="eat" money="9" />
-	<data createTime="2010-11-26" useFor="articlesForDailyUse"
-		money="33.9" description="洗发露" />
-	<data createTime="2010-11-26" useFor="clothes" money="11.9"
-		description="袜子" />
+	<data createTime="2010-11-26" useFor="articlesForDailyUse" money="33.9" description="洗发露" />
+	<data createTime="2010-11-26" useFor="clothes" money="11.9" description="袜子" />
 	<data createTime="2010-11-26" useFor="milk" money="13" />
 	<data createTime="2010-11-27" useFor="traffic" money="92.5" />
 	<data createTime="2010-11-27" useFor="eat" money="9" />
 	<data createTime="2010-11-28" useFor="milk" money="4" />
 	<data createTime="2010-11-28" useFor="traffic" money="10.5" />
-	<data createTime="2010-11-29" useFor="clothes" money="141"
-		description="皮外套" />
+	<data createTime="2010-11-29" useFor="clothes" money="141" description="皮外套" />
 	<data createTime="2010-11-29" useFor="book" money="74.5" />
 
 	<data createTime="2010-12-1" useFor="eat" money="21" />
@@ -1071,21 +1056,17 @@
 	<data createTime="2010-12-19" useFor="traffic" money="11" />
 	<data createTime="2010-12-20" useFor="eat" money="18" />
 	<data createTime="2010-12-21" useFor="eat" money="21" />
-	<data createTime="2010-12-21" useFor="clothes" money="250"
-		description="两件外套：红、灰" />
-	<data createTime="2010-12-21" useFor="clothes" money="165"
-		description="增高鞋" />
+	<data createTime="2010-12-21" useFor="clothes" money="250" description="两件外套：红、灰" />
+	<data createTime="2010-12-21" useFor="clothes" money="165" description="增高鞋" />
 	<data createTime="2010-12-22" useFor="eat" money="21" />
 	<data createTime="2010-12-23" useFor="eat" money="21" />
 	<data createTime="2010-12-24" useFor="eat" money="21" />
 	<data createTime="2010-12-25" useFor="eat" money="18" />
 	<data createTime="2010-12-26" useFor="eat" money="18" />
 	<data createTime="2010-12-26" useFor="book" money="71" />
-	<data createTime="2010-12-26" useFor="other" money="278"
-		description="域名" />
+	<data createTime="2010-12-26" useFor="other" money="278" description="域名" />
 	<data createTime="2010-12-27" useFor="eat" money="25.5" />
-	<data createTime="2010-12-27" useFor="articlesForDailyUse" money="8"
-		description="卫生纸" />
+	<data createTime="2010-12-27" useFor="articlesForDailyUse" money="8" description="卫生纸" />
 	<data createTime="2010-12-28" useFor="eat" money="21" />
 	<data createTime="2010-12-28" useFor="book" money="81" />
 	<data createTime="2010-12-29" useFor="eat" money="21" />
@@ -1128,6 +1109,7 @@
 	<data createTime="2011-1-15" useFor="traffic" money="12" />
 	<data createTime="2011-1-16" useFor="eat" money="18" />
 	<data createTime="2011-1-17" useFor="eat" money="21" />
+	<data createTime="2011-1-17" useFor="clothes" money="262" />
 	<data createTime="2011-1-18" useFor="eat" money="21" />
 	<data createTime="2011-1-19" useFor="eat" money="13" />
 	<data createTime="2011-1-20" useFor="eat" money="13" />
@@ -1136,6 +1118,7 @@
 	<data createTime="2011-1-22" useFor="traffic" money="38" />
 	<data createTime="2011-1-23" useFor="eat" money="21" />
 	<data createTime="2011-1-24" useFor="eat" money="13" />
+	<data createTime="2011-1-24" useFor="book" money="203" />
 	<data createTime="2011-1-25" useFor="eat" money="13" />
 	<data createTime="2011-1-26" useFor="eat" money="13" />
 	<data createTime="2011-1-27" useFor="eat" money="13" />
@@ -1201,8 +1184,7 @@
 	<data createTime="2011-2-20" useFor="milk" money="49.9" />
 	<data createTime="2011-2-21" useFor="eat" money="21" />
 	<data createTime="2011-2-22" useFor="eat" money="21" />
-	<data createTime="2011-2-22" useFor="other" money="720"
-		description="手表" />
+	<data createTime="2011-2-22" useFor="other" money="720" description="手表" />
 	<data createTime="2011-2-23" useFor="eat" money="13" />
 	<data createTime="2011-2-24" useFor="eat" money="21" />
 	<data createTime="2011-2-25" useFor="eat" money="13" />
@@ -1267,6 +1249,7 @@
 	<data createTime="2011-3-17" useFor="eat" money="10" />
 	<data createTime="2011-3-18" useFor="eat" money="10" />
 	<data createTime="2011-3-18" useFor="eat" money="7" />
+	<data createTime="2011-3-18" useFor="home" money="5000" />
 	<data createTime="2011-3-19" useFor="traffic" money="2.5" />
 	<data createTime="2011-3-19" useFor="eat" money="2.9" />
 	<data createTime="2011-3-19" useFor="eat" money="13" />
@@ -1286,6 +1269,8 @@
 	<data createTime="2011-3-22" useFor="eat" money="10" />
 	<data createTime="2011-3-23" useFor="eat" money="18" />
 	<data createTime="2011-3-24" useFor="eat" money="13" />
+	<data createTime="2011-3-24" useFor="other" money="49.1" description="earphone" />
+	<data createTime="2011-3-24" useFor="other" money="98" description="bag" />
 	<data createTime="2011-3-25" useFor="eat" money="13" />
 	<data createTime="2011-3-26" useFor="eat" money="28" />
 	<data createTime="2011-3-26" useFor="eat" money="10"
@@ -1303,12 +1288,7 @@
 	<data createTime="2011-3-28" useFor="traffic" money="2.9" />
 	<data createTime="2011-3-28" useFor="traffic" money="1.5" />
 	<data createTime="2011-3-28" useFor="eat" money="17" />
-	<data createTime="2011-3-28" useFor="other" money="49.1"
-		description="耳机" />
-	<data createTime="2011-3-28" useFor="other" money="98"
-		description="背包" />
-	<data createTime="2011-3-28" useFor="other" money="1300"
-		description="手机" />
+	<data createTime="2011-3-28" useFor="other" money="1300" description="phone" />
 	<data createTime="2011-3-29" useFor="eat" money="13" />
 	<data createTime="2011-3-30" useFor="eat" money="13" />
 	<data createTime="2011-3-31" useFor="eat" money="13" />
@@ -1356,5 +1336,7 @@
 	<data createTime="2011-4-26" useFor="eat" money="13" />
 	<data createTime="2011-4-27" useFor="eat" money="13" />
 	<data createTime="2011-4-28" useFor="eat" money="13" />
-	<data createTime="2011-4-22" useFor="eat" money="21" />
+	<data createTime="2011-4-29" useFor="eat" money="13" />
+	<data createTime="2011-4-29" useFor="articlesForDailyUse" money="23.9" />
+	<data createTime="2011-4-29" useFor="eat" money="20.1" />
 </dataset>

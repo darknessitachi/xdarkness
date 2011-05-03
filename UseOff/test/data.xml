@@ -1340,4 +1340,9 @@
 	<data createTime="2011-4-29" useFor="articlesForDailyUse" money="23.9" />
 	<data createTime="2011-4-29" useFor="eat" money="20.1" />
 	<data createTime="2011-4-29" useFor="phone" money="36" />
+	<data createTime="2011-4-30" useFor="traffic" money="5.5" />
+	<data createTime="2011-5-2" useFor="traffic" money="5.5" />
+	<data createTime="2011-5-2" useFor="eat" money="12" />
+	<data createTime="2011-5-2" useFor="phone" money="50" />
+	
 </dataset>

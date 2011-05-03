@@ -1344,5 +1344,7 @@
 	<data createTime="2011-5-2" useFor="traffic" money="5.5" />
 	<data createTime="2011-5-2" useFor="eat" money="12" />
 	<data createTime="2011-5-2" useFor="phone" money="50" />
+	<data createTime="2011-5-3" useFor="eat" money="3" />
+	<data createTime="2011-5-3" useFor="eat" money="18" description="saliary" />
 	
 </dataset>

@@ -1363,5 +1363,8 @@
 	<data createTime="2011-5-12" useFor="eat" money="21" />
 	<data createTime="2011-5-12" useFor="traffic" money="4" />
 	<data createTime="2011-5-12" useFor="book" money="20" />
+	<data createTime="2011-5-13" useFor="traffic" money="4" />
+	<data createTime="2011-5-13" useFor="eat" money="8" description="saliary" />
+	<data createTime="2011-5-14" useFor="eat" money="18" description="saliary" />
 	
 </dataset>

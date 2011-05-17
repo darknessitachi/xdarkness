@@ -1,5 +1,7 @@
 package com.sinosoft.fsky.component.tree
 {
+	import com.sinosoft.fsky.util.IconUtility;
+	
 	import mx.controls.Tree;
 	import mx.core.ClassFactory;
 	import mx.events.ListEvent;
@@ -24,6 +26,20 @@ package com.sinosoft.fsky.component.tree
 			this.itemRenderer=myFactory;
 			super.createChildren();
 		}
+		
+//		override public function itemToIcon(item:Object):Class
+//		{
+//			try
+//			{
+//				super.itemIcons(item);
+//			} 
+//			catch(error:Error) 
+//			{
+//				IconUtility.
+//				icon = String(item[iconField]);
+//			}
+//		}
+		
 
 	}
 }

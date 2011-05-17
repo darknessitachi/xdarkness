@@ -52,9 +52,24 @@ package com.sinosoft.fsky.component.tree
 		{
 			super.data=value;
 			
-			var imageSource:String=value.@icon.toString();
+			var imageSource:String = null;
 			
-			if (imageSource != "")
+			try
+			{
+				imageSource = value.@icon;
+			} 
+			catch(error:Error) 
+			{
+				try
+				{
+					imageSource = value.icon;
+				} 
+				catch(error:Error) 
+				{
+				}
+			}
+			
+			if (imageSource != null && imageSource != "")
 			{
 				myImage.source=imageSource;
 			}
@@ -78,7 +93,23 @@ package com.sinosoft.fsky.component.tree
 		private function addDynamicIcon():void {
 			if (super.data != null)
 			{
-				var status:String=data.@labelColor.toString();
+				var status:String=null;
+				try
+				{
+					status = data.@labelColor.toString();
+				} 
+				catch(error:Error) 
+				{
+					try
+					{
+						status = data.labelColor.toString();
+					} 
+					catch(error:Error) 
+					{
+						
+					}
+				}
+				
 				if (status == "0")
 				{
 					//StyleManager.getStyleManager(null).getStyleDeclaration('mx.core.IUITextField').setStyle('color',"#FF0000");
@@ -128,18 +159,18 @@ package com.sinosoft.fsky.component.tree
 			
 			label.x+=1;
 			
-			if(mylistData.item.@dead==1)
-			{
-				label.setColor(DEAD_COLOR);
-			}
-			else if(mylistData.item.@level != null)
-			{
-				label.setColor(LABEL_COLOR[mylistData.item.@level]);
-			}
-			else
-			{
-				label.setColor(getStyle("color"));
-			}
+//			if(mylistData.item.@dead==1)
+//			{
+//				label.setColor(DEAD_COLOR);
+//			}
+//			else if(mylistData.item.@level != null)
+//			{
+//				label.setColor(LABEL_COLOR[mylistData.item.@level]);
+//			}
+//			else
+//			{
+//				label.setColor(getStyle("color"));
+//			}
 		}
 
 	} //end class

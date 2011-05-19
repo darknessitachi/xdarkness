@@ -35,7 +35,6 @@ package com.sinosoft.fsky.component.tree
 //			} 
 //			catch(error:Error) 
 //			{
-//				IconUtility.
 //				icon = String(item[iconField]);
 //			}
 //		}

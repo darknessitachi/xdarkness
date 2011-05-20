@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
 		 xmlns:s="library://ns.adobe.com/flex/spark" 
-		 xmlns:mx="library://ns.adobe.com/flex/mx" width="100%" height="100%">
+		 xmlns:mx="library://ns.adobe.com/flex/mx" 
+		 width="100%" height="100%"
+		 initialize="init()">
 	<fx:Declarations>
+		<s:State name="init" />
 		<s:State name="nomal" />
 		<s:State name="uploading" />
-		<s:State name="upload" />
+		<s:State name="uploaded" />
 	</fx:Declarations>
 	
 	<fx:Script>
 		<![CDATA[
 			import mx.controls.Alert;
+			import mx.rpc.events.ResultEvent;
+			import mx.utils.UIDUtil;
 			
 			/**
 			 * 业务主键
@@ -20,6 +25,21 @@
 			//文件上传类  
 			private var fileRefer:FileReference=new FileReference();  
 			
+			private function init():void {
+				
+				if(xid == "") {
+					currentState = "nomal";
+					return;
+				}
+				
+				XFileService.getInstance().getXFile(xid).addResultListener(function(event:ResultEvent):void {
+					var xfile:XFileVO = event.result as XFileVO;
+					lblName.text = xfile.fileName;
+					lblSize.text = Math.floor(xfile.fileSize / 1024) + "kb";;
+					
+					currentState = "uploaded";
+				});
+			}
 			// createChildren 比 creationComplete 事件更早发生, 省的注册事件侦听, 直接在这里写了
 			protected override function createChildren():void {
 				super.createChildren();
@@ -36,13 +56,16 @@
 				
 				currentState = "uploading";
 				
+				xid = UIDUtil.createUID();
+				
 				//提交三个参数Filename,Filedata,Upload       
-				var r:URLRequest=new URLRequest(xid + ".xfile");  
+				var r:URLRequest=new URLRequest("XFILE.xfile?xtype=upload&xid=" + xid);  
 				fileRefer.upload(r);//第二个参数指定文件域的名字，默认为Filedata
-			}  
+			}
 			
 			private function processResult(event:Event):void{  
-				currentState = "upload";
+				currentState = "uploaded";
+				
 				this.lblName.text = fileRefer.name;
 				this.lblSize.text = Math.floor(fileRefer.size / 1024) + "kb";
 			}  
@@ -54,9 +77,11 @@
 			
 			private function browse():void{  
 				
-				var filter:FileFilter = new FileFilter("Excel 2003 文件", "*.xls");  
+				var filter:FileFilter = new FileFilter("Excel 2003 文件", "*.xls");
+				var filter2007:FileFilter = new FileFilter("Excel 2007 文件", "*.xlsx");
+				
 				//打开选择文件对话框  
-				fileRefer.browse([filter]);  
+				fileRefer.browse([filter, filter2007]);  
 			}
 			
 			private function cancel():void {
@@ -65,15 +90,16 @@
 		]]>
 	</fx:Script>
 	
-	<s:Button icon="assets/icons/upload.png" label="上报" click="browse();" visible.nomal="true" visible.uploading="false" visible.upload="false"/>
+	<s:Button icon="assets/icons/upload.png" label="上报" click="browse();" visible.init="false" visible.nomal="true" visible.uploading="false" visible.uploaded="false"/>
 	
 	<s:HGroup>
-		<s:Label id="lblName" visible.nomal="false" visible.uploading="true" visible.upload="true"/>
-		<s:Label id="lblSize" visible.nomal="false" visible.uploading="true" visible.upload="true"/>
+		<s:Label id="lblName" text="初始化..." visible.init="true" visible.nomal="false" visible.uploading="false" visible.uploaded="true"/>
+		<s:Label id="lblSize" visible.init="false" visible.nomal="false" visible.uploading="true" visible.uploaded="true"/>
 		
 		<mx:ProgressBar id="progressBar" labelPlacement="bottom" label="上传进度：0%"
-						minimum="0" visible="true" maximum="100" 
-						direction="right" mode="manual" width="100" visible.nomal="false" visible.uploading="true" visible.upload="false"/>
-		<s:Button label="取消" click="cancel()" visible.nomal="false" visible.uploading="true" visible.upload="false"/>
+						minimum="0" maximum="100" 
+						direction="right" mode="manual" width="100"
+						visible.init="false" visible.nomal="false" visible.uploading="true" visible.uploaded="false"/>
+		<s:Button label="取消" click="cancel()" visible.init="false" visible.nomal="false" visible.uploading="true" visible.uploaded="false"/>
 	</s:HGroup>
 </s:Group>

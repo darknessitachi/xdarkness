@@ -1,5 +1,6 @@
 package com.sinosoft.fsky.component.tree
 {
+	import mx.collections.ArrayCollection;
 	import mx.controls.Tree;
 	import mx.core.ClassFactory;
 	import mx.events.ListEvent;
@@ -281,6 +282,24 @@ package com.sinosoft.fsky.component.tree
 		{
 			m_checkBoxCascadeOnCheck=v;
 			PropertyChange();
+		}
+		
+		/**
+		 * 获取选中节点
+		 */
+		public function getCheckItems():Array {
+			
+			var datas = dataProvider as ArrayCollection;
+			
+			var checkItems:Array = new Array;
+			
+			for(var i=0; i<datas.length; i++) {
+				if(datas[i][checkBoxStateField]) {
+					checkItems.push(datas[i]);
+				}
+			}
+			
+			return checkItems;
 		}
 	}
 }

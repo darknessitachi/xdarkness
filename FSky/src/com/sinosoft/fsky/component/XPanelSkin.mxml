@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!---
+	
+-->
+<s:Skin xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark" 
+    xmlns:fb="http://ns.adobe.com/flashbuilder/2009" alpha.disabled="0.5" xmlns:mx="library://ns.adobe.com/flex/mx">
+	
+    <fx:Metadata>
+		[HostComponent("com.sinosoft.fsky.component.XPanel")]
+	</fx:Metadata>
+
+	<s:states>
+        <s:State name="normal" />
+		<s:State name="disabled" />
+		<s:State name="expand" />
+		<s:State name="shrink" />
+		<s:State name="expandTop" />
+		<s:State name="shrinkTop" />
+    </s:states>
+	
+	<!-- the widget template wireframe -->
+	<s:Group id="widgetFrame"
+			 left="0"
+			 right="0"
+			 top="0" bottom="0" clipAndEnableScrolling="false">
+		<s:Rect width="100%" height="100%"
+				radiusX="2"
+				radiusY="2">
+			<s:fill>
+				<!--
+				<s:BitmapFill source="{hostComponent.borderBG}" />
+				-->
+				<s:SolidColor alpha="{getStyle('contentBackgroundAlpha')}"
+							  alpha.shrink="0.5"
+							  color="{getStyle('contentBackgroundColor')}"/>
+				
+			</s:fill>
+			<!--边线-->
+			<s:stroke>
+				<!--<s:SolidColorStroke alpha.shrink="0.5" color="{getStyle('borderColor')}"/>-->
+				<s:LinearGradientStroke weight="1">
+					<s:GradientEntry color="#DADADA"/>
+				</s:LinearGradientStroke>
+			</s:stroke>
+		</s:Rect>
+		<!--
+		<s:Rect width="99%" height="{header.height}"
+				left="1" top="1"
+				topLeftRadiusX="5"
+				topRightRadiusX="5">
+			<s:fill>
+				<s:SolidColor alpha="{getStyle('contentBackgroundAlpha')}"
+							  alpha.shrink="0"
+							  color="{getStyle('contentBackgroundColor')}"/>
+			</s:fill>
+		</s:Rect>-->
+	</s:Group>
+
+	<s:Group id="header" 
+			 height="30" left="0" 
+			 right="0" top="0">
+		<!--<s:Rect width="100%" height="100%" alpha.shrink="0"
+				alpha.expand="1"
+				radiusX="2"
+				radiusY="2">
+			<s:fill>
+				<s:BitmapFill  source="{hostComponent.borderBG}" />
+			</s:fill>
+		</s:Rect>-->
+		<mx:Image id="headBgImage" source="{hostComponent.borderBG}" buttonMode="true" width="100%" height="30"/>
+		<mx:Image id="headerIconImage" alpha.shrink="0"
+				  alpha.expand="1"
+				  height="30" left="5" verticalAlign="middle" source="{hostComponent.headerIcon}" />
+		<s:Label id="widgetLabel" left="{headerIconImage.width + 10}" 
+				 width="100%"
+				 right="{headerToolGroup.width + 60}"
+				 alpha.shrink="0"
+				 alpha.expand="1"
+				 maxDisplayedLines="1"
+				 showTruncationTip="true"
+				 styleName="WidgetTitle"
+				 text="{hostComponent.widgetTitle}"
+				 verticalCenter="0"/>
+	</s:Group>
+	
+	<s:Group id="headerToolGroup"
+			 height="30"
+			 right="70" top="0"
+			 visible.shrink="false"
+			 visible.expand="true">
+		<s:layout>
+			<s:HorizontalLayout paddingLeft="10"/>
+		</s:layout>
+	</s:Group>
+	
+	<s:Group id="minclose"
+			 height="30"
+			 right="3" top="0">
+		<s:layout>
+			<s:HorizontalLayout gap="2"
+								paddingLeft="2"
+								verticalAlign="middle"/>
+		</s:layout>
+		
+		<mx:Image id="expandButton"
+				  buttonMode="true"
+				  source="assets/images/XPanel_expand.png"
+				  useHandCursor="true"
+				  includeInLayout.shrink="true"
+				  includeInLayout.expand="false"
+				  includeInLayout.shrinkTop="false"
+				  includeInLayout.expandTop="false"
+				  visible.shrink="true"
+				  visible.expand="false"
+				  visible.shrinkTop="false"
+				  visible.expandTop="false"/>
+		
+		<mx:Image id="shrinkButton"
+				  buttonMode="true"
+				  source="assets/images/XPanel_shrink.png"
+				  useHandCursor="true"
+				  includeInLayout.shrink="false"
+				  includeInLayout.expand="true"
+				  includeInLayout.shrinkTop="false"
+				  includeInLayout.expandTop="false"
+				  visible.shrink="false"
+				  visible.expand="true"
+				  visible.shrinkTop="false"
+				  visible.expandTop="false"/>
+		
+		<mx:Image id="expandTopButton"
+				  buttonMode="true"
+				  source="assets/images/expandTop.png"
+				  useHandCursor="true"
+				  includeInLayout.shrinkTop="true"
+				  includeInLayout.expandTop="false"
+				  includeInLayout.shrink="false"
+				  includeInLayout.expand="false"
+				  visible.shrinkTop="true"
+				  visible.expandTop="false"
+				  visible.shrink="false"
+				  visible.expand="false"/>
+		
+		<mx:Image id="shrinkTopButton"
+				  buttonMode="true"
+				  source="assets/images/shrinkTop.png"
+				  useHandCursor="true"
+				  includeInLayout.shrinkTop="false"
+				  includeInLayout.expandTop="true"
+				  includeInLayout.shrink="false"
+				  includeInLayout.expand="false"
+				  visible.shrinkTop="false"
+				  visible.expandTop="true"
+				  visible.shrink="false"
+				  visible.expand="false"/>
+		
+	</s:Group>
+	
+	<s:Group id="contentGroup"
+			 left="5" right="5" top="35" bottom="5"
+			 clipAndEnableScrolling="true"
+			 >
+		<s:layout>
+			<s:VerticalLayout/>
+		</s:layout>
+		<!--<s:Rect width="100%" height="100%">
+			<s:fill>
+				<s:BitmapFill source="{hostComponent.contentBg}" />
+			</s:fill>
+		</s:Rect>-->
+	</s:Group>
+	
+	<!--边线另一种表现，在控件外面包一层边线的方法-->
+	<!--<s:Rect top="-2" 
+			bottom="-2" 
+			right="-2"
+			left="-2">
+		<s:stroke>
+			<s:LinearGradientStroke weight="1" caps="none" miterLimit="10" joints="round">
+				<s:GradientEntry color="#ff0000"/>
+			</s:LinearGradientStroke>
+		</s:stroke>
+	</s:Rect>-->
+	
+	<!--边框阴影效果-->
+	<!--<s:filters>
+		<s:DropShadowFilter alpha="0.5"
+							blurX="0"
+							blurY="0"/>
+	</s:filters>
+	-->
+	
+	
+</s:Skin>

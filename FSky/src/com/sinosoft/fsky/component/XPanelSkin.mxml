@@ -72,7 +72,7 @@
 		<mx:Image id="headerIconImage" alpha.shrink="0"
 				  alpha.expand="1"
 				  height="30" left="5" verticalAlign="middle" source="{hostComponent.headerIcon}" />
-		<s:Label id="widgetLabel" left="{headerIconImage.width + 10}" 
+		<s:Label id="widgetLabel" left="{headerIconImage.width + 10}" buttonMode="true"
 				 width="100%"
 				 right="{headerToolGroup.width + 60}"
 				 alpha.shrink="0"

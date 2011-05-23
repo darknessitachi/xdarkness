@@ -20,7 +20,18 @@
 			/**
 			 * 业务主键
 			 */
-			public var xid:String = "";
+			private var _xid:String = "";
+			
+			[Bindable]
+			public function get xid():String {
+				return _xid;
+			}
+			
+			public function set xid(value:String):void {
+				_xid = value;
+				
+				init();
+			}
 			
 			//文件上传类  
 			private var fileRefer:FileReference=new FileReference();  
@@ -34,6 +45,12 @@
 				
 				XFileService.getInstance().getXFile(xid).addResultListener(function(event:ResultEvent):void {
 					var xfile:XFileVO = event.result as XFileVO;
+					
+					if(!xfile) {
+						currentState = "nomal";
+						return;
+					}
+					
 					lblName.text = xfile.fileName;
 					lblSize.text = Math.floor(xfile.fileSize / 1024) + "kb";;
 					

@@ -21,6 +21,7 @@ package com.sinosoft.fsky.component
 		public function TreePanel()
 		{
 			super();
+			setStyle("skinClass", com.sinosoft.fsky.component.TreePanelSkin);
 		}
 	}
 }

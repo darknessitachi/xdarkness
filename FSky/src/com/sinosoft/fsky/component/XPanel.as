@@ -2,6 +2,7 @@ package com.sinosoft.fsky.component
 {
 import flash.events.Event;
 import flash.events.MouseEvent;
+import flash.utils.setTimeout;
 
 import mx.controls.Alert;
 import mx.controls.Image;
@@ -248,11 +249,28 @@ public class XPanel extends SkinnableContainer
 		this.dispatchEvent(new Event(XPanel.EXPANDED_TOP));
 		
 		var _resize:Resize = new Resize();
+		_resize.duration = 500;
 		_resize.target = this;
 		_resize.heightFrom = 33;
-		
 		_resize.heightTo = getContentGroupHeight();
+		
+		var i:Number = this.width;
+		_resize.widthFrom = this.width;
+		_resize.widthTo =  this.width;
+		
+		trace("this.i:" + i);
+		trace("this.width:" + this.width);
+		trace("this.parent.width:" + this.parent.width);
+		
 		_resize.play();
+		
+		setTimeout(fixWidth, 1000);
+		trace("f:this.width:" + this.width);
+		trace("f:this.parent.width:" + this.parent.width + "," + this.parent.parent.width);
+	}
+	
+	function fixWidth():void {
+		this.width = this.parent.width;
 	}
 	
 	/**
@@ -268,7 +286,18 @@ public class XPanel extends SkinnableContainer
 		_resize.target = this;
 		_resize.heightFrom = getContentGroupHeight();
 		_resize.heightTo = 33;
+		
+		var i:Number = this.width;
+		_resize.widthFrom =  this.width;
+		_resize.widthTo =  this.width;
+		
+		trace("this.i:" + i);
+		trace("this.width:" + this.width);
+		trace("this.parent.width:" + this.parent.width);
 		_resize.play();
+		setTimeout(fixWidth, 1000);
+		trace("f:this.width:" + this.width);
+		trace("f:this.parent.width:" + this.parent.width + "," + this.parent.parent.width);
 	}
 	
 	/**

@@ -269,7 +269,7 @@ public class XPanel extends SkinnableContainer
 		trace("f:this.parent.width:" + this.parent.width + "," + this.parent.parent.width);
 	}
 	
-	function fixWidth():void {
+	private function fixWidth():void {
 		this.width = this.parent.width;
 	}
 	

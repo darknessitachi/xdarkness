@@ -289,11 +289,11 @@ package com.sinosoft.fsky.component.tree
 		 */
 		public function getCheckItems():Array {
 			
-			var datas = dataProvider as ArrayCollection;
+			var datas:ArrayCollection = dataProvider as ArrayCollection;
 			
 			var checkItems:Array = new Array;
 			
-			for(var i=0; i<datas.length; i++) {
+			for(var i:int=0; i<datas.length; i++) {
 				if(datas[i][checkBoxStateField]) {
 					checkItems.push(datas[i]);
 				}

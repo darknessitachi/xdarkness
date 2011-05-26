@@ -38,6 +38,10 @@ package com.sinosoft.fsky.component
 	 * 
 	 * @date 2011-05-26 08:06 PM
 	 * @version 1.0.2 修正target在全局的精确坐标，通过 realTarget.localToGlobal(new Point(0,0))方式转换坐标系，获得精确的全局坐标
+	 * 
+	 * @date 2011-05-26 08:45 PM
+	 * @version 1.0.3 当target为null时不执行Zoom效果
+	 * 
 	 */
 	public class XWindow extends SkinnableContainer
 	{
@@ -106,16 +110,25 @@ package com.sinosoft.fsky.component
 			PopUpManager.addPopUp(this, parent, modal);
 			PopUpManager.centerPopUp(this);
 			
-			effectStart(target);
+			if(target) {
+				effectStart(target);
+			}
+			
+			this.visible=true;
 		}
 		
 		/**
 		 * 移除窗体
 		 */
 		public function hide():void { 
-			zoomEnd.play();
 			
-			setTimeout(removeFromWindow, 1500);
+			if(zoomStart) {
+				zoomEnd.play();
+				
+				setTimeout(removeFromWindow, 1500);
+			} else {
+				removeFromWindow();
+			}
 			
 			this.removeEventListener(CloseEvent.CLOSE, closeFormWindow);
 		}
@@ -172,8 +185,6 @@ package com.sinosoft.fsky.component
 			trace("x:" + this.x + ",y:" + this.y + "height:" + this.height + ",width:" + this.width + "centerX:" + moveX + "," + "centerY:" + moveY + ",originX:" + zoomStart.originX + ",originY:" + zoomStart.originY);
 			
 			zoomStart.play();
-			
-			this.visible=true;
 		}
 		
 		/**

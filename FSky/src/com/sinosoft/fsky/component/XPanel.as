@@ -264,7 +264,7 @@ public class XPanel extends SkinnableContainer
 		
 		_resize.play();
 		
-		setTimeout(fixWidth, 1000);
+		setTimeout(fixWidth, 520);
 		trace("f:this.width:" + this.width);
 		trace("f:this.parent.width:" + this.parent.width + "," + this.parent.parent.width);
 	}
@@ -295,7 +295,7 @@ public class XPanel extends SkinnableContainer
 		trace("this.width:" + this.width);
 		trace("this.parent.width:" + this.parent.width);
 		_resize.play();
-		setTimeout(fixWidth, 1000);
+		setTimeout(fixWidth, 520);
 		trace("f:this.width:" + this.width);
 		trace("f:this.parent.width:" + this.parent.width + "," + this.parent.parent.width);
 	}

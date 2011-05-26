@@ -55,6 +55,10 @@ import spark.effects.Resize;
  * 
  * @date 2011-05-19 10:00 AM
  * @version 1.3 添加head 背景点击，如果是展开状态就折叠，如果是折叠状态就展开
+ * 
+ * @date 2011-05-26 08:14 PM
+ * @version 1.3.1 修正展开面板父级出现滚动条后，遮盖面板问题
+ * @description 当前解决方案采用Resize效果后重新设置其宽度为父元素的宽度的方式：this.width = this.parent.width，目前实现效果有些许不流畅
  */
 public class XPanel extends SkinnableContainer 
 {

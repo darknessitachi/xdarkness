@@ -2,6 +2,7 @@ package com.sinosoft.fsky.component
 {
 	import flash.display.DisplayObject;
 	import flash.events.MouseEvent;
+	import flash.geom.Point;
 	import flash.utils.setTimeout;
 	
 	import mx.core.FlexGlobals;
@@ -18,7 +19,25 @@ package com.sinosoft.fsky.component
 	 * 
 	 * @author Darkness
 	 * @date 2011-05-25 09:00 PM
-	 * @version 1.0  从事件源开始渐渐变大，关闭时缩放回事件源
+	 * @version 1.0  从事件源target开始渐渐变大，关闭时缩放回事件源
+	 * 
+	 * @date 2011-05-26 10:25 AM
+	 * @version 1.0.1 修正窗体起始位置为事件源target的位置
+	 * @description 
+	 * 		第一次需要将其坐标设置居中位置
+	 *  	其余将其坐标设置成事件源位置
+	 *  	否则窗体效果位置不正确，原因未知
+	 *		 
+	 *		if(!zoomStart) {
+	 *			this.x = moveX;
+	 *			this.y = moveY;
+	 *		} else {
+	 *			this.x = targetPosition.x + target.width/2;
+	 *			this.y = targetPosition.y + target.height/2;
+	 *		}
+	 * 
+	 * @date 2011-05-26 08:06 PM
+	 * @version 1.0.2 修正target在全局的精确坐标，通过 realTarget.localToGlobal(new Point(0,0))方式转换坐标系，获得精确的全局坐标
 	 */
 	public class XWindow extends SkinnableContainer
 	{
@@ -106,6 +125,9 @@ package com.sinosoft.fsky.component
 		 */
 		private function effectStart(target:Object):void {
 			
+			var realTarget:UIComponent = UIComponent(target);
+			var targetPosition:Point = realTarget.localToGlobal(new Point(0,0));
+			
 			/**
 			 * 第一次需要将其坐标设置居中位置
 			 * 其余将其坐标设置成事件源位置
@@ -115,8 +137,8 @@ package com.sinosoft.fsky.component
 				this.x = moveX;
 				this.y = moveY;
 			} else {
-				this.x = target.x + target.width/2;
-				this.y = target.y + target.height/2;
+				this.x = targetPosition.x + target.width/2;
+				this.y = targetPosition.y + target.height/2;
 			}
 			
 			if(!zoomStart) {
@@ -130,8 +152,8 @@ package com.sinosoft.fsky.component
 				zoomStart.target = this;
 				zoomStart.duration = 1000;
 				
-				var ox:Number =  target.x - moveX + target.width/2;
-				var oy:Number = target.y - moveY + target.height/2;
+				var ox:Number =  targetPosition.x - moveX + target.width/2;
+				var oy:Number = targetPosition.y - moveY + target.height/2;
 				zoomStart.originX = ox;
 				zoomStart.originY = oy;
 				

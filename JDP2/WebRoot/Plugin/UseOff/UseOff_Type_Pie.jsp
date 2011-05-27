@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="<%=request.getContextPath() %>/FusionCharts_Evaluation/Contents/Style.css" type="text/css" />
 <script language="JavaScript" src="<%=request.getContextPath() %>/FusionCharts_Evaluation/JSClass/FusionCharts.js"></script>
 </head>
-
+ 
 <body>
 <table width="98%" border="0" cellspacing="0" cellpadding="3" align="center">
   <tr> 
@@ -56,7 +56,8 @@
 		"09-01","09-02","09-03","09-04","09-05","09-06",
 		"09-07","09-08","09-09","09-10","09-11","09-12",
 		"10-01","10-02","10-03","10-04","10-05","10-06",
-		"10-07","10-08","10-09","10-10","10-11","10-12"};
+		"10-07","10-08","10-09","10-10","10-11","10-12",
+		"11-01","11-02","11-03","11-04"};
   for(int i=0;i<months.length;i++){
 	  String month = months[i];
 	  boolean writeTr = (i%2==0);

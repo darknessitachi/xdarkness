@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=GBK" language="java" errorPage=""%>
+<%@ page contentType="text/html; charset=gbk" language="java" errorPage=""%>
 <%@page import="com.xdarkness.framework.sql.QueryBuilder"%>
 <%@page import="com.xdarkness.framework.orm.data.DataTable"%>
 <%@page import="com.xdarkness.framework.orm.data.DataRow"%>

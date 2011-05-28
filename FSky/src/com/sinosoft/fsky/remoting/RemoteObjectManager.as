@@ -42,6 +42,7 @@ package com.sinosoft.fsky.remoting
 		
 		private static function resultHandler(event : ResultEvent) : void
 		{
+			trace("resultHandler:" + event.result);
 			if (event.token.resultHandler == null)
 			{
 				return;
@@ -52,6 +53,7 @@ package com.sinosoft.fsky.remoting
 		
 		private static function faultHandler(event : FaultEvent) : void
 		{
+			trace("faultHandler:" + event.fault + "====" + event.message);
 			var errorMessage:ErrorMessage = event.message as ErrorMessage;
 			
 			Alert.show(errorMessage.faultString, errorMessage.faultCode.toString());

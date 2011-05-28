@@ -7,12 +7,14 @@ package com.sinosoft.fsky.component
 	
 	import mx.core.FlexGlobals;
 	import mx.core.UIComponent;
+	import mx.effects.Parallel;
 	import mx.effects.Zoom;
 	import mx.events.CloseEvent;
 	import mx.managers.PopUpManager;
 	
 	import spark.components.Image;
 	import spark.components.SkinnableContainer;
+	import spark.effects.Fade;
 	
 	/**
 	 * 窗体面板
@@ -96,7 +98,7 @@ package com.sinosoft.fsky.component
 		/**
 		 * 显示窗体
 		 */
-		public function show(target:Object, parent:DisplayObject,modal:Boolean = false):void
+		public function show(parent:DisplayObject,modal:Boolean = false, target:Object=null):void
 		{
 			// 已经打开，则返回
 			if(isOpen) {
@@ -112,6 +114,8 @@ package com.sinosoft.fsky.component
 			
 			if(target) {
 				effectStart(target);
+			} else {
+				getFade().play();
 			}
 			
 			this.visible=true;
@@ -124,13 +128,37 @@ package com.sinosoft.fsky.component
 			
 			if(zoomStart) {
 				zoomEnd.play();
-				
-				setTimeout(removeFromWindow, 1500);
+				setTimeout(removeFromWindow, 500);
 			} else {
-				removeFromWindow();
+				getFade(false).play();
+				setTimeout(removeFromWindow, 500);
 			}
 			
 			this.removeEventListener(CloseEvent.CLOSE, closeFormWindow);
+		}
+		
+		private var fade:Fade;// 淡入淡出效果
+		
+		/**
+		 * 窗体默认淡入淡出效果
+		 */
+		private function getFade(fadeIn:Boolean=true):Fade {
+			
+			if(fade == null) {
+				fade = new Fade();
+				fade.target = this;
+				fade.duration = 500;
+			}
+			
+			if(fadeIn) {
+				fade.alphaFrom = 0;
+				fade.alphaTo = 1;
+			} else {
+				fade.alphaFrom = 1;
+				fade.alphaTo = 0;
+			}
+			
+			return fade;
 		}
 		
 		/**
@@ -163,7 +191,7 @@ package com.sinosoft.fsky.component
 				zoomStart.zoomWidthFrom = 0;
 				zoomStart.zoomWidthTo = 1;
 				zoomStart.target = this;
-				zoomStart.duration = 1000;
+				zoomStart.duration = 500;
 				
 				var ox:Number =  targetPosition.x - moveX + target.width/2;
 				var oy:Number = targetPosition.y - moveY + target.height/2;
@@ -175,7 +203,7 @@ package com.sinosoft.fsky.component
 				zoomEnd.zoomWidthFrom = 1;
 				zoomEnd.zoomWidthTo = 0;
 				zoomEnd.target = this;
-				zoomEnd.duration = 1000;
+				zoomEnd.duration = 500;
 				
 				zoomEnd.originX = ox;
 				zoomEnd.originY = oy;

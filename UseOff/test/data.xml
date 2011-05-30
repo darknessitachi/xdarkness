@@ -1383,5 +1383,23 @@
 	<data createTime="2011-5-21" useFor="eat" money="21.5"/>
 	<data createTime="2011-5-22" useFor="eat" money="26.7"/>
 	<data createTime="2011-5-22" useFor="traffic" money="50"/>
+	<data createTime="2011-5-23" useFor="eat" money="3" />
+	<data createTime="2011-5-23" useFor="house" money="123" />
+	<data createTime="2011-5-23" useFor="eat" money="18" description="saliary" />
+	<data createTime="2011-5-24" useFor="eat" money="3" />
+	<data createTime="2011-5-24" useFor="eat" money="18" description="saliary" />
+	<data createTime="2011-5-25" useFor="eat" money="3" />
+	<data createTime="2011-5-25" useFor="eat" money="18" description="saliary" />
+	<data createTime="2011-5-26" useFor="eat" money="3" />
+	<data createTime="2011-5-26" useFor="eat" money="18" description="saliary" />
+	<data createTime="2011-5-27" useFor="eat" money="3" />
+	<data createTime="2011-5-27" useFor="eat" money="18" description="saliary" />
+	<data createTime="2011-5-28" useFor="eat" money="3" />
+	<data createTime="2011-5-28" useFor="eat" money="18" description="saliary" />
+	<data createTime="2011-5-29" useFor="traffic" money="60" />
+	<data createTime="2011-5-29" useFor="articlesForDailyUse" money="58.8" />
+	<data createTime="2011-5-29" useFor="eat" money="18" description="saliary" />
+	<data createTime="2011-5-30" useFor="eat" money="3" />
+	<data createTime="2011-5-30" useFor="eat" money="18" description="saliary" />
 	
 </dataset>

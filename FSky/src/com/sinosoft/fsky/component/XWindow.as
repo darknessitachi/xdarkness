@@ -1,8 +1,11 @@
 package com.sinosoft.fsky.component
 {
 	import flash.display.DisplayObject;
+	import flash.display.InteractiveObject;
+	import flash.events.Event;
 	import flash.events.MouseEvent;
 	import flash.geom.Point;
+	import flash.geom.Rectangle;
 	import flash.utils.setTimeout;
 	
 	import mx.core.FlexGlobals;
@@ -10,6 +13,7 @@ package com.sinosoft.fsky.component
 	import mx.effects.Parallel;
 	import mx.effects.Zoom;
 	import mx.events.CloseEvent;
+	import mx.events.SandboxMouseEvent;
 	import mx.managers.PopUpManager;
 	
 	import spark.components.Image;
@@ -44,6 +48,9 @@ package com.sinosoft.fsky.component
 	 * @date 2011-05-26 08:45 PM
 	 * @version 1.0.3 当target为null时不执行Zoom效果
 	 * 
+	 * @date 2011-05-31 10:36 PM
+	 * @version 1.1 添加拖动功能
+	 * 
 	 */
 	public class XWindow extends SkinnableContainer
 	{
@@ -60,6 +67,27 @@ package com.sinosoft.fsky.component
 			
 			setStyle("skinClass", com.sinosoft.fsky.component.XWindowSkin);
 		}
+		
+		/**
+		 * 当用户在移动区域按下鼠标按钮，相对于该窗口原水平位置的水平位置。
+		 */
+		private var offsetX:Number;
+
+		/**
+		 * 当用户在移动区域按下鼠标按钮，相对于该窗口原垂直位置的垂直位置。
+		 */
+		private var offsetY:Number;
+		
+		/**
+		 * 是否可拖动窗口。
+		 */
+		public var draggable:Boolean = true;
+		
+		[SkinPart(required="false")]
+		/**
+		 * 用户必须单击并拖动才可移动窗口的区域。
+		 */
+		public var moveArea:InteractiveObject;
 		
 		[Bindable]
 		private var moveY:Number = 0;// 初始位置Y
@@ -225,6 +253,13 @@ package com.sinosoft.fsky.component
 			if (instance == btnClose) {
 				btnClose.addEventListener(MouseEvent.CLICK, close);
 			} 
+			else if (instance == moveArea)
+			{
+				if (this.draggable)
+				{
+					moveArea.addEventListener(MouseEvent.MOUSE_DOWN, moveArea_mouseDownHandler);
+				}
+			}
 		}
 		
 		/**
@@ -241,6 +276,68 @@ package com.sinosoft.fsky.component
 		
 		private function close(event:MouseEvent):void {
 			dispatchEvent(new CloseEvent(CloseEvent.CLOSE));
+		}
+		
+		/**
+		 * 处理移动区域鼠标按下事件，当用户开始拖动窗口时调用。
+		 * @param event
+		 * 
+		 */
+		protected function moveArea_mouseDownHandler(event:MouseEvent):void
+		{
+			if (!draggable)
+				return;
+			
+			offsetX = event.stageX - x;
+			offsetY = event.stageY - y;
+			var sbRoot:DisplayObject = systemManager.getSandboxRoot();
+			sbRoot.addEventListener(MouseEvent.MOUSE_MOVE, moveArea_mouseMoveHandler, true);
+			sbRoot.addEventListener(MouseEvent.MOUSE_UP, moveArea_mouseUpHandler, true);
+			sbRoot.addEventListener(SandboxMouseEvent.MOUSE_UP_SOMEWHERE, moveArea_mouseUpHandler)
+			systemManager.deployMouseShields(true); 
+		}
+		
+		/**
+		 * 处理移动区域鼠标移动事件，如果没有正在改变大小的窗口则可以移动窗口。
+		 * @param event
+		 * 
+		 */
+		protected function moveArea_mouseMoveHandler(event:MouseEvent):void
+		{
+//			if (resizer == null)
+//			{
+				var afterBounds:Rectangle = new Rectangle(Math.round(event.stageX - this.offsetX),Math.round(event.stageY - this.offsetY),width,height);
+				var point:Point = new Point();
+				point.x = afterBounds.x;
+				point.y = (afterBounds.y<0)?0:(afterBounds.y>parent.height-60)?parent.height-60:afterBounds.y;
+				setPosition(point);
+//			}
+		}
+		
+		/**
+		 * 处理移动区域鼠标松开事件，删除移动区域的事件侦听。
+		 * @param event
+		 * 
+		 */
+		protected function moveArea_mouseUpHandler(event:Event):void
+		{
+			var sbRoot:DisplayObject = systemManager.getSandboxRoot();
+			sbRoot.removeEventListener(MouseEvent.MOUSE_MOVE, moveArea_mouseMoveHandler, true);
+			sbRoot.removeEventListener(MouseEvent.MOUSE_UP, moveArea_mouseUpHandler, true);
+			sbRoot.removeEventListener(SandboxMouseEvent.MOUSE_UP_SOMEWHERE, moveArea_mouseUpHandler);
+			offsetX = NaN;
+			offsetY = NaN;
+		}
+		
+		/**
+		 * 调整窗口原点的坐标，使其当前x坐标为 p.x，当前y坐标为 p.y。 
+		 * @param p
+		 * 
+		 */
+		public function setPosition(p:Point):void
+		{
+			this.x = p.x;
+			this.y = p.y;
 		}
 	}
 }

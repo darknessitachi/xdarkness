@@ -1,5 +1,9 @@
 package com.sinosoft.fsky.component
 {
+	import com.sinosoft.fsky.component.window.CursorMgr;
+	import com.sinosoft.fsky.component.window.Dimension;
+	import com.sinosoft.fsky.component.window.SystemSound;
+	
 	import flash.display.DisplayObject;
 	import flash.display.InteractiveObject;
 	import flash.events.Event;
@@ -16,6 +20,7 @@ package com.sinosoft.fsky.component
 	import mx.events.SandboxMouseEvent;
 	import mx.managers.PopUpManager;
 	
+	import spark.components.BorderContainer;
 	import spark.components.Image;
 	import spark.components.SkinnableContainer;
 	import spark.effects.Fade;
@@ -51,6 +56,8 @@ package com.sinosoft.fsky.component
 	 * @date 2011-05-31 10:36 PM
 	 * @version 1.1 添加拖动功能
 	 * 
+	 * @date 2011-06-01 10:53 PM
+	 * @version 1.2 添加改变窗体大小功能
 	 */
 	public class XWindow extends SkinnableContainer
 	{
@@ -66,6 +73,23 @@ package com.sinosoft.fsky.component
 			super();
 			
 			setStyle("skinClass", com.sinosoft.fsky.component.XWindowSkin);
+			
+			init();
+		}
+		
+		/**
+		 * 初始化窗口，分发windowCreateEvent、taskbarButtonCreateEvent。
+		 * 
+		 */
+		private function init():void
+		{
+			this.addEventListener(MouseEvent.MOUSE_DOWN, window_mouseDownHandler);
+			this.addEventListener(MouseEvent.MOUSE_MOVE, window_mouseMoveHandler);
+			this.addEventListener(MouseEvent.MOUSE_OUT, window_mouseOutHandler);
+			FlexGlobals.topLevelApplication.parent.addEventListener(MouseEvent.MOUSE_UP, parent_mouseUpHandler);
+			FlexGlobals.topLevelApplication.parent.addEventListener(MouseEvent.MOUSE_MOVE, parent_mouseMoveHandler);
+			//this.visible = false;
+			//this.includeInLayout = false;
 		}
 		
 		/**
@@ -253,6 +277,11 @@ package com.sinosoft.fsky.component
 			if (instance == btnClose) {
 				btnClose.addEventListener(MouseEvent.CLICK, close);
 			} 
+			else if (instance == maskLayer)
+			{
+				maskLayer.visible = false;
+				maskLayer.includeInLayout = false;
+			}
 			else if (instance == moveArea)
 			{
 				if (this.draggable)
@@ -304,14 +333,14 @@ package com.sinosoft.fsky.component
 		 */
 		protected function moveArea_mouseMoveHandler(event:MouseEvent):void
 		{
-//			if (resizer == null)
-//			{
+			if (resizer == null)
+			{
 				var afterBounds:Rectangle = new Rectangle(Math.round(event.stageX - this.offsetX),Math.round(event.stageY - this.offsetY),width,height);
 				var point:Point = new Point();
 				point.x = afterBounds.x;
 				point.y = (afterBounds.y<0)?0:(afterBounds.y>parent.height-60)?parent.height-60:afterBounds.y;
 				setPosition(point);
-//			}
+			}
 		}
 		
 		/**
@@ -338,6 +367,238 @@ package com.sinosoft.fsky.component
 		{
 			this.x = p.x;
 			this.y = p.y;
+		}
+		
+		[SkinPart(required="true")]
+		/**
+		 * 窗口禁用时的遮罩层，这是一个必要的外观部件。
+		 */
+		public var maskLayer:BorderContainer;
+		
+		/**
+		 * 是否可改变窗口大小 
+		 */
+		public var resizable:Boolean = true;
+		
+		/**
+		 * 当前鼠标形状。 
+		 */
+		private var cursorState:Number = 0;
+		
+		/**
+		 * 光标在窗口边缘处变换的感应距离。
+		 */
+		public static var MOUSE_INDUCTION_MARGIN:Number = 4;
+		
+		/**
+		 * 当前正在改变大小的窗口。 
+		 */
+		private static var resizer:XWindow;
+		
+		private var _disabled:Boolean = false;
+		
+		private var originalSize:Dimension;
+		private var originalPos:Point;
+		private var originalMousePos:Point;
+		
+		/**
+		 * 是否禁用此窗口，不响应任何鼠标键盘事件
+		 * @return 
+		 * 
+		 */
+		public function get disabled():Boolean
+		{
+			return _disabled;
+		}
+		public function set disabled(value:Boolean):void
+		{
+			_disabled = value;
+			maskLayer.visible = value;
+			maskLayer.includeInLayout = value;
+		}
+		/**
+		 * 处理窗口鼠标按下事件，置前该窗口。 
+		 * @param event
+		 * 
+		 */
+		protected function window_mouseDownHandler(event:MouseEvent):void
+		{
+			if(disabled)
+			{
+				SystemSound.DING.play();
+			}
+//			show();
+			if (this.cursorState != CursorMgr.SIDE_OTHER)
+			{
+				resizer = this;
+				resizer.originalSize = this.getSize();
+				resizer.originalPos = this.getPosition();
+				resizer.originalMousePos = this.localToGlobal(new Point(resizer.mouseX, resizer.mouseY));
+			}
+		}
+		protected function window_mouseMoveHandler(event:MouseEvent):void
+		{
+			if (resizer == null && !disabled && resizable)
+			{
+				var px:Number = FlexGlobals.topLevelApplication.parent.mouseX; 
+				var py:Number = FlexGlobals.topLevelApplication.parent.mouseY;
+				//右下
+				if(px >= (this.x + this.width - XWindow.MOUSE_INDUCTION_MARGIN) && py >= (this.y + this.height - XWindow.MOUSE_INDUCTION_MARGIN))
+				{
+					CursorMgr.setCursor(CursorMgr.NWSE, -6, -6);
+					this.cursorState = CursorMgr.SIDE_RIGHT | CursorMgr.SIDE_BOTTOM;
+				}
+					//左上
+				else if(px <= (this.x + XWindow.MOUSE_INDUCTION_MARGIN) && py <= (this.y + XWindow.MOUSE_INDUCTION_MARGIN))
+				{
+					CursorMgr.setCursor(CursorMgr.NWSE, -10, -10);
+					this.cursorState = CursorMgr.SIDE_LEFT | CursorMgr.SIDE_TOP;
+				}
+					//左下
+				else if(px <= (this.x + XWindow.MOUSE_INDUCTION_MARGIN) && py >= (this.y + this.height - XWindow.MOUSE_INDUCTION_MARGIN))
+				{
+					CursorMgr.setCursor(CursorMgr.NESW, -10, -6);
+					this.cursorState = CursorMgr.SIDE_LEFT | CursorMgr.SIDE_BOTTOM;
+				}
+					//右上
+				else if(px >= (this.x + this.width - XWindow.MOUSE_INDUCTION_MARGIN) && py <= (this.y + XWindow.MOUSE_INDUCTION_MARGIN))
+				{
+					CursorMgr.setCursor(CursorMgr.NESW, -6, -10);
+					this.cursorState = CursorMgr.SIDE_RIGHT | CursorMgr.SIDE_TOP;
+				}
+					//右
+				else if(px >= (this.x + this.width - XWindow.MOUSE_INDUCTION_MARGIN))
+				{
+					CursorMgr.setCursor(CursorMgr.EW, -8, 0);
+					this.cursorState = CursorMgr.SIDE_RIGHT;
+				}
+					//左
+				else if(px <= (this.x + XWindow.MOUSE_INDUCTION_MARGIN))
+				{
+					CursorMgr.setCursor(CursorMgr.EW, -14, 0);
+					this.cursorState = CursorMgr.SIDE_LEFT;
+				}
+					//下
+				else if(py >= (this.y + this.height - XWindow.MOUSE_INDUCTION_MARGIN))
+				{
+					CursorMgr.setCursor(CursorMgr.NS, 0, -10);
+					this.cursorState = CursorMgr.SIDE_BOTTOM;
+				}
+					//上
+				else if(py <= (this.y + XWindow.MOUSE_INDUCTION_MARGIN))
+				{
+					CursorMgr.setCursor(CursorMgr.NS, 0, -14);
+					this.cursorState = CursorMgr.SIDE_TOP;
+				}
+				else
+				{
+					CursorMgr.setCursor(null, 0, 0);
+					this.cursorState = CursorMgr.SIDE_OTHER;
+				}
+			}
+		}
+
+		protected function window_mouseOutHandler(event:MouseEvent):void
+		{
+			if (resizer == null)
+			{
+				CursorMgr.setCursor(null, 0, 0);
+				this.cursorState = CursorMgr.SIDE_OTHER;
+			}
+		}
+		
+		protected function parent_mouseUpHandler(event:MouseEvent):void
+		{
+			resizer = null;
+		}
+		
+		protected function parent_mouseMoveHandler(event:MouseEvent):void
+		{
+			if (resizer != null && resizable)
+			{
+				var px:Number = FlexGlobals.topLevelApplication.parent.mouseX - resizer.originalMousePos.x;
+				var py:Number = FlexGlobals.topLevelApplication.parent.mouseY - resizer.originalMousePos.y;
+				
+				switch(this.cursorState)
+				{
+					case CursorMgr.SIDE_RIGHT | CursorMgr.SIDE_BOTTOM :
+						resizer.setSize(
+							new Dimension(resizer.originalSize.width + px > this.minWidth ? resizer.originalSize.width + px : this.minWidth,
+								resizer.originalSize.height + py > this.minHeight ? resizer.originalSize.height + py : this.minHeight)
+						);
+						break;
+					case CursorMgr.SIDE_LEFT | CursorMgr.SIDE_TOP:
+						resizer.setPosition(
+							new Point(px < resizer.originalSize.width - this.minWidth ? resizer.originalPos.x + px : resizer.x,
+								py < resizer.originalSize.height - this.minHeight ? resizer.originalPos.y + py : resizer.y)
+						);
+						resizer.setSize(
+							new Dimension(resizer.originalSize.width - px > this.minWidth ? resizer.originalSize.width - px : this.minWidth,
+								resizer.originalSize.height - py > this.minHeight ? resizer.originalSize.height - py : this.minHeight)
+						);
+						break;
+					case CursorMgr.SIDE_LEFT | CursorMgr.SIDE_BOTTOM:
+						resizer.x = px < resizer.originalSize.width - this.minWidth ? resizer.originalPos.x + px: resizer.x;
+						resizer.setSize(
+							new Dimension(resizer.originalSize.width - px > this.minWidth ? resizer.originalSize.width - px : this.minWidth,
+								resizer.originalSize.height + py > this.minHeight ? resizer.originalSize.height + py : this.minHeight)
+						);
+						break;
+					case CursorMgr.SIDE_RIGHT | CursorMgr.SIDE_TOP:
+						resizer.y = py < resizer.originalSize.height - this.minHeight ? resizer.originalPos.y + py : resizer.y;
+						resizer.setSize(
+							new Dimension(resizer.originalSize.width + px > this.minWidth ? resizer.originalSize.width + px : this.minWidth,
+								resizer.originalSize.height - py > this.minHeight ? resizer.originalSize.height - py : this.minHeight)
+						);
+						break;
+					case CursorMgr.SIDE_RIGHT:
+						resizer.width = resizer.originalSize.width + px > this.minWidth ? resizer.originalSize.width + px : this.minWidth;
+						break;
+					case CursorMgr.SIDE_LEFT:
+						resizer.x = px < resizer.originalSize.width - this.minWidth ? resizer.originalPos.x + px : resizer.x;
+						resizer.width = resizer.originalSize.width - px > this.minWidth ? resizer.originalSize.width - px : this.minWidth;
+						break;
+					case CursorMgr.SIDE_BOTTOM:
+						resizer.height = resizer.originalSize.height + py > this.minHeight ? resizer.originalSize.height + py : this.minHeight;
+						break;
+					case CursorMgr.SIDE_TOP:
+						resizer.y = py < resizer.originalSize.height - this.minHeight ? resizer.originalPos.y + py : resizer.y;
+						resizer.height = resizer.originalSize.height - py > this.minHeight ? resizer.originalSize.height - py : this.minHeight;
+						break;
+				}
+			}
+		}
+		
+		
+		/**
+		 * 以 Dimension 对象的形式返回窗口的大小。Dimension 对象的 height 字段包含此窗口的高度，而 Dimension 对象的 width 字段则包含此窗口的宽度。
+		 * @return 
+		 * 
+		 */
+		public function getSize():Dimension
+		{
+			return new Dimension(this.width, this.height);
+		}
+		
+		/**
+		 * 调整窗口的大小，使其宽度为 d.width，高度为 d.height。 
+		 * @param d
+		 * 
+		 */
+		public function setSize(d:Dimension):void
+		{
+			this.width = d.width;
+			this.height = d.height;
+		}
+		
+		/**
+		 * 以 Point 对象的形式返回窗口原点的坐标。Point 对象的 x 字段包含此窗口原点的 x 坐标，而 Point 对象的 y 字段则包含此窗口原点的 y 坐标。
+		 * @return 
+		 * 
+		 */
+		public function getPosition():Point
+		{
+			return new Point(this.x, this.y);
 		}
 	}
 }

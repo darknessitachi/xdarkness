@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <framework>
+	<application>
+		<config name="DebugMode">false</config>
+		<config name="LogLevel">Debug</config>
+	</application>
 	<databases>
 		<database name="Default">
 			<Type>MYSQL</Type>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<framework>
+	<application>
+		<config name="DebugMode">false</config>
+		<config name="LogLevel">Debug</config>
+		<config name="PDM">CMS</config>
+	</application>
+	<databases>
+		<database name="Default">
+			<Type>MYSQL</Type>
+			<ServerAddress>localhost</ServerAddress>
+			<Port>3306</Port>
+			<Name>xcms</Name>
+			<UserName>root</UserName>
+			<Password>$KEYw//j8IH+fBtReFR4D88/Hw==</Password>
+			<MaxConnCount>1000</MaxConnCount>
+			<InitConnCount>0</InitConnCount>
+			<TestTable>XTest</TestTable>
+		</database>
+	</databases>
+</framework>

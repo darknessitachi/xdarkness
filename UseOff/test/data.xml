@@ -1401,5 +1401,19 @@
 	<data createTime="2011-5-29" useFor="eat" money="18" description="saliary" />
 	<data createTime="2011-5-30" useFor="eat" money="3" />
 	<data createTime="2011-5-30" useFor="eat" money="18" description="saliary" />
-	
+	<data createTime="2011-6-1" useFor="eat" money="3" />
+	<data createTime="2011-6-1" useFor="eat" money="18" description="saliary" />
+	<data createTime="2011-6-2" useFor="eat" money="3" />
+	<data createTime="2011-6-2" useFor="eat" money="18" description="saliary" />
+	<data createTime="2011-6-3" useFor="eat" money="3" />
+	<data createTime="2011-6-3" useFor="eat" money="18" description="saliary" />
+	<data createTime="2011-6-4" useFor="eat" money="13.5" />
+	<data createTime="2011-6-4" useFor="traffic" money="1.5"/>
+	<data createTime="2011-6-4" useFor="traffic" money="2"/>
+	<data createTime="2011-6-4" useFor="traffic" money="4"/>
+	<data createTime="2011-6-4" useFor="home" money="2851" description="ice box"/>
+	<data createTime="2011-6-5" useFor="traffic" money="4"/>
+	<data createTime="2011-6-5" useFor="traffic" money="2.5"/>
+	<data createTime="2011-6-5" useFor="eat" money="9"/>
+	<data createTime="2011-6-5" useFor="other" money="100" description="公司捐款"/>
 </dataset>

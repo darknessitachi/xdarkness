@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.abigdreamer.java.net.Config;
 import com.abigdreamer.java.net.SessionCheck;
 import com.abigdreamer.java.net.User;
-import com.abigdreamer.java.net.extend.ExtendManager;
+import com.abigdreamer.java.net.jaf.extend.ExtendManager;
 import com.abigdreamer.java.net.orm.data.DataCollection;
 import com.abigdreamer.java.net.util.LogUtil;
 import com.abigdreamer.java.net.util.XString;
@@ -24,8 +24,8 @@ import com.abigdreamer.java.net.util.XString;
 public class MainServlet extends HttpServlet {
 
 	private static final long serialVersionUID = -524995966806258384L;
-	public static int ServletMajorVersion = Config.ServletMajorVersion;
-	public static int ServletMinorVersion = Config.ServletMinorVersion;
+	public static int ServletMajorVersion = WebConfig.ServletMajorVersion;
+	public static int ServletMinorVersion = WebConfig.ServletMinorVersion;
 
 	public MainServlet() {
 	}
@@ -63,28 +63,28 @@ public class MainServlet extends HttpServlet {
 			}
 
 			// 测试网站，禁用删除功能
-			if (("www.sky.com".equalsIgnoreCase(request.getServerName()))
-					&& ("/demo".equalsIgnoreCase(request.getContextPath()))
-					&& (!"admin".equalsIgnoreCase(User.getUserName()))
-					&& (getServletConfig().getInitParameter(method) != null)) {
-				LogUtil
-						.getLogger()
-						.warn(
-								"method:"
-										+ method
-										+ ",操作："
-										+ getServletConfig().getInitParameter(
-												method)
-										+ "此操作被拒绝!<br>系统提示：为保证泽元软件Demo站的稳定运行，Demo站中部分删除功能已被屏蔽.");
-				DataCollection dcResponse = new DataCollection();
-				dcResponse.put("_SKY_STATUS", "0");
-				dcResponse
-						.put(
-								"_SKY_MESSAGE",
-								"此操作被拒绝!<br>系统提示：为保证泽元软件Demo站的稳定运行，Demo站中部分删除功能已被屏蔽.如需要可下载安装程序到本地来试用.<br>下载地址：<a href='http://www.sky.com/download/program/index.shtml' target='_blank'>下载ZCMS</a>");
-				response.getWriter().write(dcResponse.toXML());
-				return;
-			}
+//			if (("www.sky.com".equalsIgnoreCase(request.getServerName()))
+//					&& ("/demo".equalsIgnoreCase(request.getContextPath()))
+//					&& (!"admin".equalsIgnoreCase(User.getUserName()))
+//					&& (getServletConfig().getInitParameter(method) != null)) {
+//				LogUtil
+//						.getLogger()
+//						.warn(
+//								"method:"
+//										+ method
+//										+ ",操作："
+//										+ getServletConfig().getInitParameter(
+//												method)
+//										+ "此操作被拒绝!<br>系统提示：为保证泽元软件Demo站的稳定运行，Demo站中部分删除功能已被屏蔽.");
+//				DataCollection dcResponse = new DataCollection();
+//				dcResponse.put("_SKY_STATUS", "0");
+//				dcResponse
+//						.put(
+//								"_SKY_MESSAGE",
+//								"此操作被拒绝!<br>系统提示：为保证泽元软件Demo站的稳定运行，Demo站中部分删除功能已被屏蔽.如需要可下载安装程序到本地来试用.<br>下载地址：<a href='http://www.sky.com/download/program/index.shtml' target='_blank'>下载ZCMS</a>");
+//				response.getWriter().write(dcResponse.toXML());
+//				return;
+//			}
 
 			Current.init(request, response, method);
 			if (XString.isEmpty(method)) {
@@ -106,7 +106,7 @@ public class MainServlet extends HttpServlet {
 					&& (!className.equals(LoginClass)) && (!User.isLogin())) {
 				DataCollection dcResponse = new DataCollection();
 				dcResponse.put("_SKY_SCRIPT", "window.top.location='"
-						+ Config.getContextPath() + Config.getLoginPage()
+						+ WebConfig.getContextPath() + WebConfig.getLoginPage()
 						+ "';");
 				response.getWriter().write(dcResponse.toXML());
 				return;

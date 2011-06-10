@@ -7,7 +7,7 @@ import javax.servlet.jsp.PageContext;
 import javax.servlet.jsp.tagext.BodyTagSupport;
 import javax.servlet.jsp.tagext.Tag;
 
-import com.abigdreamer.java.net.Config;
+import com.abigdreamer.java.net.jaf.WebConfig;
 import com.abigdreamer.java.net.jaf.html.element.HtmlDiv;
 import com.abigdreamer.java.net.jaf.html.element.HtmlScript;
 
@@ -51,7 +51,7 @@ public class TabTag extends BodyTagSupport {
 					.append("    <td height=\"26\" valign=\"middle\" class=\"blockTd\">");
 			sb
 					.append("    <table width=\"100%\" border='0' cellpadding='0' cellspacing='0' style=\"background:url("
-							+ Config.getContextPath()
+							+ WebConfig.getContextPath()
 							+ "Framework/Images/divchildtabBarBg.gif) repeat-x left bottom; margin-bottom:1px;\">");
 			sb.append("    <tr>");
 			sb

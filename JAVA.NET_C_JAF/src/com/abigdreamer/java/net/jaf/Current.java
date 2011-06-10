@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 import com.abigdreamer.java.net.orm.data.DataCollection;
 import com.abigdreamer.java.net.util.LogUtil;
 import com.abigdreamer.java.net.util.Mapx;
-import com.abigdreamer.java.net.util.ServletUtil;
 import com.abigdreamer.java.net.util.XString;
 
 /**

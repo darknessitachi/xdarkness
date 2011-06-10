@@ -119,7 +119,7 @@ public class Cookies {
 	}
 
 	private static String getDefaultPath() {
-		String path = Config.getContextPath();
+		String path = WebConfig.getContextPath();
 		return normalizePath(path);
 	}
 

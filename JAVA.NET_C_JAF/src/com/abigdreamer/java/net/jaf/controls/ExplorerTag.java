@@ -16,13 +16,13 @@ import org.apache.commons.io.filefilter.SuffixFileFilter;
 
 import com.abigdreamer.java.net.Config;
 import com.abigdreamer.java.net.io.FileUtil;
+import com.abigdreamer.java.net.jaf.WebConfig;
 import com.abigdreamer.java.net.jaf.html.element.HtmlTR;
 import com.abigdreamer.java.net.jaf.html.element.HtmlTable;
 import com.abigdreamer.java.net.orm.data.DataColumn;
 import com.abigdreamer.java.net.orm.data.DataRow;
 import com.abigdreamer.java.net.orm.data.DataTable;
 import com.abigdreamer.java.net.util.DateUtil;
-import com.abigdreamer.java.net.util.HtmlUtil;
 import com.abigdreamer.java.net.util.Mapx;
 import com.abigdreamer.java.net.util.NumberUtil;
 import com.abigdreamer.java.net.util.XString;
@@ -63,7 +63,7 @@ public class ExplorerTag extends BodyTagSupport {
 				StringBuffer psb = new StringBuffer();
 
 				psb.append(ButtonTag.getHtml("Explorer.goPath('')",
-						"<img src='" + Config.getContextPath()
+						"<img src='" + WebConfig.getContextPath()
 								+ "Platform/Images/none.gif'>", "/根目录", false));
 
 				for (int i = 0; i < arr.length; i++) {
@@ -76,7 +76,7 @@ public class ExplorerTag extends BodyTagSupport {
 							jsb.append(arr[j]);
 						}
 						psb.append(ButtonTag.getHtml("Explorer.goPath('" + jsb
-								+ "')", "<img src='" + Config.getContextPath()
+								+ "')", "<img src='" + WebConfig.getContextPath()
 								+ "Platform/Images/none.gif'>", "/" + jsb,
 								false));
 					}
@@ -191,7 +191,7 @@ public class ExplorerTag extends BodyTagSupport {
 				dc.setColumnType(1);
 				dcs[i] = dc;
 			}
-			String extPrefix = Config.getContextPath()
+			String extPrefix = WebConfig.getContextPath()
 					+ "Framework/Images/FileType/";
 			ArrayList arrayDir = new ArrayList();
 			ArrayList arrayFile = new ArrayList();

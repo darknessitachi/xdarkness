@@ -6,8 +6,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import com.abigdreamer.java.net.Config;
-import com.abigdreamer.java.net.Constant;
+import com.abigdreamer.java.net.jaf.Constant;
 import com.abigdreamer.java.net.jaf.JafResponse;
+import com.abigdreamer.java.net.jaf.WebConfig;
 import com.abigdreamer.java.net.jaf.controls.IControlAction;
 import com.abigdreamer.java.net.jaf.html.element.HtmlScript;
 import com.abigdreamer.java.net.jaf.html.element.HtmlTD;
@@ -18,6 +19,7 @@ import com.abigdreamer.java.net.orm.data.DataCollection;
 import com.abigdreamer.java.net.orm.data.DataColumn;
 import com.abigdreamer.java.net.orm.data.DataRow;
 import com.abigdreamer.java.net.orm.data.DataTable;
+import com.abigdreamer.java.net.orm.data.DataTableTree;
 import com.abigdreamer.java.net.orm.data.DataTableUtil;
 import com.abigdreamer.java.net.sql.QueryBuilder;
 import com.abigdreamer.java.net.util.LogUtil;
@@ -171,7 +173,7 @@ public class DataGridAction implements IControlAction {
 				sb.append(td.getInnerHTML());
 				sb.append("</span>");
 				sb.append("<img src='");
-				sb.append(Config.getContextPath());
+				sb.append(WebConfig.getContextPath());
 				sb.append("Framework/Images/icon_sort");
 				sb.append(direction.toUpperCase());
 				sb.append(".gif' width='12' height='12' style='float:right'>");
@@ -406,10 +408,10 @@ public class DataGridAction implements IControlAction {
 					if (level < nextLevel)
 						sb
 								.append("<img src='"
-										+ Config.getContextPath()
+										+ WebConfig.getContextPath()
 										+ "Framework/Images/butExpand.gif' onclick='DataGrid.treeClick(this)'/>&nbsp;");
 					else {
-						sb.append("<img src='" + Config.getContextPath()
+						sb.append("<img src='" + WebConfig.getContextPath()
 								+ "Framework/Images/butNoChild.gif'/>&nbsp;");
 					}
 					if (field != null) {
@@ -1016,7 +1018,7 @@ public class DataGridAction implements IControlAction {
 			LogUtil.warn("DataGridAction.sortTreeDataTable():数据中不存在列"
 					+ parentIdentifierColumnName);
 		}
-		Treex tree = Treex.dataTableToTree(dt, identifierColumnName,
+		Treex tree = DataTableTree.dataTableToTree(dt, identifierColumnName,
 				parentIdentifierColumnName);
 		Treex.TreeIterator ti = tree.iterator();
 		DataTable dest = new DataTable(dt.getDataColumns(), null);

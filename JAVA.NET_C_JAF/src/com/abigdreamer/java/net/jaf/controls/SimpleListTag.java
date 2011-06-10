@@ -9,12 +9,11 @@ import javax.servlet.jsp.tagext.BodyContent;
 import javax.servlet.jsp.tagext.BodyTagSupport;
 import javax.servlet.jsp.tagext.Tag;
 
+import com.abigdreamer.java.net.jaf.ServletUtil;
 import com.abigdreamer.java.net.orm.data.DataColumn;
 import com.abigdreamer.java.net.orm.data.DataRow;
 import com.abigdreamer.java.net.orm.data.DataTable;
-import com.abigdreamer.java.net.util.HtmlUtil;
 import com.abigdreamer.java.net.util.Mapx;
-import com.abigdreamer.java.net.util.ServletUtil;
 
 public class SimpleListTag extends BodyTagSupport {
 	private static final long serialVersionUID = 1L;

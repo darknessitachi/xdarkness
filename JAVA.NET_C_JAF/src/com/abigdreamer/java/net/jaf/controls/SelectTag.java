@@ -1,7 +1,6 @@
 package com.abigdreamer.java.net.jaf.controls;
 
 import java.io.IOException;
-import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -12,13 +11,14 @@ import javax.servlet.jsp.tagext.BodyTagSupport;
 import javax.servlet.jsp.tagext.Tag;
 
 import com.abigdreamer.java.net.Config;
+import com.abigdreamer.java.net.jaf.ServletUtil;
+import com.abigdreamer.java.net.jaf.WebConfig;
 import com.abigdreamer.java.net.jaf.html.element.HtmlElement;
 import com.abigdreamer.java.net.jaf.html.element.HtmlSelect;
 import com.abigdreamer.java.net.orm.data.DataCollection;
 import com.abigdreamer.java.net.orm.data.DataTable;
 import com.abigdreamer.java.net.util.LogUtil;
 import com.abigdreamer.java.net.util.Mapx;
-import com.abigdreamer.java.net.util.ServletUtil;
 import com.abigdreamer.java.net.util.XString;
 
 /**
@@ -219,7 +219,7 @@ public class SelectTag extends BodyTagSupport {
 		sb.append(" value=''/>");
 		sb
 				.append("<img class='arrowimg' src='"
-						+ Config.getContextPath()
+						+ WebConfig.getContextPath()
 						+ "Framework/Images/blank.gif' width='18' height='20' id='"
 						+ this.id
 						+ "_arrow' style='position:relative; left:-17px; margin-right:-18px; cursor:pointer; "

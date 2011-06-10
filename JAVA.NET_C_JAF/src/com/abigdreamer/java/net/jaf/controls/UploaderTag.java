@@ -7,6 +7,7 @@ import javax.servlet.jsp.PageContext;
 import javax.servlet.jsp.tagext.BodyTagSupport;
 
 import com.abigdreamer.java.net.Config;
+import com.abigdreamer.java.net.jaf.WebConfig;
 import com.abigdreamer.java.net.util.XString;
 
 public class UploaderTag extends BodyTagSupport {
@@ -124,13 +125,13 @@ public class UploaderTag extends BodyTagSupport {
 						+ this.id
 						+ " classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' width='"
 						+ this.width + "' height='" + this.height + "'>\n");
-		sb.append("<param name='movie' value='" + Config.getContextPath()
+		sb.append("<param name='movie' value='" + WebConfig.getContextPath()
 				+ "Tools/" + srcSWF + "'>\n");
 		sb.append("<param name='quality' value='high'>\n");
 		sb.append("<param name='wmode' value='transparent'>\n");
 		sb.append("<param name='FlashVars' value='" + FlashVars + "'>\n");
 		sb.append("<embed name='" + this.name + "' src='"
-				+ Config.getContextPath() + "Tools/" + srcSWF + "' FlashVars='"
+				+ WebConfig.getContextPath() + "Tools/" + srcSWF + "' FlashVars='"
 				+ FlashVars + "' quality='high' wmode='transparent' width='"
 				+ this.width + "' height='" + this.height + "'></embed>\n");
 		sb.append("</object>\n");

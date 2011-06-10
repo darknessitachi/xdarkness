@@ -8,11 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.tagext.BodyTagSupport;
 
-import com.abigdreamer.java.net.Constant;
+import com.abigdreamer.java.net.jaf.Constant;
 import com.abigdreamer.java.net.jaf.Current;
-import com.abigdreamer.java.net.util.HtmlUtil;
+import com.abigdreamer.java.net.jaf.ServletUtil;
 import com.abigdreamer.java.net.util.Mapx;
-import com.abigdreamer.java.net.util.ServletUtil;
 import com.abigdreamer.java.net.util.XString;
 
 public class InitTag extends BodyTagSupport {

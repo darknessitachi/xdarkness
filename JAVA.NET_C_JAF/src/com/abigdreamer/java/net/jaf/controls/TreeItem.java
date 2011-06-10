@@ -1,6 +1,6 @@
 package com.abigdreamer.java.net.jaf.controls;
 
-import com.abigdreamer.java.net.Config;
+import com.abigdreamer.java.net.jaf.WebConfig;
 import com.abigdreamer.java.net.jaf.html.element.HtmlP;
 import com.abigdreamer.java.net.orm.data.DataRow;
 import com.abigdreamer.java.net.util.XString;
@@ -81,7 +81,7 @@ public class TreeItem extends HtmlP implements Cloneable {
 		}
 
 		String text = getText();
-		String prefix = Config.getContextPath();
+		String prefix = WebConfig.getContextPath();
 		text = "<img src='" + prefix + getIcon() + "'>" + text;
 
 		StringBuffer levelSb = new StringBuffer();

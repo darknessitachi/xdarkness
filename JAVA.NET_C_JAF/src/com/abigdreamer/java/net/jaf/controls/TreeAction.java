@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 
-import com.abigdreamer.java.net.Constant;
+import com.abigdreamer.java.net.jaf.Constant;
 import com.abigdreamer.java.net.jaf.html.element.HtmlP;
 import com.abigdreamer.java.net.jaf.html.element.HtmlScript;
 import com.abigdreamer.java.net.orm.SchemaSet;

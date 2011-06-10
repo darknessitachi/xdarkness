@@ -47,5 +47,6 @@
 	<classpathentry kind="lib" path="/lib/xml-apis.jar"/>
 	<classpathentry kind="lib" path="/lib/XmlSchema-1.4.2.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="C:/Java/apache-tomcat-6.0.32/lib/servlet-api.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

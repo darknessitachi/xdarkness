@@ -1416,4 +1416,10 @@
 	<data createTime="2011-6-5" useFor="traffic" money="2.5"/>
 	<data createTime="2011-6-5" useFor="eat" money="9"/>
 	<data createTime="2011-6-5" useFor="other" money="100" description="公司捐款"/>
+	<data createTime="2011-6-6" useFor="eat" money="21" description="saliary" />
+	<data createTime="2011-6-7" useFor="eat" money="21" description="saliary" />
+	<data createTime="2011-6-8" useFor="eat" money="21" description="saliary" />
+	<data createTime="2011-6-9" useFor="eat" money="21" description="saliary" />
+	<data createTime="2011-6-10" useFor="eat" money="18" description="saliary" />
+	<data createTime="2011-6-11" useFor="eat" money="18" description="saliary" />
 </dataset>

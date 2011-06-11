@@ -3,7 +3,6 @@ package com.abigdreamer.java.net.connection;
 import java.lang.reflect.Method;
 import java.sql.SQLException;
 
-import com.abigdreamer.java.net.Config;
 import com.abigdreamer.java.net.config.SystemConfig;
 import com.abigdreamer.java.net.util.Mapx;
 import com.abigdreamer.java.net.util.XString;

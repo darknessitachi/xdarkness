@@ -45,15 +45,15 @@
 	</cron>
 	<databases>
 		<database name="Default">
-			<config name="Type">MYSQL</config>
-			<config name="ServerAddress">localhost</config>
-			<config name="Port">3306</config>
-			<config name="Name">zcms</config>
-			<config name="UserName">root</config>
-			<config name="Password">$KEYw//j8IH+fBtReFR4D88/Hw==</config>
-			<config name="MaxConnCount">1000</config>
-			<config name="InitConnCount">0</config>
-			<config name="TestTable">ZDMaxNo</config>
+			<Type>MYSQL</Type>
+			<ServerAddress>localhost</ServerAddress>
+			<Port>3306</Port>
+			<Name>xcms</Name>
+			<UserName>root</UserName>
+			<Password>$KEYw//j8IH+fBtReFR4D88/Hw==</Password>
+			<MaxConnCount>1000</MaxConnCount>
+			<InitConnCount>0</InitConnCount>
+			<TestTable>XTest</TestTable>
 		</database>
 	</databases>
 	<allowUploadExt>
@@ -61,5 +61,5 @@
 		<config name="AllowAudioExt">mp3</config>
 		<config name="AllowImageExt">jpg,gif,jpeg,png,bmp,tif,zip</config>
 		<config name="AllowVideoExt">asx,flv,avi,wmv,mp4,mov,asf,mpg,rm,rmvb</config>
-		</allowUploadExt>
-	</framework>
+	</allowUploadExt>
+</framework>

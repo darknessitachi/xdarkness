@@ -26,7 +26,6 @@
 	<classpathentry kind="lib" path="/lib/jsr173_1.0_api.jar"/>
 	<classpathentry kind="lib" path="/lib/jtds-1.2.2.jar"/>
 	<classpathentry kind="lib" path="/lib/jTDS2.jar"/>
-	<classpathentry kind="lib" path="/lib/license-1.0.jar"/>
 	<classpathentry kind="lib" path="/lib/log4j-1.2.14.jar"/>
 	<classpathentry kind="lib" path="/lib/lucene-core-2.9.1.jar"/>
 	<classpathentry kind="lib" path="/lib/mail.jar"/>

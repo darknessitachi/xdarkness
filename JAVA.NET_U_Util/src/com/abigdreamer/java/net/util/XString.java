@@ -50,6 +50,57 @@ public class XString {
 	private static Pattern idPattern = Pattern.compile("[\\w\\s\\_\\.\\,]*",
 			Pattern.CASE_INSENSITIVE);
 
+
+    /**
+     * 保证字符串中含有单引号时也能正确进行TranSql语句的执行
+     */
+    public static String sqlEncode(String str) {
+        if (str == null) {
+            return "";
+        }
+        return str.replace("'", "''");
+    }
+    
+
+    /**
+     * HtmlEncode(str) 后 将回车符进行编码，再将双空格替换为HTML空格
+     * @param str 待编码字符串
+     * @return 编码之后的字符串
+     */
+     public static String HtmlEncodeBR(String str) {
+         if (str == null) {
+             return "";
+         }
+         return HtmlEncode(str).replace("\r\n", "<BR>").replace("  ", "&nbsp; ");
+     }
+     
+
+     /**
+      * 编码单引号、双引号、AND符号及左尖括号用于HTML显示
+      * @param str 待编码字符串
+      * @return 编码之后的字符串
+      */
+     public static String HtmlEncode(String str) {
+         if (str == null) {
+             return "";
+         }
+         return str.replace("&", "&#38;").replace("<", "&#60;").replace("'",
+                 "&#39;").replace("\"", "&#34;");
+     }
+    
+     /**
+      * 将sql的where子句中的"where "去除，仅包含条件部分
+      * 此操作的作用为，使where适合DataTable的FilterExpression参数规则
+      */
+     public static String ruleSqlWhereClause(String m_wheres) {
+         String m_where = (m_wheres == null || m_wheres.length() <= 3) ? "1=1"
+                 : m_wheres.toLowerCase().trim();
+         if (m_where.indexOf("where ") == 0) {
+             m_where = m_where.substring(5).trim();
+         }
+         return m_where;
+     }
+     
 	/**
 	 * 从前往后直到找到一个非空的字符串为止，如果都为空，返回空字符串
 	 * 

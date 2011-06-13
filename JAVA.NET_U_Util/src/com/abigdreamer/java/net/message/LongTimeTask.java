@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import com.abigdreamer.java.net.util.LogUtil;
 import com.abigdreamer.java.net.util.Mapx;
 import com.abigdreamer.java.net.util.XString;
-import com.zving.framework.messages.StopThreadException;
 
 public abstract class LongTimeTask extends Thread {
 	private static Mapx map = new Mapx();
@@ -125,7 +124,8 @@ public abstract class LongTimeTask extends Thread {
 		try {
 //			User.setCurrent(this.user);
 			execute();
-		} catch (StopThreadException ie) {
+//		} catch (StopThreadException ie) {
+		} catch (Exception ie) {
 			interrupt();
 		} finally {
 			this.stopTime = System.currentTimeMillis();

@@ -525,4 +525,17 @@ public class DataTableUtil {
 		}
 		return null;
 	}
+	
+	public static DataTable mapToDataTable(Mapx<?, ?> mapx) {
+		DataColumn[] dcs = { new DataColumn("Key", 1),
+				new DataColumn("Value", 1) };
+		Object[] ks = mapx.keyArray();
+		Object[][] vs = new Object[ks.length][2];
+		DataTable dt = new DataTable(dcs, vs);
+		for (int i = 0; i < ks.length; ++i) {
+			dt.set(i, 0, ks[i]);
+			dt.set(i, 1, mapx.get(ks[i]));
+		}
+		return dt;
+	}
 }

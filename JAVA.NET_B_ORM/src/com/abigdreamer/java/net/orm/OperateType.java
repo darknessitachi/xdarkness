@@ -3,7 +3,6 @@ package com.abigdreamer.java.net.orm;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class OperateType {
 	public static final OperateType INSERT = new OperateType(1);
 	public static final OperateType UPDATE = new OperateType(2);
@@ -22,6 +21,10 @@ public class OperateType {
 	@Override
 	public String toString() {
 		return "" + type;
+	}
+	
+	public int value() {
+		return this.type;
 	}
 	
 	public static OperateType getType(int type) {

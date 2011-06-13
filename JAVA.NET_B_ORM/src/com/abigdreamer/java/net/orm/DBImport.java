@@ -33,8 +33,8 @@ public class DBImport {
 		this.task = task;
 	}
 
-	public void importDB(String file) {
-		importDB(file, "");
+	public boolean importDB(String file) {
+		return importDB(file, "");
 	}
 
 	public String getSQL(String file, String dbtype) {

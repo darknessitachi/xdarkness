@@ -1,6 +1,5 @@
 package com.abigdreamer.java.net.connection;
 
-
 /**
  * 
  * Create on May 14, 2010 11:29:37 AM

@@ -1,7 +1,6 @@
 package com.abigdreamer.java.net.connection;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +12,6 @@ import org.dom4j.io.SAXReader;
 
 import com.abigdreamer.java.net.Config;
 import com.abigdreamer.java.net.security.EncryptUtil;
-import com.ibm.db2.jcc.b.db;
 
 /**
  * //	<Type>MYSQL</Type>

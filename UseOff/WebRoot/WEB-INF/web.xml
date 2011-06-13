@@ -4,8 +4,16 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+  <error-page>
+    <error-code>404</error-code>
+    <location>/Services/404.jsp</location>
+  </error-page>
   <welcome-file-list>
-    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.shtml</welcome-file>
+    <welcome-file>Login.jsp</welcome-file>
+    <welcome-file>Index.jsp</welcome-file>
   </welcome-file-list>
   
   <jsp-config>

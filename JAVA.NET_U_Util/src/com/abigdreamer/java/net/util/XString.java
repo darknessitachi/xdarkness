@@ -984,5 +984,109 @@ public class XString {
 	 *            public static void setIfEmpty(String str, String... strings) {
 	 *            if(isEmpty(str)){ str = or(strings); } }
 	 */
+	
+	/**
+     * 获取字符串, null转换为空字符串
+     * @param src 源对象
+     * @return 字符串
+     */
+    public static String getStr(Object src) {
+        return getStr(src, -1);
+    }
 
+    public static String getTrimedStr(Object src) {
+        return getTrimedStr(src, -1);
+    }
+
+    public static String getStr(Object src, String defaultValue) {
+        return getStr(src, -1, defaultValue);
+    }
+
+    public static String getTrimedStr(Object src, String defaultValue) {
+        return getTrimedStr(src, -1, defaultValue);
+    }
+
+    /**
+     * 获取定长的字符串, null转换为空字符串
+     * @param src 源对象
+     * @param length 字符串长度
+     * @return 字符串
+     */
+    public static String getStr(Object src, int length) {
+        return getStr(src, 0, length);
+    }
+
+    public static String getTrimedStr(Object src, int length) {
+        return getTrimedStr(src, 0, length);
+    }
+
+    public static String getStr(Object src, int length, String defaultValue) {
+        return getStr(src, 0, length, defaultValue);
+    }
+
+    public static String getTrimedStr(Object src, int length, String defaultValue) {
+        return getTrimedStr(src, 0, length, defaultValue);
+    }
+
+    /**
+     * 从start位置开始获取定长字符串, null转换为空字符串
+     * @param src 源对象
+     * @param start 起始位置
+     * @param length 长度
+     * @return
+     */
+    public static String getStr(Object src, int start, int length) {
+        return getStr(src, start, length, "", false);
+    }
+
+    public static String getTrimedStr(Object src, int start, int length) {
+        return getStr(src, start, length, "", true);
+    }
+
+    public static String getStr(Object src, int start, int length, String defaultValue) {
+        return getStr(src, start, length, defaultValue, false);
+    }
+
+    public static String getTrimedStr(Object src, int start, int length, String defaultValue) {
+        return getStr(src, start, length, defaultValue, true);
+    }
+    
+	public static String getStr(Object src, int start, int length, String defaultValue, boolean trim) {
+        if (src == null) {
+            return defaultValue;
+        }
+
+        String value = src.toString();
+
+        if (value.length() > start) {
+            if (length < 0 || value.length() < start + length) {
+                value = value.substring(start);
+            } else {
+                value = value.substring(start, start + length);
+            }
+        } else {
+            value = "";
+        }
+
+        return trim ? value.trim() : value;
+    }
+
+	/**
+	 * 替换最后一个字符
+	 * @param str
+	 * @param pattern
+	 * @param replace
+	 * @return
+	 */
+	public static String replaceLast(String str, String pattern, String replace) {
+		Pattern ptn = Pattern.compile(pattern);
+		Matcher match = ptn.matcher(str);
+		int lastIndex = 0;
+		while (match.find(lastIndex)) {
+
+			lastIndex = match.end();
+		}
+		
+		return str.substring(0, lastIndex-1) + replace;
+	}
 }

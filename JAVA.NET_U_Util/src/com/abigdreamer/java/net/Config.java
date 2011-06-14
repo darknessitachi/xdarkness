@@ -305,26 +305,26 @@ public class Config {
 
 	@SuppressWarnings("unchecked")
 	public static void loadDataBasesConfig(Element databases) {
-		if (databases != null) {
-			List<Element> dbs = databases.elements();
-			for (int i = 0; i < dbs.size(); i++) {
-				Element ele = dbs.get(i);
-				String dbname = ele.attributeValue("name").trim();
-				List<Element> configs = ele.elements();
-				for (int k = 0; k < configs.size(); k++) {
-					ele = configs.get(k);
-					String attr = ele.attributeValue("name");
-					String value = ele.getTextTrim();
-					if ((attr.equalsIgnoreCase("Password"))
-							&& (value.startsWith("$KEY"))) {
-						value = EncryptUtil.decrypt3DES(value.substring(4),
-								"27jrWz3sxrVbR+pnyg6j");
-					}
-
-					configMap.put("Database." + dbname + "." + attr, value);
-				}
-			}
-		}
+//		if (databases != null) {
+//			List<Element> dbs = databases.elements();
+//			for (int i = 0; i < dbs.size(); i++) {
+//				Element ele = dbs.get(i);
+//				String dbname = ele.attributeValue("name").trim();
+//				List<Element> configs = ele.elements();
+//				for (int k = 0; k < configs.size(); k++) {
+//					ele = configs.get(k);
+//					String attr = ele.attributeValue("name");
+//					String value = ele.getTextTrim();
+//					if ((attr.equalsIgnoreCase("Password"))
+//							&& (value.startsWith("$KEY"))) {
+//						value = EncryptUtil.decrypt3DES(value.substring(4),
+//								"27jrWz3sxrVbR+pnyg6j");
+//					}
+//
+//					configMap.put("Database." + dbname + "." + attr, value);
+//				}
+//			}
+//		}
 	}
 
 	public static void update() {

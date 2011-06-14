@@ -283,7 +283,7 @@ public abstract class HtmlElement implements Cloneable {
 	 * 获取标签正则
 	 * @return
 	 */
-	private Pattern getParrtenByTagName() {
+	protected Pattern getParrtenByTagName() {
 		Pattern o = PatternMap.get(this.TagName);
 		if (o == null) {
 			Pattern pattern = Pattern.compile("<" + this.TagName

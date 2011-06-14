@@ -1,6 +1,7 @@
 package com.abigdreamer.java.net.jaf.controls;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -28,7 +29,9 @@ import com.abigdreamer.java.net.util.XString;
  * @since JDF 1.0
  */
 public class SelectTag extends BodyTagSupport {
-	private static final long serialVersionUID = 1L;
+
+	private static final long serialVersionUID = 3584754814013282985L;
+
 	private String id;
 	private String name;
 	private String onChange;
@@ -50,7 +53,12 @@ public class SelectTag extends BodyTagSupport {
 	private boolean defaultblank;
 	private String method;
 	private static CodeSource codeSourceInstance;
-	private int selectedIndex = 0;
+
+	private boolean mutli;
+	private String text;
+	private Boolean autocomplete = false;
+	private int selectedIndex = -1;
+	private List<ISelectOption> options;
 
 	private int optionCount = 0;
 
@@ -85,12 +93,16 @@ public class SelectTag extends BodyTagSupport {
 		this.lazy = false;
 		this.selectedIndex = 0;
 		this.optionCount = 0;
+		this.text = null;
+		this.options = null;
 	}
 
 	public int doAfterBody() throws JspException {
-		String content = getBodyContent().getString();
+		String content = getBodyContent().getString().replaceAll("\r\n", "");
 		try {
-			getPreviousOut().print(getHtml(content));
+			HttpServletRequest request = (HttpServletRequest) pageContext
+					.getRequest();
+			getPreviousOut().print(getHtml(content, request));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -101,7 +113,9 @@ public class SelectTag extends BodyTagSupport {
 		if ((this.bodyContent == null)
 				|| (XString.isEmpty(this.bodyContent.getString()))) {
 			try {
-				this.pageContext.getOut().print(getHtml(""));
+				HttpServletRequest request = (HttpServletRequest) pageContext
+						.getRequest();
+				this.pageContext.getOut().print(getHtml("", request));
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -109,38 +123,56 @@ public class SelectTag extends BodyTagSupport {
 		return Tag.EVAL_PAGE;
 	}
 
-	public String getHtml(String content) {
+	/**
+	 * initialization id and name, they can't both empty at one time, if name is
+	 * empty, set the id value to name, if id is empty, set the name value to id
+	 */
+	private void initIdName() {
+		if (XString.isEmpty(this.id) && XString.isEmpty(this.name)) {
+			throw new RuntimeException("Select标签id、name不能同时为空！");
+		}
+
+		if (XString.isEmpty(this.name)) {// if name is empty, set the id
+											// value to name
+			this.name = this.id;
+		}
+
+		if (XString.isEmpty(this.id)) {// if id is empty, set the name
+										// value to id
+			this.id = this.name;// HtmlElement.generateId();
+		}
+	}
+
+	public String getHtml(String content, HttpServletRequest request) {
+		if (content.indexOf("xtype=\'Select\'") > 0) {// 已经解析过，此处为兼容旧的使用方式
+			return content;
+		}
+
 		content = parseOptions(content);
+
+		initIdName();
+
 		String codeData = "";
 		if ((XString.isNotEmpty(this.code))
 				|| (XString.isNotEmpty(this.method))) {
 			codeData = codeData + getCodeData();
 		}
-		if (XString.isEmpty(this.id)) {
-			this.id = HtmlElement.generateId();
-		}
-		if (XString.isEmpty(this.name)) {
-			this.name = this.id;
-		}
+
 		StringBuffer sb = new StringBuffer();
-		sb
-				.append("<div id='" + this.id + "' name='" + this.name
-						+ "' selectedIndex='" + this.selectedIndex
-						+ "' xtype='Select'");
-		if (XString.isNotEmpty(this.className)) {
-			sb.append("  class='" + this.className + " ");
-			sb.append(" zSelect'");
-		} else {
-			sb.append(" class='zSelect'");
-		}
-		if (XString.isNotEmpty(this.style)) {
-			sb
-					.append(" style=\"display:inline-block; *zoom: 1;*display: inline;vertical-align:middle;position:relative;height:20px;white-space: nowrap;"
-							+ this.style + "\"");
+		sb.append("<input type='hidden' id='" + this.id + "' name='" + this.id
+				+ "' value='" + XString.getStr(this.value) + "'> <div multi='"
+				+ this.mutli + "' id='select_" + this.id + "' name='"
+				+ this.name + "' selectedIndex='" + this.selectedIndex
+				+ "' xtype='Select'");
+
+		sb.append("  class='" + XString.getStr(this.className) + " zSelect'");
+
+		if (!XString.isEmpty(this.style)) {
+			sb.append(" style=\"display:inline-block; *zoom: 1;*display: inline;vertical-align:middle;position:relative;height:20px;white-space: nowrap;"
+					+ this.style + "\"");
 			sb.append(" styleOriginal=\"" + this.style + "\"");
 		} else {
-			sb
-					.append(" style=\"display:inline-block; *zoom: 1;*display: inline;vertical-align:middle;position:relative;height:20px;white-space: nowrap;\"");
+			sb.append(" style=\"display:inline-block; *zoom: 1;*display: inline;vertical-align:middle;position:relative;height:20px;white-space: nowrap;\"");
 
 			sb.append(" styleOriginal='NULL'");
 		}
@@ -196,8 +228,11 @@ public class SelectTag extends BodyTagSupport {
 		}
 		sb.append(">");
 
-		sb.append("<input type='text' id='" + this.id
-				+ "_textField' xtype='select' autocomplete='off'");
+		String autocompleteString = autocomplete ? "on" : "off";
+		sb.append("<input type='text' id='select_" + this.id
+				+ "_textField' xtype='select' autocomplete='"
+				+ autocompleteString + "'");
+		sb.append(" name=\"select_" + this.name + "\"");
 		if (XString.isNotEmpty(this.verify)) {
 			sb.append(" verify=\"" + this.verify + "\"");
 		}
@@ -209,58 +244,87 @@ public class SelectTag extends BodyTagSupport {
 			sb.append(" condition=\"" + this.condition + "\"");
 		}
 		if (XString.isNotEmpty(this.style))
-			sb
-					.append(" style=\"vertical-align:top; background:transparent none; cursor:default;"
-							+ this.style + "\"");
+			sb.append(" style=\"vertical-align:top; background:transparent none; cursor:default;"
+					+ this.style + "\"");
 		else {
-			sb
-					.append(" style=\"vertical-align:top; background:transparent none; cursor:default;\"");
+			sb.append(" style=\"vertical-align:top; background:transparent none; cursor:default;\"");
 		}
 		sb.append(" value=''/>");
-		sb
-				.append("<img class='arrowimg' src='"
-						+ WebConfig.getContextPath()
-						+ "Framework/Images/blank.gif' width='18' height='20' id='"
-						+ this.id
-						+ "_arrow' style='position:relative; left:-17px; margin-right:-18px; cursor:pointer; "
-						+ "width:18px; height:20px;vertical-align:top;'/>");
-		sb
-				.append("<div id='"
-						+ this.id
-						+ "_list' class='optgroup' style='text-align:left;display:none;'>");
-		sb.append("<div id='" + this.id
+		sb.append("<img class='arrowimg' src='"
+				+ WebConfig.getContextPath()
+				+ "Framework/Images/blank.gif' width='18' height='20' id='select_"
+				+ this.id
+				+ "_arrow' style='position:relative; left:-17px; margin-right:-18px; cursor:pointer; "
+				+ "width:18px; height:20px;vertical-align:top;'/>");
+		sb.append("<div id='select_"
+				+ this.id
+				+ "_list' class='optgroup' style='text-align:left;display:none;'>");
+		sb.append("<div id='select_" + this.id
 				+ "_ul' style='left:-1px; width:-1px;'>");
 
 		if (this.defaultblank) {
-			sb.append(getOption("", ""));
+			sb.append(getOption("请选择", ""));
 		}
 		sb.append(content);
 
 		if (XString.isNotEmpty(codeData)) {
 			sb.append(codeData);
 		}
+		if (this.options != null) {// add extra options
+			for (int i = 0; i < options.size(); i++) {
+				ISelectOption select = options.get(i);
+				sb.append(getOption(select.getText(), select.getValue()));
+			}
+		}
 		sb.append("</div></div></div>");
+		if (listURL != null) {
+			if (this.text == null)
+				this.text = this.id;
+			sb.append("<script type='text/javascript'>Selector.setValueEx($('select_"
+					+ this.id
+					+ "'), '"
+					+ XString.getStr(request.getAttribute(this.id))
+					+ "','"
+					+ XString.getStr(request.getAttribute(this.text))
+					+ "');</script>");
+		}
 		return sb.toString();
 	}
 
 	private String getOption(String text, String value) {
 		this.optionCount += 1;
+		if (this.mutli) {
+			return getMultiOptionHtml(this.id, text, value, false);
+		}
 		return getOptionHtml(this.id, text, value, false);
 	}
 
-	public static String getOptionHtml(String text, String value, boolean flag) {
-		return "<a href=\"javascript:void(0);\" onclick=\"Selector.onItemClick(this);\" onmouseover='Selector.onItemMouseOver(this)' "
-				+ (flag ? "selected='true'" : "")
-				+ " hidefocus value=\""
+	public static String getOptionHtml(String text, String value,
+			boolean flag) {
+		return "<a href=\"javascript:void(0);\"  onclick=\"Selector.onItemClick(this);\" onmouseover='Selector.onItemMouseOver(this)' "
+				+ ((flag) ? "selected='true'" : "") + " hidefocus value=\""
 				+ value + "\">" + text + "</a>";
 	}
 	
 	public static String getOptionHtml(String id, String text, String value,
 			boolean flag) {
-		return "<a href=\"javascript:void(0);\" divId='select_" + id
+		return "<a href=\"javascript:void(0);\" divId='select_"
+				+ id
 				+ "' onclick=\"Selector.onItemClick(this);\" onmouseover='Selector.onItemMouseOver(this)' "
 				+ ((flag) ? "selected='true'" : "") + " hidefocus value=\""
 				+ value + "\">" + text + "</a>";
+	}
+
+	public static String getMultiOptionHtml(String id, String text,
+			String value, boolean flag) {
+		return "<div style=\'border:0px;\'><div style=\'float:left;border:0px;\'><input type=\'checkbox\' divId='select_"
+				+ id
+				+ "'/></div><div style=\'border:0px;\'><a divId='select_"
+				+ id
+				+ "' href=\"javascript:void(0);\" onclick=\"Selector.onItemClick(this);\" onmouseover='Selector.onItemMouseOver(this)' "
+				+ ((flag) ? "selected='true'" : "")
+				+ " hidefocus value=\""
+				+ value + "\">" + text + "</a></div></div>";
 	}
 
 	private String parseOptions(String content) {
@@ -270,33 +334,76 @@ public class SelectTag extends BodyTagSupport {
 				select.parseHtml(content);
 
 				this.id = XString.or(this.id, select.getID());
-				this.className = XString.or(this.className, select.getClassName());
+				this.className = XString.or(this.className,
+						select.getClassName());
 				this.style = XString.or(this.style, select.getStyle());
 				this.code = XString.or(this.code, select.getAttribute("code"));
-				this.condition = XString.or(this.condition, select.getAttribute("condition"));
-				this.conditionField = XString.or(this.conditionField, select.getAttribute("conditionfield"));
-				this.conditionValue = XString.or(this.conditionValue, select.getAttribute("conditionvalue"));
+				this.condition = XString.or(this.condition,
+						select.getAttribute("condition"));
+				this.conditionField = XString.or(this.conditionField,
+						select.getAttribute("conditionfield"));
+				this.conditionValue = XString.or(this.conditionValue,
+						select.getAttribute("conditionvalue"));
 				this.disabled = "true".equals(select.getAttribute("disabled"));
 				this.input = "true".equals(select.getAttribute("input"));
-				this.defaultblank = "true".equals(select.getAttribute("defaultblank"));
-				this.showValue = "true".equals(select.getAttribute("showvalue"));
+				this.defaultblank = "true".equals(select
+						.getAttribute("defaultblank"));
+				this.showValue = "true"
+						.equals(select.getAttribute("showvalue"));
 				this.lazy = "true".equals(select.getAttribute("lazy"));
-				this.value = XString.or(this.value, select.getAttribute("value"));
-				this.verify = XString.or(this.verify, select.getAttribute("verify"));
-				this.onChange = XString.or(this.onChange, select.getAttribute("onchange"));
-				this.listURL = XString.or(this.listURL, select.getAttribute("listurl"));
+				this.value = XString.or(this.value,
+						select.getAttribute("value"));
+				if (XString.isEmpty(this.value)) {
+					if (select.getSelectedOption() != null) {
+						this.value = (String) (select.getSelectedOption())
+								.getAttribute("value");
+					}
+				}
+				this.verify = XString.or(this.verify,
+						select.getAttribute("verify"));
+				this.onChange = XString.or(this.onChange,
+						select.getAttribute("onchange"));
+				this.listURL = XString.or(this.listURL,
+						select.getAttribute("listurl"));
 				if (select.getIntAttribute("listwidth") > 0)
 					this.listWidth = select.getIntAttribute("listwidth");
 				if (select.getIntAttribute("listheight") > 0)
 					this.listHeight = select.getIntAttribute("listheight");
-				
+
 				content = select.getInnerHTML();
 			} catch (Exception e) {
 				if (XString.isEmpty(this.id)) {
-					throw new RuntimeException("必须为<sky:select>标签或<select>元素定义ID");
+					throw new RuntimeException(
+							"必须为<sky:select>标签或<select>元素定义ID");
 				}
 			}
 		}
+		/**
+		 * get the value from the ValueStack by property name
+		 */
+		/*if (StringUtil.isEmpty(this.value)) {
+			this.value = "";
+			Object valueObject = ActionContext.getContext().getValueStack()
+					.findValue(this.name);
+			if (valueObject instanceof List) {
+				List<String> values = (List<String>) valueObject;
+				if (values != null) {
+					for (int i = 0; i < values.size(); i++) {
+
+						if (i != 0) {
+							this.value += ",";
+						}
+
+						this.value += values.get(i);
+					}
+				}
+			} else {
+				if (valueObject != null) {
+					this.value = valueObject.toString();
+				}
+			}
+
+		}*/
 		StringBuffer sb = new StringBuffer();
 		Matcher m = POption.matcher(content);
 		int lastIndex = 0;
@@ -307,9 +414,10 @@ public class SelectTag extends BodyTagSupport {
 				sb.append(tmp);
 			}
 			if (this.showValue)
-				sb.append(getOption(m.group(3)
-						+ (XString.isNotEmpty(m.group(4)) ? "-" + m.group(4)
-								: ""), m.group(3)));
+				sb.append(getOption(
+						m.group(3)
+								+ (XString.isNotEmpty(m.group(4)) ? "-"
+										+ m.group(4) : ""), m.group(3)));
 			else {
 				sb.append(getOption(m.group(4), m.group(3)));
 			}
@@ -351,8 +459,8 @@ public class SelectTag extends BodyTagSupport {
 			this.method = this.code.substring(1);
 		}
 		if (XString.isNotEmpty(this.method)) {
-			String className = this.method.substring(0, this.method
-					.lastIndexOf("."));
+			String className = this.method.substring(0,
+					this.method.lastIndexOf("."));
 			String methodName = this.method.substring(this.method
 					.lastIndexOf(".") + 1);
 			try {
@@ -376,12 +484,11 @@ public class SelectTag extends BodyTagSupport {
 					this.selectedIndex = this.optionCount;
 				}
 				if (!this.showValue)
-					sb
-							.append(getOption(dt.getString(i, 1), dt.getString(
-									i, 0)));
+					sb.append(getOption(dt.getString(i, 1), dt.getString(i, 0)));
 				else {
-					sb.append(getOption(dt.getString(i, 0) + "-"
-							+ dt.getString(i, 1), dt.getString(i, 0)));
+					sb.append(getOption(
+							dt.getString(i, 0) + "-" + dt.getString(i, 1),
+							dt.getString(i, 0)));
 				}
 			}
 			if (dt.getColCount() > 2) {
@@ -389,9 +496,7 @@ public class SelectTag extends BodyTagSupport {
 						+ "_Init,10);");
 				sb.append("function Selector_" + this.id + "_Init(){");
 				sb.append(DataCollection.dataTableToJS(dt));
-				sb
-						.append("$('" + this.id
-								+ "').DataSource = new DataTable();;");
+				sb.append("$('" + this.id + "').DataSource = new DataTable();;");
 				sb.append("$('" + this.id
 						+ "').DataSource.init(_SKY_Cols,_SKY_Values);");
 				sb.append("}\n</script>\n");
@@ -590,5 +695,36 @@ public class SelectTag extends BodyTagSupport {
 	public void setMethod(String method) {
 		this.method = method;
 	}
-	
+
+	public String getText() {
+		return text;
+	}
+
+	public void setText(String text) {
+		this.text = text;
+	}
+
+	public Boolean getAutocomplete() {
+		return autocomplete;
+	}
+
+	public void setAutocomplete(Boolean autocomplete) {
+		this.autocomplete = autocomplete;
+	}
+
+	public boolean isMutli() {
+		return mutli;
+	}
+
+	public void setMutli(boolean mutli) {
+		this.mutli = mutli;
+	}
+
+	public List<ISelectOption> getOptions() {
+		return options;
+	}
+
+	public void setOptions(List<ISelectOption> options) {
+		this.options = options;
+	}
 }

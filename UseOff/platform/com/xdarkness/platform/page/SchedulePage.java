@@ -17,8 +17,8 @@ import com.abigdreamer.java.net.sql.QueryBuilder;
 import com.abigdreamer.java.net.util.DateUtil;
 import com.abigdreamer.java.net.util.Mapx;
 import com.abigdreamer.java.net.util.XString;
-import com.abigdreamer.schema.ZDScheduleSchema;
 import com.xdarkness.platform.pub.NoUtil;
+import com.zving.schema.ZDScheduleSchema;
 
 public class SchedulePage extends Page {
 	public static Mapx init(Mapx map) {

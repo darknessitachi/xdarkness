@@ -4,14 +4,14 @@ import com.abigdreamer.java.net.cache.CacheManager;
 import com.abigdreamer.java.net.cache.CacheProvider;
 import com.abigdreamer.java.net.util.Mapx;
 import com.abigdreamer.java.net.util.XString;
-import com.abigdreamer.schema.ZDBranchSchema;
-import com.abigdreamer.schema.ZDBranchSet;
-import com.abigdreamer.schema.ZDRoleSchema;
-import com.abigdreamer.schema.ZDRoleSet;
-import com.abigdreamer.schema.ZDUserRoleSchema;
-import com.abigdreamer.schema.ZDUserRoleSet;
-import com.abigdreamer.schema.ZDUserSchema;
-import com.abigdreamer.schema.ZDUserSet;
+import com.zving.schema.ZDBranchSchema;
+import com.zving.schema.ZDBranchSet;
+import com.zving.schema.ZDRoleSchema;
+import com.zving.schema.ZDRoleSet;
+import com.zving.schema.ZDUserRoleSchema;
+import com.zving.schema.ZDUserRoleSet;
+import com.zving.schema.ZDUserSchema;
+import com.zving.schema.ZDUserSet;
 
 public class PlatformCache extends CacheProvider {
 	public static final String ProviderName = "Platform";

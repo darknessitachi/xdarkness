@@ -129,15 +129,16 @@ public class Install extends Ajax {
 			}
 			dt = new QueryBuilder("show databases like ?", $V("DBName"))
 					.executeDataTable();
-			if (dt.getRowCount() != 0)
+			if (dt.getRowCount() == 0) {
 				LogUtil.info("安装目标数据库不存在，将自动创建目标数据库!");
-
-			try {
-				new QueryBuilder("create schema " + $V("DBName"))
-						.executeNoQuery();
-			} catch (SQLException e) {
-				e.printStackTrace();
+				try {
+					new QueryBuilder("create schema " + $V("DBName"))
+							.executeNoQuery();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
 			}
+			
 		}// END
 		// START SQLServer
 		else if (XConnectionPoolManager.isSQLServer()) {

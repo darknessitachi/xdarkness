@@ -10,9 +10,9 @@ import com.abigdreamer.java.net.orm.data.DataTable;
 import com.abigdreamer.java.net.sql.QueryBuilder;
 import com.abigdreamer.java.net.util.Mapx;
 import com.abigdreamer.java.net.util.XString;
-import com.abigdreamer.schema.ZDDistrictSchema;
-import com.abigdreamer.schema.ZDDistrictSet;
 import com.xdarkness.platform.Cms;
+import com.zving.schema.ZDDistrictSchema;
+import com.zving.schema.ZDDistrictSet;
 
 public class DistrictPage extends Page {
 	static Mapx codeMap;

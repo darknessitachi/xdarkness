@@ -10,10 +10,10 @@ import com.abigdreamer.java.net.jaf.WebConfig;
 import com.abigdreamer.java.net.sql.QueryBuilder;
 import com.abigdreamer.java.net.util.XString;
 import com.abigdreamer.java.net.util.ZipUtil;
-import com.abigdreamer.schema.ZDCodeSet;
-import com.abigdreamer.schema.ZDConfigSchema;
-import com.abigdreamer.schema.ZDIPRangeSet;
-import com.abigdreamer.schema.ZDMenuSchema;
+import com.zving.schema.ZDCodeSet;
+import com.zving.schema.ZDConfigSchema;
+import com.zving.schema.ZDIPRangeSet;
+import com.zving.schema.ZDMenuSchema;
 
 public class Patch {
 	private static Object mutex = new Object();

@@ -15,11 +15,11 @@ import com.abigdreamer.java.net.sql.QueryBuilder;
 import com.abigdreamer.java.net.util.DateUtil;
 import com.abigdreamer.java.net.util.Mapx;
 import com.abigdreamer.java.net.util.XString;
-import com.abigdreamer.schema.ZDUserLogSchema;
-import com.abigdreamer.schema.ZDUserLogSet;
-import com.abigdreamer.schema.ZDUserSchema;
 import com.xdarkness.platform.pub.NoUtil;
 import com.xdarkness.platform.pub.PlatformCache;
+import com.zving.schema.ZDUserLogSchema;
+import com.zving.schema.ZDUserLogSet;
+import com.zving.schema.ZDUserSchema;
 
 public class UserLogPage extends Page {
 	public static final String LOGIN = "Login";

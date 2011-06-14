@@ -4,14 +4,13 @@ import java.sql.SQLException;
 
 import com.abigdreamer.java.net.Config;
 import com.abigdreamer.java.net.connection.XConnection;
-import com.abigdreamer.java.net.connection.XConnectionConfig;
 import com.abigdreamer.java.net.connection.XConnectionPoolManager;
 import com.abigdreamer.java.net.orm.data.DataTable;
 import com.abigdreamer.java.net.sql.DataAccess;
 import com.abigdreamer.java.net.sql.QueryBuilder;
 import com.abigdreamer.java.net.util.XString;
-import com.abigdreamer.schema.ZDMaxNoSchema;
-import com.abigdreamer.schema.ZDMaxNoSet;
+import com.zving.schema.ZDMaxNoSchema;
+import com.zving.schema.ZDMaxNoSet;
 
 public class NoUtil {
 	private static ZDMaxNoSet MaxNoSet;

@@ -16,10 +16,10 @@ import com.abigdreamer.java.net.orm.data.DataTable;
 import com.abigdreamer.java.net.sql.QueryBuilder;
 import com.abigdreamer.java.net.util.Mapx;
 import com.abigdreamer.java.net.util.XString;
-import com.abigdreamer.schema.ZDMenuSchema;
-import com.abigdreamer.schema.ZDMenuSet;
 import com.xdarkness.platform.pub.NoUtil;
 import com.xdarkness.platform.service.MenuService;
+import com.zving.schema.ZDMenuSchema;
+import com.zving.schema.ZDMenuSet;
 
 /**
  * @author Darkness create on 2010 2010-12-15 上午11:24:12

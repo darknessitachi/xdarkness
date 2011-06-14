@@ -2,7 +2,6 @@ package com.xdarkness.platform.page;
 
 import java.util.Date;
 
-import com.abigdreamer.java.net.Config;
 import com.abigdreamer.java.net.User;
 import com.abigdreamer.java.net.data.Transaction;
 import com.abigdreamer.java.net.jaf.Page;
@@ -12,8 +11,8 @@ import com.abigdreamer.java.net.orm.OperateType;
 import com.abigdreamer.java.net.orm.data.DataTable;
 import com.abigdreamer.java.net.sql.QueryBuilder;
 import com.abigdreamer.java.net.util.XString;
-import com.abigdreamer.schema.ZDConfigSchema;
-import com.abigdreamer.schema.ZDConfigSet;
+import com.zving.schema.ZDConfigSchema;
+import com.zving.schema.ZDConfigSet;
 
 public class ConfigSysPage extends Page {
 	public static void dg1DataBind(DataGridAction dga) {

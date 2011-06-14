@@ -1,7 +1,7 @@
 package com.xdarkness.platform.pub;
 
 import com.abigdreamer.java.net.util.VideoUtil;
-import com.abigdreamer.schema.ZCVideoSchema;
+import com.zving.schema.ZCVideoSchema;
 
 public class VideoUtilEx {
 	public static boolean afterUploadVideo(ZCVideoSchema video,

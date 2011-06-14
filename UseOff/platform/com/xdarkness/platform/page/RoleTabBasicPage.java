@@ -13,14 +13,14 @@ import com.abigdreamer.java.net.sql.QueryBuilder;
 import com.abigdreamer.java.net.util.LogUtil;
 import com.abigdreamer.java.net.util.Mapx;
 import com.abigdreamer.java.net.util.XString;
-import com.abigdreamer.schema.ZDPrivilegeSchema;
-import com.abigdreamer.schema.ZDRoleSchema;
-import com.abigdreamer.schema.ZDUserRoleSchema;
-import com.abigdreamer.schema.ZDUserRoleSet;
 import com.xdarkness.platform.Cms;
 import com.xdarkness.platform.Priv;
 import com.xdarkness.platform.RolePriv;
 import com.xdarkness.platform.pub.PlatformCache;
+import com.zving.schema.ZDPrivilegeSchema;
+import com.zving.schema.ZDRoleSchema;
+import com.zving.schema.ZDUserRoleSchema;
+import com.zving.schema.ZDUserRoleSet;
 
 public class RoleTabBasicPage extends Page {
 	public static Mapx init(Mapx params) {

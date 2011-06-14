@@ -15,8 +15,8 @@ import com.abigdreamer.java.net.orm.data.DataTable;
 import com.abigdreamer.java.net.sql.QueryBuilder;
 import com.abigdreamer.java.net.util.Mapx;
 import com.abigdreamer.java.net.util.XString;
-import com.abigdreamer.schema.ZDBranchSchema;
 import com.xdarkness.platform.pub.NoUtil;
+import com.zving.schema.ZDBranchSchema;
 
 public class BranchPage extends BasePage<ZDBranchSchema> {
 	

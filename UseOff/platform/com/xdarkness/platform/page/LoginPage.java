@@ -16,9 +16,9 @@ import com.abigdreamer.java.net.sql.QueryBuilder;
 import com.abigdreamer.java.net.util.Filter;
 import com.abigdreamer.java.net.util.LogUtil;
 import com.abigdreamer.java.net.util.XString;
-import com.abigdreamer.schema.ZDUserSchema;
-import com.abigdreamer.schema.ZDUserSet;
 import com.xdarkness.platform.Priv;
+import com.zving.schema.ZDUserSchema;
+import com.zving.schema.ZDUserSet;
 
 /**
  * @author Darkness

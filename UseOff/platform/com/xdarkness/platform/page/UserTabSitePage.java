@@ -10,9 +10,9 @@ import com.abigdreamer.java.net.orm.data.DataRow;
 import com.abigdreamer.java.net.orm.data.DataTable;
 import com.abigdreamer.java.net.sql.QueryBuilder;
 import com.abigdreamer.java.net.util.Mapx;
-import com.abigdreamer.schema.ZDPrivilegeSchema;
 import com.xdarkness.platform.Priv;
 import com.xdarkness.platform.RolePriv;
+import com.zving.schema.ZDPrivilegeSchema;
 
 public class UserTabSitePage extends Page {
 	public static void dg1DataBind(DataGridAction dga) {

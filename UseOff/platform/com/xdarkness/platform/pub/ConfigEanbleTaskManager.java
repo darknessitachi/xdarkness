@@ -2,8 +2,8 @@
  
  import com.abigdreamer.java.net.schedule.AbstractTaskManager;
 import com.abigdreamer.java.net.util.Mapx;
-import com.abigdreamer.schema.ZDScheduleSchema;
-import com.abigdreamer.schema.ZDScheduleSet;
+import com.zving.schema.ZDScheduleSchema;
+import com.zving.schema.ZDScheduleSet;
  
  public abstract class ConfigEanbleTaskManager extends AbstractTaskManager
  {

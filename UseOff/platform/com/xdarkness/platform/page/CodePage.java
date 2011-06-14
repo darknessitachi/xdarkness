@@ -11,9 +11,9 @@ import com.abigdreamer.java.net.orm.data.DataTable;
 import com.abigdreamer.java.net.sql.QueryBuilder;
 import com.abigdreamer.java.net.util.Mapx;
 import com.abigdreamer.java.net.util.XString;
-import com.abigdreamer.schema.ZDCodeSchema;
-import com.abigdreamer.schema.ZDCodeSet;
 import com.xdarkness.platform.pub.OrderUtil;
+import com.zving.schema.ZDCodeSchema;
+import com.zving.schema.ZDCodeSet;
 
 public class CodePage extends Page {
 	public static void dg1BindCode(DataGridAction dga) {

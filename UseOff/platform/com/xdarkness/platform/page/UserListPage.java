@@ -19,13 +19,13 @@ import com.abigdreamer.java.net.sql.QueryBuilder;
 import com.abigdreamer.java.net.util.Errorx;
 import com.abigdreamer.java.net.util.Mapx;
 import com.abigdreamer.java.net.util.XString;
-import com.abigdreamer.schema.ZDPrivilegeSchema;
-import com.abigdreamer.schema.ZDUserRoleSchema;
-import com.abigdreamer.schema.ZDUserRoleSet;
-import com.abigdreamer.schema.ZDUserSchema;
-import com.abigdreamer.schema.ZDUserSet;
 import com.xdarkness.platform.Cms;
 import com.xdarkness.platform.Priv;
+import com.zving.schema.ZDPrivilegeSchema;
+import com.zving.schema.ZDUserRoleSchema;
+import com.zving.schema.ZDUserRoleSet;
+import com.zving.schema.ZDUserSchema;
+import com.zving.schema.ZDUserSet;
 
 public class UserListPage extends Page {
 	public static final String ADMINISTRATOR = "admin";

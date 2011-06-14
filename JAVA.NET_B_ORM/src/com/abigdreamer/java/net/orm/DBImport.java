@@ -2,6 +2,7 @@ package com.abigdreamer.java.net.orm;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.io.Serializable;
 import java.security.PublicKey;
 import java.security.cert.X509Certificate;
 import java.util.Date;
@@ -9,6 +10,7 @@ import java.util.HashMap;
 
 import org.bouncycastle.jce.provider.JDKX509CertificateFactory;
 
+import com.abigdreamer.ResumeSerialVersion;
 import com.abigdreamer.java.net.Config;
 import com.abigdreamer.java.net.connection.DBTypes;
 import com.abigdreamer.java.net.connection.XConnectionPoolManager;
@@ -222,6 +224,7 @@ public class DBImport {
 					Object obj = FileUtil.unserialize(bs);
 					if (obj == null)
 						continue; /* Loop/switch isn't completed */
+					
 					if ((obj instanceof SchemaSet)) {
 						SchemaSet set = (SchemaSet) obj;
 						try {
@@ -308,7 +311,10 @@ public class DBImport {
 						e.printStackTrace();
 					}
 				} catch (Exception e) {
+//					private static final long serialVersionUID = -4218492595750785904L;
 					LogUtil.getLogger().warn("导入数据时发生错误:" + e.getMessage());
+					
+					ResumeSerialVersion.resume(e.getMessage());
 				}
 			}
 		} catch (Exception e1) {

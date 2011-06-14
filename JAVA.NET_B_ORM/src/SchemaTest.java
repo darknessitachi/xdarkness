@@ -4,7 +4,7 @@ import java.util.Date;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.abigdreamer.schema.ZCCatalogSchema;
+import com.zving.schema.ZCCatalogSchema;
 
 public class SchemaTest {
 

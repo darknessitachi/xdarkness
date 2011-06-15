@@ -1,6 +1,6 @@
 
 <%@page import="com.xdarkness.platform.page.UserListPage"%>
-<%@page import="com.xdarkness.framework.User"%>
+<%@page import="com.abigdreamer.java.net.User"%>
 <%@page import="com.xdarkness.platform.page.SysInfoPage"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@include file="../Include/Init.jsp"%>

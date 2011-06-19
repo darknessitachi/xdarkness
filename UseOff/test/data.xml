@@ -1422,4 +1422,18 @@
 	<data createTime="2011-6-9" useFor="eat" money="21" description="saliary" />
 	<data createTime="2011-6-10" useFor="eat" money="18" description="saliary" />
 	<data createTime="2011-6-11" useFor="eat" money="18" description="saliary" />
+	<data createTime="2011-6-12" useFor="eat" money="10"/>
+	<data createTime="2011-6-12" useFor="eat" money="8" description="saliary" />
+	<data createTime="2011-6-13" useFor="eat" money="18" description="saliary" />
+	<data createTime="2011-6-14" useFor="eat" money="18" description="saliary" />
+	<data createTime="2011-6-15" useFor="eat" money="18" description="saliary" />
+	<data createTime="2011-6-16" useFor="eat" money="18" description="saliary" />
+	<data createTime="2011-6-17" useFor="eat" money="18" description="saliary" />
+	<data createTime="2011-6-18" useFor="eat" money="10" description="saliary" />
+	<data createTime="2011-6-18" useFor="eat" money="8" />
+	<data createTime="2011-6-19" useFor="eat" money="10"/>
+	<data createTime="2011-6-19" useFor="articlesForDailyUse" money="3.9" description="卫生纸"/>
+	<data createTime="2011-6-19" useFor="eat" money="15.6" description="两带瓜子"/>
+	<data createTime="2011-6-19" useFor="eat" money="33" description="两代芝麻糊"/>
+	<data createTime="2011-6-19" useFor="eat" money="8" description="saliary" />
 </dataset>

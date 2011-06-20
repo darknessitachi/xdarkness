@@ -1431,9 +1431,13 @@
 	<data createTime="2011-6-17" useFor="eat" money="18" description="saliary" />
 	<data createTime="2011-6-18" useFor="eat" money="10" description="saliary" />
 	<data createTime="2011-6-18" useFor="eat" money="8" />
+	<data createTime="2011-6-18" useFor="traffic" money="3" />
+	<data createTime="2011-6-18" useFor="book" money="5.5" description="图书馆书过期罚款" />
 	<data createTime="2011-6-19" useFor="eat" money="10"/>
 	<data createTime="2011-6-19" useFor="articlesForDailyUse" money="3.9" description="卫生纸"/>
 	<data createTime="2011-6-19" useFor="eat" money="15.6" description="两带瓜子"/>
 	<data createTime="2011-6-19" useFor="eat" money="33" description="两代芝麻糊"/>
 	<data createTime="2011-6-19" useFor="eat" money="8" description="saliary" />
+	<data createTime="2011-6-20" useFor="eat" money="8" description="saliary" />
+	<data createTime="2011-6-20" useFor="traffic" money="54"/>
 </dataset>

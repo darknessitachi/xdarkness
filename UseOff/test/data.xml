@@ -24,6 +24,9 @@
 	<data createTime="2011-4-4" useFor="phone" money="30" />
 	<data createTime="2011-3-24" useFor="phone" money="50" />
 	<data createTime="2011-3-4" useFor="phone" money="50" />
+	<data createTime="2011-6-8" useFor="phone" money="35" />
+	<data createTime="2011-6-8" useFor="phone" money="36" />
+	<data createTime="2011-5-28" useFor="phone" money="35" />
 
 
 	<data createTime="2009-1-15" useFor="salary" moneyType="in" money="268.84" />
@@ -65,7 +68,7 @@
 	<data createTime="2011-3-15" useFor="salary" moneyType="in" money="4184.94" />
 	<data createTime="2011-3-15" useFor="salary" moneyType="in" money="220" />
 	<data createTime="2011-3-15" useFor="salary" moneyType="in" money="150" />
-	      
+	<data createTime="2011-3-15" useFor="salary" moneyType="in" money="4214.19" />
 	
 
 	<data createTime="2009-2-1" useFor="traffic" money="14" />
@@ -1387,6 +1390,7 @@
 	<data createTime="2011-5-23" useFor="house" money="123" />
 	<data createTime="2011-5-23" useFor="eat" money="18" description="saliary" />
 	<data createTime="2011-5-24" useFor="eat" money="3" />
+	<data createTime="2011-5-24" useFor="other" money="200" description="4G内存条" />
 	<data createTime="2011-5-24" useFor="eat" money="18" description="saliary" />
 	<data createTime="2011-5-25" useFor="eat" money="3" />
 	<data createTime="2011-5-25" useFor="eat" money="18" description="saliary" />
@@ -1401,6 +1405,8 @@
 	<data createTime="2011-5-29" useFor="eat" money="18" description="saliary" />
 	<data createTime="2011-5-30" useFor="eat" money="3" />
 	<data createTime="2011-5-30" useFor="eat" money="18" description="saliary" />
+	<data createTime="2011-6-1" useFor="other" money="138" description="两辆遥控汽车" />
+	<data createTime="2011-6-1" useFor="other" money="110" description="遥控飞机" />
 	<data createTime="2011-6-1" useFor="eat" money="3" />
 	<data createTime="2011-6-1" useFor="eat" money="18" description="saliary" />
 	<data createTime="2011-6-2" useFor="eat" money="3" />
@@ -1440,4 +1446,20 @@
 	<data createTime="2011-6-19" useFor="eat" money="8" description="saliary" />
 	<data createTime="2011-6-20" useFor="eat" money="8" description="saliary" />
 	<data createTime="2011-6-20" useFor="traffic" money="54"/>
+	<data createTime="2011-6-24" useFor="doctor" money="168" description="药"/>
+	<data createTime="2011-6-21" useFor="eat" money="10" description="saliary" />
+	<data createTime="2011-6-21" useFor="eat" money="8" />
+	<data createTime="2011-6-22" useFor="eat" money="10" description="saliary" />
+	<data createTime="2011-6-22" useFor="eat" money="8" />
+	<data createTime="2011-6-23" useFor="eat" money="10" description="saliary" />
+	<data createTime="2011-6-23" useFor="eat" money="8" />
+	<data createTime="2011-6-24" useFor="eat" money="10" description="saliary" />
+	<data createTime="2011-6-24" useFor="eat" money="8" />
+	<data createTime="2011-6-24" useFor="clothes" money="110" description="两件衬衫18*2+牛仔裤68+运费"/>
+	<data createTime="2011-6-27" useFor="eat" money="10" description="saliary" />
+	<data createTime="2011-6-27" useFor="eat" money="8" />
+	<data createTime="2011-6-28" useFor="eat" money="10" description="saliary" />
+	<data createTime="2011-6-28" useFor="eat" money="8" />
+	<data createTime="2011-6-29" useFor="eat" money="10" description="saliary" />
+	<data createTime="2011-6-29" useFor="eat" money="8" />
 </dataset>

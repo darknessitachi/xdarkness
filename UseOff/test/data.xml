@@ -27,6 +27,7 @@
 	<data createTime="2011-6-8" useFor="phone" money="35" />
 	<data createTime="2011-6-8" useFor="phone" money="36" />
 	<data createTime="2011-5-28" useFor="phone" money="35" />
+	<data createTime="2011-7-10" useFor="phone" money="30" />
 
 
 	<data createTime="2009-1-15" useFor="salary" moneyType="in" money="268.84" />
@@ -1462,4 +1463,31 @@
 	<data createTime="2011-6-28" useFor="eat" money="8" />
 	<data createTime="2011-6-29" useFor="eat" money="10" description="saliary" />
 	<data createTime="2011-6-29" useFor="eat" money="8" />
+	<data createTime="2011-6-30" useFor="traffic" money="2.5" />
+	<data createTime="2011-6-30" useFor="traffic" money="83" />
+	<data createTime="2011-6-30" useFor="eat" money="4" />
+	<data createTime="2011-6-30" useFor="traffic" money="4" />
+	<data createTime="2011-7-1" useFor="other" money="60" description="买牛奶等给外婆" />
+	<data createTime="2011-7-1" useFor="other" money="30" description="电话卡" />
+	<data createTime="2011-7-3" useFor="eat" money="10"/>
+	<data createTime="2011-7-3" useFor="traffic" money="6.5"/>
+	<data createTime="2011-7-4" useFor="eat" money="10" description="saliary" />
+	<data createTime="2011-7-4" useFor="eat" money="8"  description="saliary"/>
+	<data createTime="2011-7-5" useFor="eat" money="10" description="saliary" />
+	<data createTime="2011-7-5" useFor="eat" money="8" />
+	<data createTime="2011-7-6" useFor="eat" money="10" description="saliary" />
+	<data createTime="2011-7-6" useFor="eat" money="8"  description="saliary"/>
+	<data createTime="2011-7-7" useFor="eat" money="10" description="saliary" />
+	<data createTime="2011-7-7" useFor="eat" money="8" />
+	<data createTime="2011-7-8" useFor="eat" money="10" description="saliary" />
+	<data createTime="2011-7-8" useFor="eat" money="8" />
+	<data createTime="2011-7-9" useFor="eat" money="10" description="saliary" />
+	<data createTime="2011-7-9" useFor="other" money="20" description="泳衣泳帽" />
+	<data createTime="2011-7-9" useFor="other" money="25" description="木板拼图" />
+	<data createTime="2011-7-9" useFor="other" money="15" description="修自行车" />
+	<data createTime="2011-7-9" useFor="eat" money="21" description="请同事吃饭"/>
+	<data createTime="2011-7-9" useFor="eat" money="19" description="瓜子" />
+	<data createTime="2011-7-9" useFor="eat" money="20.9" description="芝麻糊" />
+	<data createTime="2011-7-10" useFor="eat" money="10" description="saliary" />
+	<data createTime="2011-7-10" useFor="eat" money="8" description="saliary" />
 </dataset>

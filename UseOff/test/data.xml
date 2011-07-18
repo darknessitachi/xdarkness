@@ -1490,4 +1490,25 @@
 	<data createTime="2011-7-9" useFor="eat" money="20.9" description="芝麻糊" />
 	<data createTime="2011-7-10" useFor="eat" money="10" description="saliary" />
 	<data createTime="2011-7-10" useFor="eat" money="8" description="saliary" />
+	<data createTime="2011-7-11" useFor="eat" money="10" description="saliary" />
+	<data createTime="2011-7-11" useFor="eat" money="8" description="saliary" />
+	<data createTime="2011-7-12" useFor="eat" money="10" description="saliary" />
+	<data createTime="2011-7-12" useFor="eat" money="8" />
+	<data createTime="2011-7-13" useFor="eat" money="10" description="saliary" />
+	<data createTime="2011-7-13" useFor="eat" money="8"  description="saliary" />
+	<data createTime="2011-7-14" useFor="eat" money="10" description="saliary" />
+	<data createTime="2011-7-14" useFor="eat" money="8" />
+	<data createTime="2011-7-15" useFor="eat" money="10" description="saliary" />
+	<data createTime="2011-7-15" useFor="eat" money="8" />
+	<data createTime="2011-7-15" useFor="clothes" money="130" description="皮带" />
+	<data createTime="2011-7-15" useFor="clothes" money="289" description="皮鞋" />
+	<data createTime="2011-7-15" useFor="clothes" money="126" description="领带" />
+	<data createTime="2011-7-15" useFor="clothes" money="199" description="衬衫" />
+	<data createTime="2011-7-15" useFor="clothes" money="319" description="西裤" />
+	<data createTime="2011-7-15" useFor="eat" money="16" />
+	<data createTime="2011-7-16" useFor="other" money="300" description="同事结婚" />
+	<data createTime="2011-7-17" useFor="eat" money="50" />
+	<data createTime="2011-7-17" useFor="traffic" money="3" />
+	<data createTime="2011-7-18" useFor="eat" money="10" description="saliary" />
+	<data createTime="2011-7-18" useFor="eat" money="8"  description="saliary" />
 </dataset>

@@ -19,7 +19,7 @@
 		<sky:button onClick="discard()" image="../../Icons/icon400a8.gif">放弃</sky:button>
 		<sky:button onClick="del()" image="../../Icons/icon022a3.gif">删除</sky:button>
 	</sky:toolbar>
-	<sky:datagrid id="dg1" method="com.xdarkness.platform.page.MenuPage.dg1DataBind" page="false">
+	<sky:datagrid id="dg1" method="com.xdarkness.platform.page.MenuPage.treeDataGridBind" page="false">
 		<table width="100%" cellpadding="2" cellspacing="0" class="dataTable" afterdrag="sortMenu">
 			<tr xtype="head" class="dataTableHead">
 				<td width="3%" xtype="RowNo" drag="true"><img src="../../Framework/Images/icon_drag.gif" width="16" height="16"></td>

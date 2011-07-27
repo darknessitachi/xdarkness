@@ -68,7 +68,7 @@ function hideExpand(index){
 }
 
 function save(){
-	DataGrid.save("dg1","com.xdarkness.platform.page.MenuPage.dg1Edit",function(){DataGrid.loadData("dg1",initGrid);});
+	DataGrid.save("dg1","com.xdarkness.platform.page.MenuPage.dataGridEdit",function(){DataGrid.loadData("dg1",initGrid);});
 }
 
 MenuManager = {

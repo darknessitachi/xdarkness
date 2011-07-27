@@ -152,8 +152,12 @@ a.zInputBtn {_position:relative;}
                   <tr>
                     <td width="15%" height="30" align="right" ><em>数据库类型：</em></td>
                     <td width="35%"><div style="_position: relative;">
-                        <sky:select id="ServerType" onChange="onServerTypeChange();"> <span value="ORACLE">Oracle</span> <span value="DB2">DB2</span> <span value="MSSQL">SQL
-                            Server 2005</span> <span value="MYSQL">Mysql</span> </sky:select>
+                        <sky:select id="ServerType" onChange="onServerTypeChange();">
+                        	<span value="ORACLE">Oracle</span> 
+                        	<span value="DB2">DB2</span> 
+                        	<span value="MSSQL">SQL Server 2005</span> 
+                        	<span value="MYSQL">Mysql</span> 
+                        </sky:select>
                       </div></td>
                     <td width="45%"><span id="DB2Info" style="display:none">注意：<span class="red">DB2下默认表空间页大小要求大于等于16K，否则不能正确创建表结构。</span></span></td>
                     <td width="5%">&nbsp;</td>

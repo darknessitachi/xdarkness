@@ -1,13 +1,4 @@
-//多选框全选
-function selectAll(ele,eles){
-	var flag = $V(ele);
-	var arr = $N(eles);
-	if(arr){
-		for(var i=0;i< arr.length;i++){
-			arr[i].checked = flag;
-	  }
-	}
-}
+ 
  DynamicDiv = Base.extend({
 
     constructor: function(config){
@@ -15,11 +6,15 @@ function selectAll(ele,eles){
         this.target = $(config.id);
         
         var container = $(document.createElement("div"));
+        container.id = config.divId || "";/* 增加divId配置，用来设置创建div的id */
         container.addClass("dynamicDiv");
         
         this.el = container;
         this.el.hide();
         document.body.appendChild(this.el);
+        
+		this.onLoadBefore = config.onLoadBefore || function(){};
+		this.onLoadAfter = config.onLoadAfter || function(){};
     },
     
     bind: function(target) {
@@ -30,16 +25,31 @@ function selectAll(ele,eles){
     show: function(params) {
    
     	var div = this;
-    	new Sky.Ajax({
-        	url: Sky.getUrl(this.url, params),
-        	//params: strParams, @TODO this way can't carray the params, but don't know why
-        	onload: function(data) {
-				div.el.innerHTML = data; 
-				div.el.positionTo(div.target);
-    
-    			div.el.show();
-        	}
-        });
+    	
+    	/* 增加reload配置，用来设置是否重新加载页面 */
+    	if(params.reload === true) {
+	    	new Sky.Ajax({
+	        	url: Sky.getUrl(this.url, params),
+	        	//params: strParams, @TODO this way can't carray the params, but don't know why
+	        	onload: function(data) {
+					div.el.innerHTML = data; 
+					div.el.positionTo(div.target);
+	    
+	    			/* div显示之前调用 */
+	    			div.onLoadBefore();
+	    			
+	    			div.el.show();
+	    			
+	    			/* div显示之后调用 */
+	    			div.onLoadAfter();
+	        	}
+	        });
+        } else {
+        	div.el.positionTo(div.target);
+   			
+   			div.el.show();
+        }
+        
         /* @TODO Thinking about it's necessary to use dwr, it just can't use basic ajax call
         DWRActionUtil.executeActionURL(this.url.replace(".action",""), params, function(data) {debugger;
 				div.el.innerHTML = data; 
@@ -330,7 +340,7 @@ Selector = Base.extend({
 	},
     
     getMultiItemString: function(text, value) {
-		return "<div style='border:0px;'><div style='float:left;border:0px;'><input type='checkbox' divId='"+this.el.id+"' /></div><div style='border:0px;'><a href=\"javascript:void(0);\" divId='"+this.el.id+"' onclick=\"Selector.onItemClick(this);\" onmouseover='Selector.onItemMouseOver(this)' hidefocus value=\"" + value + "\">" + text + "</a></div></div>";
+		return "<div style='border:0px;'><div style='float:left;border:0px;display:none;'><input type='checkbox' divId='"+this.el.id+"' /></div><div style='border:0px;'><a href=\"javascript:void(0);\" divId='"+this.el.id+"' onclick=\"Selector.onItemClick(this);\" onmouseover='Selector.onItemMouseOver(this)' hidefocus value=\"" + value + "\">" + text + "</a></div></div>";
 	},
 	
 	/**
@@ -387,8 +397,8 @@ Selector = Base.extend({
     initHtml: function(){
     
         this.initIdName();
-        //// 如果div下面有a标签，需要先将其备份，防止被覆盖
-        var items = this.el.$T("span").add(this.el.$T("a"));
+        
+        var items = this.el.$T("span");
         var selectedIndex = -1;
         var selectedFlag = true;
         //以下兼容旧写法
@@ -551,6 +561,10 @@ Selector = Base.extend({
 		    }
 		    this.el.$T("DIV")[0].childNodes[0].innerHTML = "";
 		    this.items = this.el.$T("DIV")[0].childNodes[0].$T("a");
+		    // @TODO 重构时需考虑纳入默认项
+		    if(this.el.defaultblank == "true"){
+		    	this.add("请选择","");
+		    }
 	    } catch(e) {
 	    }
 	},
@@ -591,6 +605,8 @@ Selector = Base.extend({
 	addBatch: function(arr, index){
         var showValue = this.el.$A("showValue") == "true";
         var html = [];
+        
+        /* 添加选项 */
         for (var i = 0; i < arr.length; i++) {
             var text = arr[i][0];
             var value = arr[i][1];
@@ -608,30 +624,33 @@ Selector = Base.extend({
             	html.push(this.createItemString(text, value));
             }
         }
+        
+        
         if (!this.items || this.items.length == 0) {
             this.el.$T("DIV")[0].childNodes[0].innerHTML = html.join('\n');
             this.options = this.items = this.el.$T("DIV")[0].childNodes[0].$T("a");
-            return;
-        }
-        var lastIndex = this.items.length - 1;
-        if (index != null) {
-            index = parseInt(index);
-            if (index > lastIndex) {
-                index = lastIndex;
-            }
-        }
-        else {
-            index = lastIndex;
-        }
-        if(this.multi) {
-        	this.items[index].parentElement.parentElement.insertAdjacentHTML("afterEnd", html.join('\n'));
         } else {
-        	this.items[index].insertAdjacentHTML("afterEnd", html.join('\n'));
+        	 var lastIndex = this.items.length - 1;
+	        if (index != null) {
+	            index = parseInt(index);
+	            if (index > lastIndex) {
+	                index = lastIndex;
+	            }
+	        }
+	        else {
+	            index = lastIndex;
+	        }
+	        if(this.multi) {
+	        	this.items[index].parentElement.parentElement.insertAdjacentHTML("afterEnd", html.join('\n'));
+	        } else {
+	        	this.items[index].insertAdjacentHTML("afterEnd", html.join('\n'));
+	        }
+	        this.options = this.items = this.el.$T("DIV")[0].childNodes[0].$T("a");
+	        if (this.items.length > 10) {
+	            this.el.$T("DIV")[0].childNodes[0].style.height = "15em";
+	        }
         }
-        this.options = this.items = this.el.$T("DIV")[0].childNodes[0].$T("a");
-        if (this.items.length > 10) {
-            this.el.$T("DIV")[0].childNodes[0].style.height = "15em";
-        }
+       
         
         /* when add a option,and it's value is in the initValues,set it checked and put the text to the show input */
         if(this.el.initValue) {
@@ -1461,9 +1480,9 @@ Selector = Base.extend({
 	    return div;
 	},
 	onItemMouseOver: function(ele){
-	    var id = ele.divId || ele.parentElement.id.replace("_ul", "");//$E.getParentByAttr("className", "zSelect", ele).id;// 兼容旧的使用方式，新的推荐在生成item时添加divId
+var id = ele.divId || ele.parentElement.id.replace("_ul", "");//$E.getParentByAttr("className", "zSelect", ele).id;// 兼容旧的使用方式，新的推荐在生成item时添加divId
 	    //id = id.substring(0, id.lastIndexOf("_"));
-	    var div = Selector.getSourceDiv(id);
+	    var div = Selector.getSourceDiv(id );
 	    var selector = div.srcClass;
 	    
 	    ///var list = document.getElementById(ele.divId + "_list");
@@ -1518,7 +1537,7 @@ if(selector.multi) {
 		// ele.setAttribute("checked", checked=="true"?"false":"true");
 		 
 	    var pw = window;//$E.getTopLevelWindow();;
-	    var div = Selector.getSourceDiv(ele.divId || ele.parentElement.id.replace("_ul", ""));
+		var div = Selector.getSourceDiv(ele.divId || ele.parentElement.id.replace("_ul", ""));
 	    var selector = div.srcClass;// 自定义控件对象
 	    var oldValue = div.value;
 	    
@@ -1527,7 +1546,7 @@ if(selector.multi) {
 		var _v = ele.getAttribute("value");
 		
 		var items = selector.options;
-	    for (var i = 0; i < items.length; i++) {
+	    for (var i = 0; i < items.length; i++) {// 设置item的选中状态，即：单击一下为选中、再单击一下为非选中，依次类推
 	        if (items[i].getAttribute("value") == ele.getAttribute("value")) {
 	            items[i].checked = !items[i].checked;
 	        }
@@ -1625,9 +1644,11 @@ if(selector.multi) {
 	                    }
 	                }
 	            }
+	            if(!arr) arr = [];
 	            if (!anyFlag && ele.input) {
 	                var txt = ele.textField.value.trim();
 	                var arr = ele.options;
+	                arr = arr || [];
 	                var len = arr.length;
 	                var flag = false;
 	                for (var i = 0; i < len; i = i + 1) {
@@ -1733,6 +1754,9 @@ if(selector.multi) {
 	getSelect: function(id){
 		if(!id.startsWith("select_")) {
 			id = "select_" + id;
+		}
+		if(!$(id)){
+			return null;
 		}
 	    var _select = $(id).srcClass || new Selector($(id));
 	    
